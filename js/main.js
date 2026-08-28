@@ -560,6 +560,76 @@
       }, 800);
     });
   }
+
+  /* ---------- Password Visibility Toggle ---------- */
+  var passwordToggleBtns = Array.prototype.slice.call(document.querySelectorAll(".btn-toggle-password"));
+  passwordToggleBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var input = btn.previousElementSibling || btn.parentElement.querySelector("input");
+      if (!input) return;
+      var isPassword = input.getAttribute("type") === "password";
+      input.setAttribute("type", isPassword ? "text" : "password");
+      var eyeOpen = btn.querySelector(".eye-open");
+      var eyeClosed = btn.querySelector(".eye-closed");
+      if (eyeOpen && eyeClosed) {
+        eyeOpen.style.display = isPassword ? "none" : "block";
+        eyeClosed.style.display = isPassword ? "block" : "none";
+      }
+    });
+  });
+
+  /* ---------- Login Form Handler ---------- */
+  var loginForm = document.getElementById("loginForm");
+  var loginSuccessAlert = document.getElementById("loginSuccessAlert");
+  var loginSubmitBtn = document.getElementById("loginSubmitBtn");
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (loginSubmitBtn) {
+        loginSubmitBtn.innerHTML = "Authenticating...";
+        loginSubmitBtn.disabled = true;
+      }
+      setTimeout(function () {
+        if (loginSuccessAlert) loginSuccessAlert.style.display = "block";
+        if (loginSubmitBtn) loginSubmitBtn.innerHTML = "Redirecting...";
+        setTimeout(function () { window.location.href = "index.html"; }, 1000);
+      }, 700);
+    });
+  }
+
+  /* ---------- Sign Up Form Handler ---------- */
+  var signupForm = document.getElementById("signupForm");
+  var signupSuccessAlert = document.getElementById("signupSuccessAlert");
+  var signupSubmitBtn = document.getElementById("signupSubmitBtn");
+  if (signupForm) {
+    signupForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (signupSubmitBtn) {
+        signupSubmitBtn.innerHTML = "Creating Account...";
+        signupSubmitBtn.disabled = true;
+      }
+      setTimeout(function () {
+        if (signupSuccessAlert) signupSuccessAlert.style.display = "block";
+        if (signupSubmitBtn) signupSubmitBtn.innerHTML = "Account Created";
+        setTimeout(function () { window.location.href = "login.html"; }, 1000);
+      }, 700);
+    });
+  }
+
+  /* ---------- Social Auth Handlers ---------- */
+  var socialBtns = ["googleLoginBtn", "appleLoginBtn", "googleSignupBtn", "appleSignupBtn"];
+  socialBtns.forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener("click", function () {
+        btn.style.opacity = "0.7";
+        btn.querySelector("span").textContent = "Connecting...";
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 600);
+      });
+    }
+  });
 })();
 
 
