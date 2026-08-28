@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolarBright — Home 2 | The Roof is an Energy Asset</title>
+<meta name="description" content="An architectural energy journal and interactive solar discovery experience by SolarBright. Transform your roof into personal energy infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="light" class="page-home2">
+
+<!-- ============ HEADER (Floating Minimal Bar) ============ -->
+<header class="site-header h2-header" id="siteHeader">
+  <div class="header-inner h2-header-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="8" fill="#E9BD3F"/>
+        <g stroke="#4D9948" stroke-width="2.4" stroke-linecap="round">
+          <line x1="17" y1="1" x2="17" y2="6"/>
+          <line x1="17" y1="28" x2="17" y2="33"/>
+          <line x1="1" y1="17" x2="6" y2="17"/>
+          <line x1="28" y1="17" x2="33" y2="17"/>
+        </g>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+        <span class="brand-tag">Architectural Energy</span>
+      </span>
+    </a>
+
+    <nav class="main-nav h2-nav" aria-label="Primary">
+      <a href="#roof" class="nav-link active">Explore</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services Studio</a>
+      <a href="plans.html" class="nav-link">Solar Plans</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="#project-story" class="nav-link">Projects</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <a href="index.html" class="nav-link nav-page-switch">Home 1 ↗</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="#roof-potential" class="btn btn-primary btn-header h2-btn-header">Assessment →</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#roof" class="mobile-link">Explore Roof</a>
+    <a href="#energy-system" class="mobile-link">Energy Transformation</a>
+    <a href="#day-cycle" class="mobile-link">Day Cycle</a>
+    <a href="#lifestyle" class="mobile-link">Lifestyle Portrait</a>
+    <a href="#roof-potential" class="mobile-link">Rooftop Potential</a>
+    <a href="#financial-timeline" class="mobile-link">Solar As An Asset</a>
+    <a href="#project-story" class="mobile-link">Project Story</a>
+    <a href="index.html" class="mobile-link text-accent">Switch to Home 1 ↗</a>
+  </nav>
+  <a href="#roof-potential" class="btn btn-primary btn-block">Analyze My Roof →</a>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+<main id="roof">
+
+  <!-- ============ SECTION 01 — THE ROOF (Full-screen Editorial Hero) ============ -->
+  <section class="h2-hero">
+    <div class="h2-hero-media" data-parallax>
+      <img src="assets/images/home2-hero-roof.jpg" alt="Aerial photograph of a luxury modern residential roof with solar panels" loading="eager">
+      <div class="h2-hero-scrim"></div>
+    </div>
+
+    <div class="container h2-hero-container">
+      <div class="h2-hero-tag" data-reveal>
+        <span class="h2-coordinate-label">RESIDENTIAL / ROOFTOP / SOLAR</span>
+      </div>
+
+      <div class="h2-hero-content" data-reveal>
+        <h1 class="h2-hero-heading">
+          Your Roof.<br>
+          Your Energy.<br>
+          Your Future.
+        </h1>
+        <p class="h2-hero-sub">Every home has an energy opportunity above it.</p>
+        <div class="h2-hero-actions">
+          <a href="#energy-system" class="btn btn-primary h2-btn-green">Explore Solar <span class="arrow">→</span></a>
+          <a href="#roof-potential" class="h2-hero-secondary-link">See What Your Roof Can Generate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="h2-hero-scroll-indicator" aria-hidden="true">
+      <span class="h2-scroll-text">SCROLL TO DISCOVER</span>
+      <div class="h2-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 — FROM ROOF TO ENERGY (Horizontal Narrative) ============ -->
+  <section class="h2-section h2-narrative-section" id="energy-system">
+    <div class="container">
+      <div class="h2-section-header" data-reveal>
+        <span class="h2-section-label">01 / SYSTEM TRANSFORMATION</span>
+        <h2 class="h2-editorial-heading">
+          One Roof.<br>
+          <span class="h2-highlight">A New Energy System.</span>
+        </h2>
+        <p class="h2-section-desc">Solar turns unused rooftop space into electricity your home can use every day.</p>
+      </div>
+
+      <div class="h2-energy-pipeline" data-reveal>
+        <div class="h2-pipeline-track">
+          <!-- Flow Step 1 -->
+          <div class="h2-pipeline-step active" data-step="1">
+            <div class="h2-step-node">
+              <span class="h2-step-num">01</span>
+              <div class="h2-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              </div>
+            </div>
+            <div class="h2-step-info">
+              <h4>SUNLIGHT</h4>
+              <p>Free, abundant solar radiation strikes rooftop surface throughout daylight hours.</p>
+            </div>
+          </div>
+
+          <div class="h2-pipeline-connector">
+            <span class="h2-pulse-dot"></span>
+          </div>
+
+          <!-- Flow Step 2 -->
+          <div class="h2-pipeline-step" data-step="2">
+            <div class="h2-step-node">
+              <span class="h2-step-num">02</span>
+              <div class="h2-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+              </div>
+            </div>
+            <div class="h2-step-info">
+              <h4>SOLAR PANELS</h4>
+              <p>Monocrystalline silicon cells capture photons and convert them into Direct Current (DC).</p>
+            </div>
+          </div>
+
+          <div class="h2-pipeline-connector">
+            <span class="h2-pulse-dot"></span>
+          </div>
+
+          <!-- Flow Step 3 -->
+          <div class="h2-pipeline-step" data-step="3">
+            <div class="h2-step-node">
+              <span class="h2-step-num">03</span>
+              <div class="h2-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+              </div>
+            </div>
+            <div class="h2-step-info">
+              <h4>INVERTER</h4>
+              <p>High-efficiency smart inverter transforms DC energy into synchronized household AC power.</p>
+            </div>
+          </div>
+
+          <div class="h2-pipeline-connector">
+            <span class="h2-pulse-dot"></span>
+          </div>
+
+          <!-- Flow Step 4 -->
+          <div class="h2-pipeline-step" data-step="4">
+            <div class="h2-step-node">
+              <span class="h2-step-num">04</span>
+              <div class="h2-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+              </div>
+            </div>
+            <div class="h2-step-info">
+              <h4>HOME</h4>
+              <p>Clean electricity instantly powers lighting, climate control, appliances, and devices.</p>
+            </div>
+          </div>
+
+          <div class="h2-pipeline-connector">
+            <span class="h2-pulse-dot"></span>
+          </div>
+
+          <!-- Flow Step 5 -->
+          <div class="h2-pipeline-step" data-step="5">
+            <div class="h2-step-node">
+              <span class="h2-step-num">05</span>
+              <div class="h2-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+            </div>
+            <div class="h2-step-info">
+              <h4>ENERGY INDEPENDENCE</h4>
+              <p>Reduced grid bills, lower carbon footprint, and complete control over power generation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 — A DAY POWERED BY THE SUN (Day-cycle Visualization) ============ -->
+  <section class="h2-section h2-day-section" id="day-cycle">
+    <div class="container">
+      <div class="h2-section-header" data-reveal>
+        <span class="h2-section-label">02 / DAILY CHRONICLE</span>
+        <h2 class="h2-editorial-heading">
+          A Day Powered<br>
+          <span class="h2-highlight">By The Sun.</span>
+        </h2>
+        <p class="h2-section-desc">Observe how rooftop solar production naturally syncs with your family’s daily energy rhythm.</p>
+      </div>
+
+      <div class="h2-graph-container" data-reveal>
+        <!-- Graph Header & Key -->
+        <div class="h2-graph-meta">
+          <div class="h2-graph-legend">
+            <span class="legend-item legend-solar"><span class="dot"></span> Solar Generation (kW)</span>
+            <span class="legend-item legend-home"><span class="dot"></span> Household Usage (kW)</span>
+            <span class="legend-item legend-grid"><span class="dot"></span> Grid / Backup Support</span>
+          </div>
+          <div class="h2-graph-badge" id="graphTimeBadge">Active View: 12:00 PM (Peak Generation)</div>
+        </div>
+
+        <!-- Animated SVG Curve Chart -->
+        <div class="h2-svg-chart-wrapper">
+          <svg class="h2-day-chart" viewBox="0 0 900 280" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="solarGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4D9948" stop-opacity="0.45"/>
+                <stop offset="100%" stop-color="#4D9948" stop-opacity="0.0"/>
+              </linearGradient>
+              <linearGradient id="homeGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E9BD3F" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#E9BD3F" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Horizontal Gridlines -->
+            <line x1="50" y1="40" x2="850" y2="40" stroke="var(--h2-border-color)" stroke-dasharray="4 4" stroke-width="1"/>
+            <line x1="50" y1="100" x2="850" y2="100" stroke="var(--h2-border-color)" stroke-dasharray="4 4" stroke-width="1"/>
+            <line x1="50" y1="160" x2="850" y2="160" stroke="var(--h2-border-color)" stroke-dasharray="4 4" stroke-width="1"/>
+            <line x1="50" y1="220" x2="850" y2="220" stroke="var(--h2-border-color)" stroke-width="1"/>
+
+            <!-- Y Axis Labels -->
+            <text x="35" y="45" fill="var(--h2-text-sub)" font-size="11" font-weight="600" text-anchor="end">6 kW</text>
+            <text x="35" y="105" fill="var(--h2-text-sub)" font-size="11" font-weight="600" text-anchor="end">4 kW</text>
+            <text x="35" y="165" fill="var(--h2-text-sub)" font-size="11" font-weight="600" text-anchor="end">2 kW</text>
+            <text x="35" y="225" fill="var(--h2-text-sub)" font-size="11" font-weight="600" text-anchor="end">0 kW</text>
+
+            <!-- Solar Generation Filled Curve -->
+            <path d="M 50 220 C 180 220, 280 210, 370 110 C 450 30, 530 30, 610 110 C 700 210, 780 220, 850 220 Z" fill="url(#solarGrad)"/>
+            <path class="solar-curve-line" d="M 50 220 C 180 220, 280 210, 370 110 C 450 30, 530 30, 610 110 C 700 210, 780 220, 850 220" fill="none" stroke="#4D9948" stroke-width="3.5" stroke-linecap="round"/>
+
+            <!-- Home Usage Curve -->
+            <path d="M 50 180 Q 200 130, 330 160 T 610 140 T 850 170" fill="none" stroke="#E9BD3F" stroke-width="2.5" stroke-dasharray="6 3"/>
+
+            <!-- Interactive Time Markers -->
+            <g class="chart-nodes">
+              <!-- 6 AM -->
+              <circle class="chart-node" data-time="6 AM" cx="130" cy="216" r="6" fill="#4D9948"/>
+              <!-- 9 AM -->
+              <circle class="chart-node" data-time="9 AM" cx="290" cy="180" r="6" fill="#4D9948"/>
+              <!-- 12 PM -->
+              <circle class="chart-node active" data-time="12 PM" cx="450" cy="30" r="9" fill="#E9BD3F" stroke="#123C29" stroke-width="3"/>
+              <!-- 3 PM -->
+              <circle class="chart-node" data-time="3 PM" cx="610" cy="110" r="6" fill="#4D9948"/>
+              <!-- 6 PM -->
+              <circle class="chart-node" data-time="6 PM" cx="720" cy="195" r="6" fill="#4D9948"/>
+              <!-- 9 PM -->
+              <circle class="chart-node" data-time="9 PM" cx="810" cy="218" r="6" fill="#4D9948"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Interactive Timeline Slots -->
+        <div class="h2-timeline-slots">
+          <button class="h2-time-slot" data-time="6 AM">
+            <span class="slot-time">6 AM</span>
+            <span class="slot-label">Breakfast</span>
+            <span class="slot-status">Solar Generation Begins</span>
+          </button>
+          <button class="h2-time-slot" data-time="9 AM">
+            <span class="slot-time">9 AM</span>
+            <span class="slot-label">Work From Home</span>
+            <span class="slot-status">Energy Production Builds</span>
+          </button>
+          <button class="h2-time-slot active" data-time="12 PM">
+            <span class="slot-time">12 PM</span>
+            <span class="slot-label">Cooling</span>
+            <span class="slot-status">Peak Solar Generation</span>
+          </button>
+          <button class="h2-time-slot" data-time="3 PM">
+            <span class="slot-time">3 PM</span>
+            <span class="slot-label">Appliances</span>
+            <span class="slot-status">Direct Household Power</span>
+          </button>
+          <button class="h2-time-slot" data-time="6 PM">
+            <span class="slot-time">6 PM</span>
+            <span class="slot-label">Evening Living</span>
+            <span class="slot-status">Transition to Saved/Grid</span>
+          </button>
+          <button class="h2-time-slot" data-time="9 PM">
+            <span class="slot-time">9 PM</span>
+            <span class="slot-label">Night Living</span>
+            <span class="slot-status">Grid / Battery Backup</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 04 — THE HOME ENERGY PORTRAIT (Split-screen Editorial) ============ -->
+  <section class="h2-section h2-lifestyle-section" id="lifestyle">
+    <div class="container h2-portrait-grid">
+      <div class="h2-portrait-media" data-reveal>
+        <div class="h2-image-frame">
+          <img src="assets/images/home2-interior.jpg" alt="Interior view of a modern sunlit architectural living space" loading="lazy">
+          <div class="h2-frame-caption">RESIDENTIAL VILLA / INTERIOR ATMOSPHERE</div>
+        </div>
+      </div>
+
+      <div class="h2-portrait-content" data-reveal>
+        <span class="h2-section-label">03 / LIFESTYLE ALIGNMENT</span>
+        <h2 class="h2-editorial-heading">
+          Energy Should<br>
+          <span class="h2-highlight">Fit Your Life.</span>
+        </h2>
+        <p class="h2-portrait-sub">Instead of altering your family's routine around utility costs, design your energy infrastructure to quietly elevate every room.</p>
+
+        <div class="h2-scenarios-list">
+          <div class="h2-scenario-row">
+            <div class="h2-scenario-tag">MORNING</div>
+            <div class="h2-scenario-body">
+              <h4>Kitchen + Morning Routine</h4>
+              <p>Espresso machines, high-efficiency breakfast appliances, and warm natural morning illumination.</p>
+            </div>
+            <span class="h2-scenario-stat">0.9 kW</span>
+          </div>
+
+          <div class="h2-scenario-row">
+            <div class="h2-scenario-tag">AFTERNOON</div>
+            <div class="h2-scenario-body">
+              <h4>Home Office + Climate Control</h4>
+              <p>Continuous cooling, workstations, high-speed routing, and swimming pool filtration at peak solar hours.</p>
+            </div>
+            <span class="h2-scenario-stat">3.8 kW</span>
+          </div>
+
+          <div class="h2-scenario-row">
+            <div class="h2-scenario-tag">EVENING</div>
+            <div class="h2-scenario-body">
+              <h4>Architectural Lighting + Living</h4>
+              <p>Ambient interior LED scenes, media systems, and family evening relaxation without tariff anxiety.</p>
+            </div>
+            <span class="h2-scenario-stat">1.4 kW</span>
+          </div>
+
+          <div class="h2-scenario-row">
+            <div class="h2-scenario-tag">NIGHT</div>
+            <div class="h2-scenario-body">
+              <h4>Smart Grid / Battery Resilience</h4>
+              <p>Uninterrupted essential power protection ensuring peaceful night-time security and comfort.</p>
+            </div>
+            <span class="h2-scenario-stat">0.5 kW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 — ROOFTOP POTENTIAL (Interactive Roof Analysis) ============ -->
+  <section class="h2-section h2-potential-section" id="roof-potential">
+    <div class="container">
+      <div class="h2-section-header" data-reveal>
+        <span class="h2-section-label">04 / ARCHITECTURAL ANALYSIS</span>
+        <h2 class="h2-editorial-heading">
+          Discover What<br>
+          <span class="h2-highlight">Your Roof Can Do.</span>
+        </h2>
+        <p class="h2-section-desc">Every architectural layout offers unique solar orientation. Explore an example rooftop potential assessment below.</p>
+      </div>
+
+      <div class="h2-roof-analysis-grid" data-reveal>
+        <!-- Overlay Graphic Container -->
+        <div class="h2-roof-canvas-wrapper">
+          <img src="assets/images/home2-roof-plan.jpg" alt="Top-down architectural view of a residential roof layout" loading="lazy">
+          
+          <!-- Interactive SVG Blueprint Overlay -->
+          <svg class="h2-roof-overlay" viewBox="0 0 1000 562" preserveAspectRatio="none">
+            <!-- Roof Boundary Polygon -->
+            <polygon points="270,180 730,180 730,380 270,380" fill="rgba(77,153,72,0.12)" stroke="#4D9948" stroke-width="2" stroke-dasharray="6 4"/>
+            
+            <!-- Panel Grid Rectangles -->
+            <rect x="310" y="200" width="380" height="140" fill="rgba(233,189,63,0.18)" stroke="#E9BD3F" stroke-width="2"/>
+            
+            <!-- Technical Dimension Lines -->
+            <line x1="270" y1="160" x2="730" y2="160" stroke="#4D9948" stroke-width="1.5"/>
+            <circle cx="270" cy="160" r="3" fill="#4D9948"/>
+            <circle cx="730" cy="160" r="3" fill="#4D9948"/>
+            <text x="500" y="152" fill="#4D9948" font-size="13" font-weight="700" text-anchor="middle">AVAILABLE LENGTH: 14.6 M</text>
+
+            <line x1="750" y1="180" x2="750" y2="380" stroke="#4D9948" stroke-width="1.5"/>
+            <circle cx="750" cy="180" r="3" fill="#4D9948"/>
+            <circle cx="750" cy="380" r="3" fill="#4D9948"/>
+            <text x="762" y="285" fill="#4D9948" font-size="13" font-weight="700" text-anchor="start">WIDTH: 6.4 M</text>
+
+            <!-- Compass Rosette Marker -->
+            <g transform="translate(180, 280)">
+              <circle cx="0" cy="0" r="28" fill="rgba(18,60,41,0.85)" stroke="#4D9948" stroke-width="1.5"/>
+              <text x="0" y="-10" fill="#E9BD3F" font-size="10" font-weight="800" text-anchor="middle">N</text>
+              <text x="12" y="4" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">E</text>
+              <text x="-12" y="4" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">W</text>
+              <text x="0" y="18" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">S</text>
+              <path d="M0 -7 L4 2 L0 0 L-4 2 Z" fill="#E9BD3F"/>
+            </g>
+
+            <!-- Target Pins -->
+            <g class="h2-target-pin" transform="translate(500, 270)">
+              <circle cx="0" cy="0" r="16" fill="rgba(233,189,63,0.3)" class="ping-circle"/>
+              <circle cx="0" cy="0" r="5" fill="#E9BD3F"/>
+            </g>
+          </svg>
+          <div class="h2-canvas-tag">OPTIMAL SOLAR AZIMUTH: 180° SOUTH</div>
+        </div>
+
+        <!-- Metrics Panel Side -->
+        <div class="h2-analysis-panel">
+          <div class="h2-panel-header">
+            <span class="h2-panel-badge">EXAMPLE ROOF ANALYSIS</span>
+            <h3>YOUR ROOF HAS POTENTIAL</h3>
+            <p>Based on typical residential roof layouts in major Indian urban regions.</p>
+          </div>
+
+          <div class="h2-metrics-list">
+            <div class="h2-metric-item">
+              <div class="h2-metric-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 3v18"/></svg>
+              </div>
+              <div class="h2-metric-data">
+                <span class="metric-label">Available Roof Area</span>
+                <span class="metric-value">78 m² <small>(840 sq ft)</small></span>
+              </div>
+            </div>
+
+            <div class="h2-metric-item">
+              <div class="h2-metric-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42"/></svg>
+              </div>
+              <div class="h2-metric-data">
+                <span class="metric-label">Solar Exposure Rating</span>
+                <span class="metric-value text-accent">94% <small>Unshaded Peak Hours</small></span>
+              </div>
+            </div>
+
+            <div class="h2-metric-item">
+              <div class="h2-metric-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div class="h2-metric-data">
+                <span class="metric-label">Potential Panel Count</span>
+                <span class="metric-value">18 – 22 High-Efficiency Panels</span>
+              </div>
+            </div>
+
+            <div class="h2-metric-item">
+              <div class="h2-metric-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="h2-metric-data">
+                <span class="metric-label">Estimated System Capacity</span>
+                <span class="metric-value">5 kW – 6 kW System</span>
+              </div>
+            </div>
+
+            <div class="h2-metric-item highlight">
+              <div class="h2-metric-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="h2-metric-data">
+                <span class="metric-label">Estimated Annual Output</span>
+                <span class="metric-value">7,200 – 8,500 kWh / year</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="h2-panel-footer">
+            <p class="h2-panel-note">*Illustrative parameters. Actual generation depends on site angle, shade, location, and equipment selection.</p>
+            <a href="#final-invitation" class="btn btn-primary btn-block">Analyze My Roof <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 06 — SOLAR AS AN ASSET (25-Year Timeline) ============ -->
+  <section class="h2-section h2-asset-section" id="financial-timeline">
+    <div class="container">
+      <div class="h2-section-header" data-reveal>
+        <span class="h2-section-label">05 / FINANCIAL HORIZON</span>
+        <h2 class="h2-editorial-heading">
+          Think Beyond<br>
+          <span class="h2-highlight">The Monthly Bill.</span>
+        </h2>
+        <p class="h2-section-desc">Solar is not an ongoing utility expense. It is a high-yielding long-term infrastructure asset that appreciates over time.</p>
+      </div>
+
+      <!-- 25 Year Interactive Timeline -->
+      <div class="h2-horizon-timeline" data-reveal>
+        <div class="h2-timeline-track">
+          <div class="h2-track-line">
+            <div class="h2-track-progress"></div>
+          </div>
+
+          <div class="h2-horizon-nodes">
+            <!-- Year 0 -->
+            <div class="h2-horizon-card active" data-year="0">
+              <div class="h2-card-node">
+                <span class="h2-year-tag">YEAR 0</span>
+              </div>
+              <div class="h2-card-body">
+                <h4>Installation &amp; Activation</h4>
+                <p>Capital investment in Tier-1 solar modules &amp; inverter system. Instant grid offset begins.</p>
+                <div class="h2-card-stat">Day 1 Energy Production</div>
+              </div>
+            </div>
+
+            <!-- Year 5 -->
+            <div class="h2-horizon-card" data-year="5">
+              <div class="h2-card-node">
+                <span class="h2-year-tag">YEAR 5</span>
+              </div>
+              <div class="h2-card-body">
+                <h4>Capital Payback Achieved</h4>
+                <p>Cumulative utility savings fully recover original equipment and installation outlay.</p>
+                <div class="h2-card-stat">100% Breakeven Point</div>
+              </div>
+            </div>
+
+            <!-- Year 10 -->
+            <div class="h2-horizon-card" data-year="10">
+              <div class="h2-card-node">
+                <span class="h2-year-tag">YEAR 10</span>
+              </div>
+              <div class="h2-card-body">
+                <h4>Pure Financial Dividend</h4>
+                <p>Every kilowatt generated is net-positive financial yield insulating your family from inflation.</p>
+                <div class="h2-card-stat">2x Return On Asset</div>
+              </div>
+            </div>
+
+            <!-- Year 15 -->
+            <div class="h2-horizon-card" data-year="15">
+              <div class="h2-card-node">
+                <span class="h2-year-tag">YEAR 15</span>
+              </div>
+              <div class="h2-card-body">
+                <h4>Home Value Elevation</h4>
+                <p>Independent energy infrastructure boosts property market value and architectural appeal.</p>
+                <div class="h2-card-stat">+12-15% Villa Equity</div>
+              </div>
+            </div>
+
+            <!-- Year 20 -->
+            <div class="h2-horizon-card" data-year="20">
+              <div class="h2-card-node">
+                <span class="h2-year-tag">YEAR 20</span>
+              </div>
+              <div class="h2-card-body">
+                <h4>Energy Independence</h4>
+                <p>Complete peace of mind over two decades of rising utility tariff rate increases.</p>
+                <div class="h2-card-stat">Tariff Immunity</div>
+              </div>
+            </div>
+
+            <!-- Year 25 -->
+            <div class="h2-horizon-card" data-year="25">
+              <div class="h2-card-node">
+                <span class="h2-year-tag">YEAR 25</span>
+              </div>
+              <div class="h2-card-body">
+                <h4>Performance Guarantee</h4>
+                <p>Linear performance warranty guarantees at least 80% original rated power output.</p>
+                <div class="h2-card-stat">80%+ Warranted Yield</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="h2-asset-disclaimer">
+          <p>Illustrative projections only. Actual generation, savings and system life depend on location, usage, equipment and installation conditions.</p>
+          <a href="#final-invitation" class="btn btn-yellow">Calculate Your Potential <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 07 — ARCHITECTURAL PROJECT STORY (Single Case Study) ============ -->
+  <section class="h2-section h2-story-section" id="project-story">
+    <div class="container">
+      <div class="h2-section-header" data-reveal>
+        <span class="h2-section-label">06 / ARCHITECTURAL INTEGRATION</span>
+        <h2 class="h2-editorial-heading">
+          Real Homes.<br>
+          <span class="h2-highlight">Real Impact.</span>
+        </h2>
+      </div>
+
+      <div class="h2-single-story-card" data-reveal>
+        <div class="h2-story-media">
+          <img src="assets/images/home2-project-story.jpg" alt="Architectural villa with rooftop solar installation at twilight" loading="lazy">
+          
+          <div class="h2-story-overlay-index">
+            <span class="h2-index-badge">PROJECT 014</span>
+            <span class="h2-index-type">RESIDENTIAL VILLA</span>
+            <span class="h2-index-cap">5 KW MONO PERC</span>
+            <span class="h2-index-site">ROOFTOP SYSTEM</span>
+          </div>
+        </div>
+
+        <div class="h2-story-content">
+          <div class="h2-story-quotes">
+            <h3>"Designed around the architecture."</h3>
+            <h3>"Installed around the lifestyle."</h3>
+            <h3>"Built for long-term energy generation."</h3>
+          </div>
+
+          <div class="h2-story-details">
+            <div class="h2-story-meta-grid">
+              <div class="meta-col">
+                <span class="meta-label">Location</span>
+                <span class="meta-val">Bangalore, Karnataka</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">System Capacity</span>
+                <span class="meta-val">5.4 kW Monocrystalline</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">Property Type</span>
+                <span class="meta-val">Independent Luxury Villa</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">Est. Generation</span>
+                <span class="meta-val">7,200 kWh / year</span>
+              </div>
+            </div>
+
+            <div class="h2-story-action">
+              <a href="index.html#projects" class="btn btn-outline">Explore All Projects <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 08 — THE FINAL INVITATION ============ -->
+  <section class="h2-closing-section" id="final-invitation">
+    <div class="h2-closing-media">
+      <img src="assets/images/home2-closing-sunset.jpg" alt="Panoramic rooftop solar installation on a modern home at sunset" loading="lazy">
+      <div class="h2-closing-scrim"></div>
+    </div>
+
+    <div class="container h2-closing-container" data-reveal>
+      <span class="h2-closing-tag">THE ENERGY JOURNEY BEGINS HERE</span>
+      <h2 class="h2-closing-title">
+        What Could<br>
+        Your Roof Become?
+      </h2>
+      <p class="h2-closing-desc">Start with a free assessment and discover the solar potential of your home.</p>
+
+      <div class="h2-closing-actions">
+        <a href="index.html#contact" class="btn btn-primary h2-btn-green btn-lg">Analyze My Roof <span class="arrow">→</span></a>
+        <a href="index.html#contact" class="btn btn-secondary h2-btn-light">Book Free Assessment</a>
+      </div>
+
+      <div class="h2-closing-footer-tag">
+        ROOFTOP SOLAR / RESIDENTIAL ENERGY / 2026
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (Minimal Editorial Footer) ============ -->
+<footer class="site-footer h2-footer">
+  <div class="container h2-footer-top">
+    <div class="h2-footer-headline">
+      MAKE YOUR ROOF WORK SMARTER.
+    </div>
+  </div>
+
+  <div class="container footer-grid h2-footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="brand">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+          <circle cx="17" cy="17" r="8" fill="#E9BD3F"/>
+          <g stroke="#69C34B" stroke-width="2.4" stroke-linecap="round">
+            <line x1="17" y1="1" x2="17" y2="6"/><line x1="17" y1="28" x2="17" y2="33"/>
+            <line x1="1" y1="17" x2="6" y2="17"/><line x1="28" y1="17" x2="33" y2="17"/>
+          </g>
+        </svg>
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+      </div>
+      <p class="footer-desc">Architectural rooftop solar solutions designed to convert personal property into long-term clean energy infrastructure.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home (Version 1)</a>
+      <a href="home2.html">Home 2 (Journal)</a>
+      <a href="#energy-system">Energy System</a>
+      <a href="#roof-potential">Roof Analysis</a>
+      <a href="#financial-timeline">Savings Horizon</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="index.html#about">About SolarBright</a>
+      <a href="#project-story">Featured Projects</a>
+      <a href="index.html#products">Services &amp; Tier-1 Tech</a>
+      <a href="index.html#process">How It Works</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="index.html#contact">FAQ</a>
+      <a href="index.html#contact">Contact Engineering</a>
+      <a href="index.html#trust">25-Yr Performance Warranty</a>
+      <a href="index.html#contact">Maintenance Care</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SolarBright Energy Solutions. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-social" aria-label="Social links">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="#" aria-label="YouTube">YT</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="h2-mobile-sticky-bar" id="mobileStickyBar">
+  <div class="h2-sticky-info">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+    <span>Free Site Assessment</span>
+  </div>
+  <a href="#roof-potential" class="btn btn-yellow btn-header">Book →</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

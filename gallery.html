@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolarBright — Rooftop Solar Installation Gallery</title>
+<meta name="description" content="Explore real residential homes, villas, shops, and small office solar panel installations executed by SolarBright across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="light" class="page-gallery">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header gl-header" id="siteHeader">
+  <div class="header-inner gl-header-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="8" fill="#EBC247"/>
+        <g stroke="#4B9847" stroke-width="2.4" stroke-linecap="round">
+          <line x1="17" y1="1" x2="17" y2="6"/>
+          <line x1="17" y1="28" x2="17" y2="33"/>
+          <line x1="1" y1="17" x2="6" y2="17"/>
+          <line x1="28" y1="17" x2="33" y2="17"/>
+        </g>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+        <span class="brand-tag">Project Gallery</span>
+      </span>
+    </a>
+
+    <nav class="main-nav gl-nav" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home 1</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="plans.html" class="nav-link">Plans &amp; Pricing</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary btn-header gl-btn-header">Book Assessment →</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html" class="mobile-link">Home 1</a>
+    <a href="home2.html" class="mobile-link">Home 2 (Journal)</a>
+    <a href="about.html" class="mobile-link">About Us</a>
+    <a href="products.html" class="mobile-link">Solar Products</a>
+    <a href="services.html" class="mobile-link">Services Studio</a>
+    <a href="plans.html" class="mobile-link">Plans &amp; Pricing</a>
+    <a href="gallery.html" class="mobile-link text-accent">Project Gallery</a>
+  </nav>
+  <a href="index.html#contact" class="btn btn-primary btn-block">Book Assessment →</a>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+<main id="gallery-main">
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="gl-hero">
+    <div class="container gl-hero-container">
+      <span class="gl-tech-label">REAL INSTALLATIONS GALLERY</span>
+      <h1 class="gl-hero-heading">
+        Solar Projects<br>
+        On Real Homes &amp; Properties.
+      </h1>
+      <p class="gl-hero-sub">Explore our portfolio of completed residential rooftop arrays, luxury villa installations, commercial shopfronts, and precision electrical engineering across India.</p>
+
+      <!-- Category Filter Pills -->
+      <div class="gl-filter-bar">
+        <button class="gl-filter-btn active" data-filter="all">All Projects (24)</button>
+        <button class="gl-filter-btn" data-filter="residential">Residential Villas</button>
+        <button class="gl-filter-btn" data-filter="commercial">Shops &amp; Offices</button>
+        <button class="gl-filter-btn" data-filter="engineering">Engineering Closeups</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY GRID (4 COLUMNS × 6 ROWS = 24 IMAGES) ============ -->
+  <section class="gl-section gl-grid-section">
+    <div class="container">
+      <div class="gl-gallery-grid" id="galleryGrid">
+        
+        <!-- Row 1 (Item 01 - 04) -->
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-project-story.jpg" alt="5.4 kW Rooftop Villa Solar System in Bangalore" loading="lazy">
+            <span class="gl-badge">5.4 KW VILLA / BANGALORE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Modern Villa Rooftop Array</h3>
+            <p>5.4 kW Mono-PERC system with high-wind anodized aluminum racking.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-hero-roof.jpg" alt="8 kW Luxury Villa Rooftop Installation" loading="lazy">
+            <span class="gl-badge">8 KW VILLA / HYDERABAD</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Luxury Estate Solar Array</h3>
+            <p>8 kW high-output array powering central HVAC and pool filtration.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/products-inverter-closeup.jpg" alt="Smart Inverter Wall Installation" loading="lazy">
+            <span class="gl-badge">SMART INVERTER / CHENNAI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Smart Inverter &amp; WiFi Logger</h3>
+            <p>Wall-mounted dual-MPPT inverter with live mobile app dashboard.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/products-panel-closeup.jpg" alt="Monocrystalline PV Cell Macro Texture" loading="lazy">
+            <span class="gl-badge">TIER-1 PV MODULE / PUNE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Monocrystalline Cell Quality</h3>
+            <p>High-efficiency anti-reflective silicon cells with 25-yr warranty.</p>
+          </div>
+        </div>
+
+        <!-- Row 2 (Item 05 - 08) -->
+        <div class="gl-card" data-category="commercial">
+          <div class="gl-card-media">
+            <img src="assets/images/subsidy-building.svg" alt="7.5 kW Commercial Shop Solar Installation" loading="lazy">
+            <span class="gl-badge">7.5 KW SHOP / MUMBAI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Commercial Retail Shopfront</h3>
+            <p>7.5 kW daytime grid-tied array offsetting peak commercial tariff.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/about-engineering-detail.jpg" alt="Conduit Routing & Protection Box" loading="lazy">
+            <span class="gl-badge">WIRING &amp; CONDUITS / KOCHI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Neat Electrical Conduit Routing</h3>
+            <p>UV-resistant conduit trunking aligned to building architectural lines.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/about-quality-inspection.jpg" alt="Technician Multimeter Testing Audit" loading="lazy">
+            <span class="gl-badge">QUALITY AUDIT / DELHI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Electrical Safety Testing</h3>
+            <p>Digital multimeter testing verifying earthing pit resistance &amp; SPD protection.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/products-hero-cutaway.jpg" alt="3.3 kW Independent Home Installation" loading="lazy">
+            <span class="gl-badge">3.3 KW HOME / GOA</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Suburban Home Rooftop</h3>
+            <p>3.3 kW rooftop installation reducing monthly power bill by 85%.</p>
+          </div>
+        </div>
+
+        <!-- Row 3 (Item 09 - 12) -->
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-closing-sunset.jpg" alt="Sunset Panoramic Solar Rooftop View" loading="lazy">
+            <span class="gl-badge">5 KW VILLA / BANGALORE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Sunset Rooftop Solar Panorama</h3>
+            <p>5 kW residential array providing continuous clean energy independence.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-roof-plan.jpg" alt="Architectural CAD Roof Blueprint" loading="lazy">
+            <span class="gl-badge">CAD BLUEPRINT / HYDERABAD</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Technical Blueprint CAD Plan</h3>
+            <p>3D solar placement modeling ensuring zero shading and roof safety.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/about-hero-portrait.jpg" alt="Solar Engineer Technical Audit" loading="lazy">
+            <span class="gl-badge">SITE INSPECTION / CHENNAI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Engineer Rooftop Audit</h3>
+            <p>On-site roof structural assessment prior to hardware installation.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-interior.jpg" alt="Residential Interior Power Usage" loading="lazy">
+            <span class="gl-badge">3 KW HOME / PUNE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Sunlit Residence Clean Power</h3>
+            <p>Complete household appliances powered by direct daytime solar energy.</p>
+          </div>
+        </div>
+
+        <!-- Row 4 (Item 13 - 16) -->
+        <div class="gl-card" data-category="commercial">
+          <div class="gl-card-media">
+            <img src="assets/images/about-team-engineer.jpg" alt="10 kW Office Workstation Array" loading="lazy">
+            <span class="gl-badge">10 KW OFFICE / MUMBAI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Small Office Workstation Array</h3>
+            <p>10 kW 3-phase system powering workstation computers and central air conditioning.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/project-bangalore.svg" alt="Bangalore Villa Rooftop System" loading="lazy">
+            <span class="gl-badge">5 KW VILLA / BANGALORE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Bangalore Suburban Villa</h3>
+            <p>5 kW grid-tied installation with DISCOM bi-directional net metering.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/project-chennai.svg" alt="Chennai Coastal Rooftop Solar" loading="lazy">
+            <span class="gl-badge">6 KW RESIDENCE / CHENNAI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Coastal Weatherproof Array</h3>
+            <p>Anodized aluminum structure engineered against humid coastal salt air.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="commercial">
+          <div class="gl-card-media">
+            <img src="assets/images/project-hyderabad.svg" alt="Hyderabad Commercial Shop System" loading="lazy">
+            <span class="gl-badge">7.5 KW SHOP / HYDERABAD</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Boutique Retail Commercial Array</h3>
+            <p>7.5 kW system supporting daytime display lighting and refrigeration.</p>
+          </div>
+        </div>
+
+        <!-- Row 5 (Item 17 - 20) -->
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/project-pune.svg" alt="Pune Independent House Solar" loading="lazy">
+            <span class="gl-badge">3 KW HOME / PUNE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Independent Residence Solar</h3>
+            <p>3 kW rooftop installation yielding 12 kWh per day average output.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/about-team-lead.jpg" alt="Lead Solar Engineer Inspection" loading="lazy">
+            <span class="gl-badge">ENGINEERING LEAD / DELHI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Engineering Quality Control</h3>
+            <p>Final commissioning inspection by SolarBright lead system designer.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-project-story.jpg" alt="Bangalore Twilight Villa Solar" loading="lazy">
+            <span class="gl-badge">5.4 KW VILLA / BANGALORE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Twilight Architectural View</h3>
+            <p>Seamless rooftop module integration matching villa roof lines.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/products-inverter-closeup.jpg" alt="Wall Inverter Setup" loading="lazy">
+            <span class="gl-badge">INVERTER SETUP / KOCHI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Concealed Wall Mounting</h3>
+            <p>IP65 outdoor-rated inverter mounting with integrated surge arrester.</p>
+          </div>
+        </div>
+
+        <!-- Row 6 (Item 21 - 24) -->
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-hero-roof.jpg" alt="Hyderabad Luxury Villa Array" loading="lazy">
+            <span class="gl-badge">8 KW ESTATE / HYDERABAD</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Estate Rooftop Array</h3>
+            <p>8 kW high-yield solar PV system generating 32 kWh per day.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="commercial">
+          <div class="gl-card-media">
+            <img src="assets/images/subsidy-building.svg" alt="Commercial Office Building Solar" loading="lazy">
+            <span class="gl-badge">10 KW OFFICE / MUMBAI</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Commercial Office Rooftop</h3>
+            <p>10 kW corporate installation with 3-phase grid net metering.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="engineering">
+          <div class="gl-card-media">
+            <img src="assets/images/products-panel-closeup.jpg" alt="Monocrystalline PV Panel Texture" loading="lazy">
+            <span class="gl-badge">MONO-PERC CELL / GOA</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>High Efficiency Monocrystalline</h3>
+            <p>PERC cell technology ensuring high yield even during overcast weather.</p>
+          </div>
+        </div>
+
+        <div class="gl-card" data-category="residential">
+          <div class="gl-card-media">
+            <img src="assets/images/home2-closing-sunset.jpg" alt="Rooftop Sunset Solar Panorama" loading="lazy">
+            <span class="gl-badge">5 KW VILLA / BANGALORE</span>
+          </div>
+          <div class="gl-card-info">
+            <h3>Completed Villa Project</h3>
+            <p>25-year guaranteed performance rooftop installation.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CENTERED 'VIEW MORE' BUTTON -->
+      <div class="gl-view-more-container">
+        <button class="btn btn-primary gl-btn-view-more" id="viewMoreBtn">
+          View More Projects <span class="arrow">↓</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer gl-footer">
+  <div class="container gl-footer-top">
+    <div class="gl-footer-headline">
+      EXPLORE REAL ROOFTOP SOLAR PROJECTS ACROSS INDIA.
+    </div>
+  </div>
+
+  <div class="container footer-grid gl-footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="brand">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+          <circle cx="17" cy="17" r="8" fill="#EBC247"/>
+          <g stroke="#69C64E" stroke-width="2.4" stroke-linecap="round">
+            <line x1="17" y1="1" x2="17" y2="6"/><line x1="17" y1="28" x2="17" y2="33"/>
+            <line x1="1" y1="17" x2="6" y2="17"/><line x1="28" y1="17" x2="33" y2="17"/>
+          </g>
+        </svg>
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+      </div>
+      <p class="footer-desc">Portfolio of real residential homes, luxury villas, commercial shopfronts, and office rooftop solar panel installations executed by SolarBright engineers.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Project Categories</h4>
+      <a href="#galleryGrid">Residential Villas</a>
+      <a href="#galleryGrid">Commercial Shops</a>
+      <a href="#galleryGrid">Small Offices</a>
+      <a href="#galleryGrid">Engineering Closeups</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Home 1</a>
+      <a href="home2.html">Home 2 (Journal)</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Solar Products</a>
+      <a href="services.html">Services Studio</a>
+      <a href="plans.html">Plans &amp; Pricing</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="index.html#contact">Book Site Audit</a>
+      <a href="index.html#contact">Contact Engineering</a>
+      <a href="index.html#savings">Savings Calculator</a>
+      <a href="index.html#trust">25-Yr Performance Warranty</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SolarBright Energy Solutions. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-social" aria-label="Social links">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="#" aria-label="YouTube">YT</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="h2-mobile-sticky-bar" id="mobileStickyBar">
+  <div class="h2-sticky-info">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+    <span>Project Gallery</span>
+  </div>
+  <a href="index.html#contact" class="btn btn-yellow btn-header">Book Audit →</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

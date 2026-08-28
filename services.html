@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolarBright — Solar Services Studio &amp; Engineering Care</title>
+<meta name="description" content="Explore rooftop solar services at SolarBright: site assessments, custom system design, professional installation, existing system repairs, and 25-year maintenance care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="light" class="page-services">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header sv-header" id="siteHeader">
+  <div class="header-inner sv-header-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="8" fill="#EBC247"/>
+        <g stroke="#4B9847" stroke-width="2.4" stroke-linecap="round">
+          <line x1="17" y1="1" x2="17" y2="6"/>
+          <line x1="17" y1="28" x2="17" y2="33"/>
+          <line x1="1" y1="17" x2="6" y2="17"/>
+          <line x1="28" y1="17" x2="33" y2="17"/>
+        </g>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+        <span class="brand-tag">Services Studio</span>
+      </span>
+    </a>
+
+    <nav class="main-nav sv-nav" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home 1</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="products.html" class="nav-link">Solar Products</a>
+      <a href="services.html" class="nav-link active">Services Studio</a>
+      <a href="#index" class="nav-link">Service Index</a>
+      <a href="#consulting" class="nav-link">Audit</a>
+      <a href="#blueprint" class="nav-link">Design</a>
+      <a href="#existing" class="nav-link">Existing Systems</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="#request" class="btn btn-primary btn-header sv-btn-header">Find A Service →</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html" class="mobile-link">Home 1</a>
+    <a href="home2.html" class="mobile-link">Home 2 (Journal)</a>
+    <a href="about.html" class="mobile-link">About Us</a>
+    <a href="products.html" class="mobile-link">Solar Products</a>
+    <a href="services.html" class="mobile-link text-accent">Services Studio</a>
+    <a href="#index" class="mobile-link">Service Index</a>
+    <a href="#consulting" class="mobile-link">Consulting &amp; Audit</a>
+    <a href="#blueprint" class="mobile-link">System Design</a>
+    <a href="#existing" class="mobile-link">Existing Systems</a>
+    <a href="#maintenance" class="mobile-link">Maintenance Care</a>
+  </nav>
+  <a href="#request" class="btn btn-primary btn-block">Request Service →</a>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+<main id="services-main">
+
+  <!-- ============ SECTION 01 — SERVICE STUDIO INTRO (Hero) ============ -->
+  <section class="sv-hero">
+    <div class="container sv-hero-grid">
+      <div class="sv-hero-left" data-reveal>
+        <span class="sv-tech-label">SERVICES / ENERGY SYSTEMS</span>
+        <h1 class="sv-hero-heading">
+          Solar Service<br>
+          Built Around<br>
+          <span class="sv-highlight">Real Properties.</span>
+        </h1>
+        <p class="sv-hero-sub">From technical site assessment to long-term system support, our services are designed around the actual conditions of your property and energy system.</p>
+        
+        <div class="sv-hero-ctas">
+          <a href="#index" class="btn btn-primary sv-btn-green">Find A Service <span class="arrow">→</span></a>
+          <a href="index.html#contact" class="btn btn-secondary sv-btn-light">Talk To Our Team</a>
+        </div>
+
+        <div class="sv-hero-meta">
+          <span>ROOFTOP</span> • <span>ELECTRICAL</span> • <span>ENERGY MAINTENANCE</span>
+        </div>
+      </div>
+
+      <div class="sv-hero-right" data-reveal>
+        <div class="sv-hero-media-frame">
+          <img src="assets/images/about-hero-portrait.jpg" alt="Solar technician inspecting rooftop installation" loading="eager">
+          <div class="sv-media-tag">ENGINEERING SERVICE STUDIO / ROOFTOP DIAGNOSTICS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 — SERVICE INDEX (Interactive Vertical Navigation) ============ -->
+  <section class="sv-section sv-index-section" id="index">
+    <div class="container">
+      <div class="sv-section-header" data-reveal>
+        <span class="sv-section-label">01 / SERVICE CATALOGUE</span>
+        <h2 class="sv-editorial-heading">
+          What Do You<br>
+          <span class="sv-highlight">Need Help With?</span>
+        </h2>
+        <p class="sv-section-desc">Select a service category below to view detailed scope, deliverables, and audience suitability.</p>
+      </div>
+
+      <div class="sv-index-list" data-reveal>
+        <!-- Service 01 -->
+        <div class="sv-index-row active" data-service="audit">
+          <div class="sv-row-header">
+            <span class="sv-row-num">01</span>
+            <div class="sv-row-title-block">
+              <h3>SOLAR SITE ASSESSMENT</h3>
+              <p>Structural roof evaluation, shading analysis &amp; household electrical load audit.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>We evaluate your property's physical orientation, structural integrity, electrical switchgear, and tree shading before recommending any equipment.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: Homeowners &amp; Villas</span>
+                  <span class="sv-tag">Deliverable: Custom Audit Report</span>
+                </div>
+                <a href="#consulting" class="btn btn-outline btn-sm">Explore Site Assessment →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/about-quality-inspection.jpg" alt="Solar site audit" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 02 -->
+        <div class="sv-index-row" data-service="design">
+          <div class="sv-row-header">
+            <span class="sv-row-num">02</span>
+            <div class="sv-row-title-block">
+              <h3>SYSTEM DESIGN &amp; ENGINEERING</h3>
+              <p>Custom CAD schematics, panel placement maps &amp; string inverter sizing.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>Architectural engineering of solar PV arrays tailored to building aesthetics, roof load limits, and future battery expansion.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: New Installations</span>
+                  <span class="sv-tag">Deliverable: 3D CAD Blueprint &amp; Single-Line Diagram</span>
+                </div>
+                <a href="#blueprint" class="btn btn-outline btn-sm">Explore System Design →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/home2-roof-plan.jpg" alt="Solar CAD design" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 03 -->
+        <div class="sv-index-row" data-service="install">
+          <div class="sv-row-header">
+            <span class="sv-row-num">03</span>
+            <div class="sv-row-title-block">
+              <h3>SOLAR INSTALLATION</h3>
+              <p>Precision structural racking, DC cabling &amp; wall-mounted inverter installation.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>Turnkey execution by certified electrical technicians using weather-proof anodized racking and heavy-duty conduit routing.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: Home, Shop &amp; Office</span>
+                  <span class="sv-tag">Deliverable: Fully Commissioned Solar System</span>
+                </div>
+                <a href="#installation" class="btn btn-outline btn-sm">Explore Installation Scope →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/products-hero-cutaway.jpg" alt="Rooftop solar installation" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 04 -->
+        <div class="sv-index-row" data-service="grid">
+          <div class="sv-row-header">
+            <span class="sv-row-num">04</span>
+            <div class="sv-row-title-block">
+              <h3>ELECTRICAL &amp; GRID SUPPORT</h3>
+              <p>Bi-directional net metering approvals, earthing pits &amp; DISCOM coordination.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>End-to-end management of utility grid interconnection, bi-directional net meter testing, and local electrical inspector compliance.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: Grid-Tied Solar</span>
+                  <span class="sv-tag">Deliverable: Net Meter Sanction &amp; Safety Certificate</span>
+                </div>
+                <a href="index.html#contact" class="btn btn-outline btn-sm">Inquire Grid Support →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/about-engineering-detail.jpg" alt="Electrical switchgear box" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 05 -->
+        <div class="sv-index-row" data-service="monitor">
+          <div class="sv-row-header">
+            <span class="sv-row-num">05</span>
+            <div class="sv-row-title-block">
+              <h3>SYSTEM MONITORING &amp; ANALYTICS</h3>
+              <p>IoT cloud connectivity, real-time generation tracking &amp; automated fault alerts.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>Configuration of smart inverter WiFi/4G data loggers connecting your solar output to iOS, Android, and web performance dashboards.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: Smart &amp; Advanced Tiers</span>
+                  <span class="sv-tag">Deliverable: App Setup &amp; Live Monitoring Access</span>
+                </div>
+                <a href="products.html#components" class="btn btn-outline btn-sm">View Monitoring Options →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/products-inverter-closeup.jpg" alt="Smart inverter monitoring" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 06 -->
+        <div class="sv-index-row" data-service="maint">
+          <div class="sv-row-header">
+            <span class="sv-row-num">06</span>
+            <div class="sv-row-title-block">
+              <h3>MAINTENANCE &amp; INSPECTION</h3>
+              <p>Scheduled thermal imaging, panel washing &amp; electrical contact tightness tests.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>Preventative health checks for rooftop PV arrays to preserve 25-year yield efficiency, prevent hot spots, and verify earthing integrity.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: New &amp; Existing Systems</span>
+                  <span class="sv-tag">Deliverable: Annual Maintenance Certificate</span>
+                </div>
+                <a href="#maintenance" class="btn btn-outline btn-sm">Explore Maintenance Care →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/home2-hero-roof.jpg" alt="Maintenance roof inspection" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 07 -->
+        <div class="sv-index-row" data-service="upgrade">
+          <div class="sv-row-header">
+            <span class="sv-row-num">07</span>
+            <div class="sv-row-title-block">
+              <h3>UPGRADE &amp; CAPACITY EXPANSION</h3>
+              <p>Adding solar panels, retrofitting battery storage &amp; upgrading string inverters.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>Expand existing rooftop installations to accommodate new EV chargers, additional air conditioning, or hybrid battery backup power.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: Growing Energy Needs</span>
+                  <span class="sv-tag">Deliverable: System Expansion Proposal</span>
+                </div>
+                <a href="#existing" class="btn btn-outline btn-sm">Explore Existing System Services →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/products-panel-closeup.jpg" alt="Panel expansion" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 08 -->
+        <div class="sv-index-row" data-service="support">
+          <div class="sv-row-header">
+            <span class="sv-row-num">08</span>
+            <div class="sv-row-title-block">
+              <h3>AFTER-SALES CARE &amp; WARRANTY</h3>
+              <p>25-year panel linear performance claim support &amp; priority technician dispatch.</p>
+            </div>
+            <span class="sv-row-arrow">→</span>
+          </div>
+          <div class="sv-row-content">
+            <div class="sv-content-inner">
+              <div class="sv-content-text">
+                <p>Dedicated customer support desk assisting with manufacturer warranty claims, inverter replacement, and site troubleshooting.</p>
+                <div class="sv-tags">
+                  <span class="sv-tag">Audience: All SolarBright Clients</span>
+                  <span class="sv-tag">Deliverable: Priority SLA Technical Support</span>
+                </div>
+                <a href="index.html#contact" class="btn btn-outline btn-sm">Contact Support Desk →</a>
+              </div>
+              <div class="sv-content-media">
+                <img src="assets/images/about-team-engineer.jpg" alt="Customer support specialist" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 — SITE & SYSTEM CONSULTING ============ -->
+  <section class="sv-section sv-consulting-section" id="consulting">
+    <div class="container">
+      <div class="sv-consulting-grid">
+        <div class="sv-consulting-media" data-reveal>
+          <img src="assets/images/about-quality-inspection.jpg" alt="Solar site consultation audit" loading="lazy">
+          <div class="sv-media-badge">01 / SITE &amp; SYSTEM CONSULTING</div>
+        </div>
+
+        <div class="sv-consulting-content" data-reveal>
+          <span class="sv-section-label">02 / TECHNICAL AUDIT</span>
+          <h2 class="sv-editorial-heading">
+            Start With<br>
+            <span class="sv-highlight">The Property.</span>
+          </h2>
+          <p class="sv-section-desc">Before recommending equipment or system capacity, the property itself needs to be evaluated by a qualified solar engineer.</p>
+
+          <div class="sv-audit-pillars">
+            <div class="pillar-item">
+              <span class="pillar-num">01</span>
+              <div>
+                <h4>ROOF AUDIT</h4>
+                <p>Structural stability, tilt angle, parapet wall shading, and usable layout space.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <span class="pillar-num">02</span>
+              <div>
+                <h4>ENERGY LOAD</h4>
+                <p>Historical billing data, daytime appliance usage, and peak consumption hours.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <span class="pillar-num">03</span>
+              <div>
+                <h4>ELECTRICAL SETUP</h4>
+                <p>Main circuit breaker panel capacity, phase balancing, and earthing status.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <span class="pillar-num">04</span>
+              <div>
+                <h4>ENVIRONMENT</h4>
+                <p>Surrounding tree growth, seasonal sun position, and dust exposure risks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sv-deliverable-box">
+            <strong>CUSTOMER DELIVERABLE:</strong> Property-specific assessment report and tailored sizing recommendation.
+          </div>
+
+          <a href="index.html#contact" class="btn btn-primary sv-btn-green">Request Property Assessment →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 04 — SOLAR SYSTEM DESIGN (Technical Blueprint) ============ -->
+  <section class="sv-section sv-blueprint-section" id="blueprint">
+    <div class="container">
+      <div class="sv-section-header light-text" data-reveal>
+        <span class="sv-section-label yellow">03 / SYSTEM DESIGN</span>
+        <h2 class="sv-editorial-heading white">
+          A Solar System<br>
+          <span class="sv-highlight-yellow">Should Fit The Building.</span>
+        </h2>
+        <p class="sv-section-desc white-desc">Engineering is not placing as many panels as possible. It is creating an array aligned with your roof's architecture.</p>
+      </div>
+
+      <div class="sv-blueprint-layout" data-reveal>
+        <div class="sv-blueprint-visual">
+          <img src="assets/images/home2-roof-plan.jpg" alt="Architectural CAD Blueprint Roof Plan" loading="lazy">
+          
+          <div class="bp-marker m-roof">ROOF OUTLINE</div>
+          <div class="bp-marker m-panels">OPTIMIZED PV ARRAY</div>
+          <div class="bp-marker m-inverter">SMART INVERTER LOCATION</div>
+          <div class="bp-marker m-conduit">CONDUIT ROUTE</div>
+        </div>
+
+        <div class="sv-blueprint-sidebar">
+          <h3>DESIGN SCOPE</h3>
+          
+          <ul class="bp-list">
+            <li><strong>01 System Configuration:</strong> Matching inverter specs to total panel wattage.</li>
+            <li><strong>02 Panel Arrangement:</strong> Maximizing solar exposure while retaining walking pathways.</li>
+            <li><strong>03 Hardware Selection:</strong> Tier-1 modules with optimized temperature coefficients.</li>
+            <li><strong>04 Electrical Planning:</strong> Calculating voltage drops and sizing DC fuses.</li>
+            <li><strong>05 Expansion Provision:</strong> Space planning for future battery storage additions.</li>
+          </ul>
+
+          <div class="bp-statement">
+            "The objective is not to place as many panels as possible. It is to create a system that fits the property."
+          </div>
+
+          <a href="index.html#contact" class="btn btn-yellow btn-block">Discuss A System Design →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 — PROFESSIONAL INSTALLATION ============ -->
+  <section class="sv-section sv-install-section" id="installation">
+    <div class="container">
+      <div class="sv-section-header" data-reveal>
+        <span class="sv-section-label">04 / INSTALLATION EXECUTION</span>
+        <h2 class="sv-editorial-heading">
+          Installed With<br>
+          <span class="sv-highlight">The Details In Mind.</span>
+        </h2>
+        <p class="sv-section-desc">A long-lasting solar system depends on installation discipline. We focus on mechanical security and clean electrical routing.</p>
+      </div>
+
+      <div class="sv-install-media-grid" data-reveal>
+        <div class="install-media-card">
+          <img src="assets/images/products-hero-cutaway.jpg" alt="Rooftop solar panel mounting" loading="lazy">
+          <span>01 / MECHANICAL RACKING</span>
+        </div>
+        <div class="install-media-card">
+          <img src="assets/images/about-engineering-detail.jpg" alt="Electrical conduit and inverter box" loading="lazy">
+          <span>02 / ELECTRICAL WIRING</span>
+        </div>
+        <div class="install-media-card">
+          <img src="assets/images/products-panel-closeup.jpg" alt="Solar panel array close-up" loading="lazy">
+          <span>03 / FINAL COMMISSIONING</span>
+        </div>
+      </div>
+
+      <div class="sv-install-specs-grid" data-reveal>
+        <div class="spec-col">
+          <h4>STRUCTURE</h4>
+          <p>Anodized aluminum mounting rails anchored to load-bearing roof beams rated for 150 km/h wind resilience.</p>
+        </div>
+        <div class="spec-col">
+          <h4>ELECTRICAL</h4>
+          <p>Dual-insulated solar DC cabling housed inside UV-resistant conduits with dedicated IP65 surge protection boxes.</p>
+        </div>
+        <div class="spec-col">
+          <h4>CABLE MANAGEMENT</h4>
+          <p>Organized, concealed wiring routing aligned cleanly against wall contours without loose rooftop dangling.</p>
+        </div>
+        <div class="spec-col">
+          <h4>FINISHING</h4>
+          <p>Weather-proof chemical sealant around all anchor points, dedicated chemical earthing pits, and complete cleanup.</p>
+        </div>
+      </div>
+
+      <div class="sv-install-action" data-reveal>
+        <a href="index.html#contact" class="btn btn-primary sv-btn-green">Discuss Installation Scope →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 06 — EXISTING SYSTEM SERVICES ============ -->
+  <section class="sv-section sv-existing-section" id="existing">
+    <div class="container">
+      <div class="sv-existing-panel" data-reveal>
+        <div class="sv-existing-header">
+          <span class="sv-section-label yellow">05 / EXISTING SOLAR OWNERS</span>
+          <h2 class="sv-editorial-heading white">
+            Already Have Solar?<br>
+            <span class="sv-highlight-yellow">We Can Help With That Too.</span>
+          </h2>
+          <p class="sv-section-desc white-desc">If your current solar installation is underperforming, tripping breakers, or lacks monitoring, our engineering team provides diagnostic &amp; repair services.</p>
+        </div>
+
+        <div class="sv-existing-grid">
+          <div class="sv-existing-list">
+            <div class="ex-card">
+              <h4>PERFORMANCE CHECK</h4>
+              <p>For systems producing significantly less electricity than original estimates.</p>
+            </div>
+
+            <div class="ex-card">
+              <h4>FAULT DIAGNOSIS</h4>
+              <p>Troubleshooting inverter error codes, tripped MCBs, and DC string ground faults.</p>
+            </div>
+
+            <div class="ex-card">
+              <h4>SYSTEM HEALTH INSPECTION</h4>
+              <p>Full health evaluation for aging, second-hand, or orphan solar installations.</p>
+            </div>
+
+            <div class="ex-card">
+              <h4>COMPONENT REPLACEMENT</h4>
+              <p>Replacement of failed string inverters, damaged panels, or broken isolator switches.</p>
+            </div>
+
+            <div class="ex-card">
+              <h4>MONITORING REVIEW</h4>
+              <p>Connecting legacy string inverters to modern mobile app performance monitoring.</p>
+            </div>
+
+            <div class="ex-card">
+              <h4>CAPACITY EXPANSION</h4>
+              <p>Adding extra solar panels or hybrid battery storage where technically supported.</p>
+            </div>
+          </div>
+
+          <div class="sv-existing-media">
+            <img src="assets/images/products-inverter-closeup.jpg" alt="Inverter fault diagnostics" loading="lazy">
+            <div class="ex-note">*Existing systems require an on-site inspection before service recommendations can be confirmed.</div>
+          </div>
+        </div>
+
+        <div class="sv-existing-cta">
+          <a href="index.html#contact" class="btn btn-yellow btn-lg">Request System Inspection →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 07 — MAINTENANCE & LONG-TERM CARE ============ -->
+  <section class="sv-section sv-maint-section" id="maintenance">
+    <div class="container">
+      <div class="sv-section-header" data-reveal>
+        <span class="sv-section-label">06 / AFTERCARE &amp; MAINTENANCE</span>
+        <h2 class="sv-editorial-heading">
+          Installation Is Not<br>
+          <span class="sv-highlight">The End Of The Service.</span>
+        </h2>
+        <p class="sv-section-desc">Ongoing technical inspection and scheduled maintenance help identify small issues before they impact 25-year energy yields.</p>
+      </div>
+
+      <div class="sv-lifecycle-container" data-reveal>
+        <div class="sv-lifecycle-visual">
+          <img src="assets/images/home2-hero-roof.jpg" alt="Rooftop solar lifecycle maintenance" loading="lazy">
+          
+          <div class="lc-point p1">
+            <span class="lc-dot"></span>
+            <span class="lc-text">INSPECT</span>
+          </div>
+
+          <div class="lc-point p2">
+            <span class="lc-dot"></span>
+            <span class="lc-text">CHECK</span>
+          </div>
+
+          <div class="lc-point p3">
+            <span class="lc-dot"></span>
+            <span class="lc-text">CLEAN</span>
+          </div>
+
+          <div class="lc-point p4">
+            <span class="lc-dot"></span>
+            <span class="lc-text">MONITOR</span>
+          </div>
+
+          <div class="lc-point p5">
+            <span class="lc-dot"></span>
+            <span class="lc-text">TEST</span>
+          </div>
+
+          <div class="lc-point p6">
+            <span class="lc-dot"></span>
+            <span class="lc-text">REVIEW</span>
+          </div>
+        </div>
+
+        <div class="sv-maint-options">
+          <div class="maint-opt-card">
+            <h4>Routine Inspection</h4>
+            <p>Bi-annual structural mounting check &amp; wire tightness audit.</p>
+          </div>
+
+          <div class="maint-opt-card">
+            <h4>Performance Review</h4>
+            <p>Annual yield comparison against local solar irradiance data.</p>
+          </div>
+
+          <div class="maint-opt-card">
+            <h4>Electrical Health Check</h4>
+            <p>Thermal camera imaging to identify hidden PV module hot spots.</p>
+          </div>
+
+          <div class="maint-opt-card">
+            <h4>Panel Washing Guidance</h4>
+            <p>Deionized water washing recommendations for heavy dust regions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-maint-action" data-reveal>
+        <a href="index.html#contact" class="btn btn-outline">Ask About Maintenance Care →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 08 — SERVICE FOR DIFFERENT PROPERTY TYPES ============ -->
+  <section class="sv-section sv-property-service" id="properties">
+    <div class="container">
+      <div class="sv-section-header" data-reveal>
+        <span class="sv-section-label">07 / PROPERTY TAILORING</span>
+        <h2 class="sv-editorial-heading">
+          The Service Changes<br>
+          <span class="sv-highlight">With The Property.</span>
+        </h2>
+        <p class="sv-section-desc">Residential villas, boutique shops, and commercial offices have distinct operational requirements.</p>
+      </div>
+
+      <div class="sv-prop-service-grid" data-reveal>
+        <!-- Home -->
+        <div class="sv-prop-story">
+          <div class="story-media">
+            <img src="assets/images/home2-interior.jpg" alt="Residential Home Solar Service" loading="lazy">
+            <span class="story-badge">RESIDENTIAL HOME</span>
+          </div>
+          <div class="story-body">
+            <h3>HOME &amp; VILLA</h3>
+            <div class="story-focus">
+              <strong>SERVICE FOCUS:</strong> Aesthetics, noise-free inverter mounting, family safety, and simple app access.
+            </div>
+            <ul class="story-list">
+              <li>Roof access and parapet safety checks</li>
+              <li>Concealed electrical conduit routing</li>
+              <li>Household electricity bill offset sizing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="sv-prop-story">
+          <div class="story-media">
+            <img src="assets/images/subsidy-building.svg" alt="Commercial Shop Solar Service" loading="lazy">
+            <span class="story-badge">BOUTIQUE RETAIL</span>
+          </div>
+          <div class="story-body">
+            <h3>SHOP</h3>
+            <div class="story-focus">
+              <strong>SERVICE FOCUS:</strong> Daytime energy offset, zero business disruption, and rapid net meter approval.
+            </div>
+            <ul class="story-list">
+              <li>Daytime lighting &amp; cooling load matching</li>
+              <li>Off-peak weekend installation execution</li>
+              <li>DISCOM commercial tariff alignment</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Small Office -->
+        <div class="sv-prop-story">
+          <div class="story-media">
+            <img src="assets/images/about-team-engineer.jpg" alt="Small Office Solar Service" loading="lazy">
+            <span class="story-badge">WORKSPACES</span>
+          </div>
+          <div class="story-body">
+            <h3>SMALL OFFICE</h3>
+            <div class="story-focus">
+              <strong>SERVICE FOCUS:</strong> Continuous workstation power, heavy HVAC load balancing, and battery readiness.
+            </div>
+            <ul class="story-list">
+              <li>3-Phase load balancing and surge protection</li>
+              <li>Centralized IoT web portal monitoring</li>
+              <li>Future expansion provision for UPS integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-prop-action" data-reveal>
+        <a href="index.html#contact" class="btn btn-primary sv-btn-green">Discuss My Property Service →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 09 — WHAT YOU RECEIVE (Deliverables Wall) ============ -->
+  <section class="sv-section sv-deliverables-section" id="deliverables">
+    <div class="container">
+      <div class="sv-section-header" data-reveal>
+        <span class="sv-section-label">08 / CUSTOMER PROMISE</span>
+        <h2 class="sv-editorial-heading">
+          Good Service Should<br>
+          <span class="sv-highlight">Leave You With Clarity.</span>
+        </h2>
+        <p class="sv-section-desc">We measure service success by how clearly you understand your system before, during, and after installation.</p>
+      </div>
+
+      <div class="sv-deliverables-wall" data-reveal>
+        <div class="d-item">
+          <span class="d-num">01</span>
+          <div class="d-body">
+            <h3>CLEAR RECOMMENDATIONS</h3>
+            <p>Understand exactly what equipment is proposed and why it fits your property energy load.</p>
+          </div>
+        </div>
+
+        <div class="d-item">
+          <span class="d-num">02</span>
+          <div class="d-body">
+            <h3>DOCUMENTED WORK</h3>
+            <p>Single-line electrical diagrams, warranty documents, and inspection certificates provided upon completion.</p>
+          </div>
+        </div>
+
+        <div class="d-item">
+          <span class="d-num">03</span>
+          <div class="d-body">
+            <h3>PROFESSIONAL EXECUTION</h3>
+            <p>Certified engineers handling your installation with care for your roof, interior walls, and property.</p>
+          </div>
+        </div>
+
+        <div class="d-item">
+          <span class="d-num">04</span>
+          <div class="d-body">
+            <h3>DEDICATED SUPPORT</h3>
+            <p>Direct line to our technical desk whenever you have questions or performance concerns.</p>
+          </div>
+        </div>
+
+        <div class="d-item">
+          <span class="d-num">05</span>
+          <div class="d-body">
+            <h3>TRANSPARENT NEXT STEPS</h3>
+            <p>Clear roadmap for net metering, mobile app setup, and annual maintenance schedules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 10 — SERVICE REQUEST (Interactive Selector) ============ -->
+  <section class="sv-request-section" id="request">
+    <div class="container sv-request-container" data-reveal>
+      <div class="sv-request-header">
+        <span class="sv-req-tag">INTERACTIVE SERVICE SELECTOR</span>
+        <h2 class="sv-req-heading">
+          Tell Us What<br>
+          Your Property Needs.
+        </h2>
+        <p class="sv-req-sub">Select your service requirement below to route directly to our engineering team.</p>
+      </div>
+
+      <div class="sv-request-form-card">
+        <!-- Question 1: Service Type -->
+        <div class="sv-form-group">
+          <label class="form-label">WHAT CAN WE HELP WITH?</label>
+          <div class="sv-pill-options" id="reqService">
+            <button class="sv-pill-opt active" data-service="new">New Solar Installation</button>
+            <button class="sv-pill-opt" data-service="audit">Site Assessment</button>
+            <button class="sv-pill-opt" data-service="issue">Existing System Issue</button>
+            <button class="sv-pill-opt" data-service="maint">Maintenance Care</button>
+            <button class="sv-pill-opt" data-service="upgrade">System Upgrade</button>
+          </div>
+        </div>
+
+        <!-- Question 2: Property Type -->
+        <div class="sv-form-group">
+          <label class="form-label">PROPERTY TYPE</label>
+          <div class="sv-pill-options" id="reqProp">
+            <button class="sv-pill-opt active" data-prop="home">Independent Home</button>
+            <button class="sv-pill-opt" data-prop="villa">Villa Residence</button>
+            <button class="sv-pill-opt" data-prop="shop">Commercial Shop</button>
+            <button class="sv-pill-opt" data-prop="office">Small Office</button>
+          </div>
+        </div>
+
+        <div class="sv-request-actions">
+          <a href="index.html#contact" class="btn btn-yellow btn-lg btn-block">Request Service Inspection →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer sv-footer">
+  <div class="container sv-footer-top">
+    <div class="sv-footer-headline">
+      COMPLETE ENERGY SERVICES FROM ROOFTOP TO AFTERCARE.
+    </div>
+  </div>
+
+  <div class="container footer-grid sv-footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="brand">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+          <circle cx="17" cy="17" r="8" fill="#EBC247"/>
+          <g stroke="#69C64E" stroke-width="2.4" stroke-linecap="round">
+            <line x1="17" y1="1" x2="17" y2="6"/><line x1="17" y1="28" x2="17" y2="33"/>
+            <line x1="1" y1="17" x2="6" y2="17"/><line x1="28" y1="17" x2="33" y2="17"/>
+          </g>
+        </svg>
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+      </div>
+      <p class="footer-desc">Professional rooftop solar services, technical audits, custom system design, and 25-year system aftercare for modern Indian properties.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#consulting">Site Assessment</a>
+      <a href="#blueprint">System Design</a>
+      <a href="#installation">Solar Installation</a>
+      <a href="#existing">Existing System Repairs</a>
+      <a href="#maintenance">Maintenance Care</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <a href="products.html">Solar Products</a>
+      <a href="products.html#capacity">Capacity Explorer</a>
+      <a href="index.html#savings">Savings Calculator</a>
+      <a href="home2.html">Home 2 (Journal)</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About SolarBright</a>
+      <a href="index.html#process">How It Works</a>
+      <a href="index.html#projects">Featured Projects</a>
+      <a href="index.html#contact">Contact Engineering</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SolarBright Energy Solutions. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-social" aria-label="Social links">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="#" aria-label="YouTube">YT</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="h2-mobile-sticky-bar" id="mobileStickyBar">
+  <div class="h2-sticky-info">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+    <span>Solar Service</span>
+  </div>
+  <a href="index.html#contact" class="btn btn-yellow btn-header">Book →</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

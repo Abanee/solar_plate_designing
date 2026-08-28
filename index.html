@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolarBright — Rooftop Solar for Homes | Power Your Home. Save Every Month.</title>
+<meta name="description" content="Premium rooftop solar installation for homes, shops and small offices. Get a free site assessment and see how much you could save.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="light">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#home" class="brand">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="8" fill="#F2C644"/>
+        <g stroke="#3E963F" stroke-width="2.4" stroke-linecap="round">
+          <line x1="17" y1="1" x2="17" y2="6"/>
+          <line x1="17" y1="28" x2="17" y2="33"/>
+          <line x1="1" y1="17" x2="6" y2="17"/>
+          <line x1="28" y1="17" x2="33" y2="17"/>
+        </g>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+        <span class="brand-tag">Powering a Greener Tomorrow</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="home2.html" class="nav-link nav-page-switch">Home 2 ↗</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services Studio</a>
+      <a href="plans.html" class="nav-link">Solar Plans</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="#savings" class="nav-link">Savings Calculator</a>
+      <a href="#process" class="nav-link">How It Works</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-header">Book Free Assessment</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#products" class="mobile-link">Products</a>
+    <a href="#savings" class="mobile-link">Savings Calculator</a>
+    <a href="#process" class="mobile-link">How It Works</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <a href="#contact" class="btn btn-primary btn-block">Book Free Assessment</a>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+<main id="home">
+
+  <!-- ============ SECTION 01 — HERO ============ -->
+  <section class="hero">
+    <div class="hero-media" data-parallax>
+      <img src="assets/images/hero-house.svg" alt="Modern residential home with rooftop solar panels at sunrise" loading="eager">
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow">Smart Rooftop Solar</p>
+      <h1 class="hero-heading">
+        Power Your Home.<br>
+        Save Every Month.<br>
+        Live Better.
+      </h1>
+      <p class="hero-sub">High-performance rooftop solar solutions designed to reduce electricity costs and give your home cleaner, smarter energy.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Get Free Site Assessment <span class="arrow">→</span></a>
+        <a href="#savings" class="btn btn-secondary">Calculate My Savings</a>
+      </div>
+    </div>
+
+    <div class="savings-float" data-reveal>
+      <div class="savings-float-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="6"/><circle cx="15" cy="9" r="6" opacity=".55"/></svg>
+      </div>
+      <div class="savings-float-text">
+        <span class="savings-float-label">Up to</span>
+        <span class="savings-float-number" data-count-to="70">0</span><span class="savings-float-percent">%</span>
+        <p class="savings-float-desc">potential reduction in electricity bills*</p>
+        <p class="savings-float-note">*Savings vary based on system size and energy usage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 — WHY SOLAR ============ -->
+  <section class="why-solar" id="why-solar">
+    <div class="container">
+      <h2 class="section-heading centered">Why Homeowners <span class="text-accent">Choose Solar</span></h2>
+
+      <div class="benefit-strip">
+        <div class="benefit" data-reveal>
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+          </div>
+          <h3>Lower Electricity Bills</h3>
+          <p>Generate your own clean power and reduce monthly electricity expenses.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>
+          </div>
+          <h3>Government Subsidy</h3>
+          <p>Eligible homeowners can access government support for rooftop solar.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-4.5 7-11a7 7 0 0 0-14 0c0 6.5 7 11 7 11Z"/><circle cx="12" cy="11" r="2.4"/></svg>
+          </div>
+          <h3>Clean &amp; Independent</h3>
+          <p>Reduce grid dependence while producing renewable energy at home.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <div class="benefit-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 11 9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+          </div>
+          <h3>Long-Term Value</h3>
+          <p>A professionally installed solar system can improve your home's energy efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 — SOLAR SAVINGS ============ -->
+  <section class="savings-section" id="savings">
+    <div class="container savings-grid">
+      <div class="savings-copy" data-reveal>
+        <p class="eyebrow eyebrow-light">Real Savings. Real Impact.</p>
+        <h2 class="section-heading light">See How Much<br>You Can Save</h2>
+        <p class="savings-desc">Switching to solar can reduce your electricity costs while turning your rooftop into a long-term energy asset.</p>
+        <a href="#contact" class="btn btn-yellow">Calculate Your Savings <span class="arrow">→</span></a>
+      </div>
+
+      <div class="savings-panel" data-reveal>
+        <div class="savings-flow">
+          <div class="savings-card">
+            <span class="savings-card-label">Current Electricity Bill</span>
+            <span class="savings-card-value">₹<span data-count-to="6500">0</span></span>
+            <span class="savings-card-unit">/ month</span>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">
+            <svg width="34" height="16" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 8h30M24 2l8 6-8 6"/></svg>
+          </div>
+          <div class="savings-card highlight">
+            <span class="savings-card-label">With Solar</span>
+            <span class="savings-card-value">₹<span data-count-to="2100">0</span></span>
+            <span class="savings-card-unit">/ month</span>
+            <div class="savings-card-divider"></div>
+            <span class="savings-card-sub-label">You Save</span>
+            <span class="savings-card-sub-value">₹<span data-count-to="4400">0</span> <small>/ month</small></span>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">
+            <svg width="34" height="16" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 8h30M24 2l8 6-8 6"/></svg>
+          </div>
+          <div class="savings-card">
+            <span class="savings-card-label">Annual Savings</span>
+            <span class="savings-card-value">₹<span data-count-to="52800">0</span></span>
+            <span class="savings-card-unit">/ year</span>
+          </div>
+        </div>
+        <p class="savings-disclaimer">Illustrative example — actual savings depend on usage, tariff, location and system size.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 04 — GOVERNMENT SUBSIDY ============ -->
+  <section class="subsidy-section" id="subsidy">
+    <div class="subsidy-visual" data-reveal>
+      <img src="assets/images/subsidy-building.svg" alt="Government building representing rooftop solar subsidy support" loading="lazy">
+    </div>
+    <div class="subsidy-content" data-reveal>
+      <p class="eyebrow">Government Support</p>
+      <h2 class="section-heading">Save More With<br>Solar Incentives</h2>
+      <p>Eligible residential rooftop solar systems may qualify for government subsidy support. Our team helps guide you through the required documentation and application process.</p>
+
+      <div class="subsidy-highlight">
+        <span class="subsidy-amount">Up to ₹<span data-count-to="78000">0</span>*</span>
+        <span class="subsidy-note">*Illustrative maximum for eligible residential systems; current eligibility and subsidy rules should be verified before installation.</span>
+      </div>
+
+      <ul class="check-list">
+        <li>Eligibility guidance</li>
+        <li>Documentation support</li>
+        <li>Application assistance</li>
+        <li>Installation coordination</li>
+      </ul>
+
+      <a href="#contact" class="btn btn-yellow">Check Your Eligibility <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 — PROJECTS ============ -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading">Recent Solar Installations</h2>
+        <p>Explore rooftop systems designed for different homes and energy needs.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project featured" data-reveal>
+          <div class="project-media">
+            <img src="assets/images/project-bangalore.svg" alt="5 kW rooftop solar installation in Bangalore" loading="lazy">
+            <span class="project-badge">5 kW</span>
+          </div>
+          <div class="project-meta">
+            <h3>Residential Rooftop</h3>
+            <p class="project-location">Bangalore, Karnataka</p>
+            <div class="project-stats">
+              <span>7,200 kWh annual generation</span>
+              <span>₹67,000 estimated annual savings</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-supporting">
+          <article class="project" data-reveal>
+            <div class="project-media">
+              <img src="assets/images/project-pune.svg" alt="3 kW rooftop solar installation in Pune" loading="lazy">
+              <span class="project-badge">3 kW</span>
+            </div>
+            <div class="project-meta">
+              <h3>Pune, Maharashtra</h3>
+              <span class="project-stat-inline">4,200 kWh / year</span>
+            </div>
+          </article>
+          <article class="project" data-reveal>
+            <div class="project-media">
+              <img src="assets/images/project-hyderabad.svg" alt="8 kW rooftop solar installation in Hyderabad" loading="lazy">
+              <span class="project-badge">8 kW</span>
+            </div>
+            <div class="project-meta">
+              <h3>Hyderabad, Telangana</h3>
+              <span class="project-stat-inline">11,500 kWh / year</span>
+            </div>
+          </article>
+          <article class="project" data-reveal>
+            <div class="project-media">
+              <img src="assets/images/project-chennai.svg" alt="10 kW rooftop solar installation in Chennai" loading="lazy">
+              <span class="project-badge">10 kW</span>
+            </div>
+            <div class="project-meta">
+              <h3>Chennai, Tamil Nadu</h3>
+              <span class="project-stat-inline">14,400 kWh / year</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="projects-cta">
+        <a href="#projects" class="btn btn-outline">View All Projects <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 06 — TRUST ============ -->
+  <section class="trust-section" id="trust">
+    <div class="container trust-inner">
+      <h2 class="section-heading trust-heading">Trusted Quality.<br>Certified Solutions.</h2>
+      <div class="trust-band">
+        <div class="trust-item">
+          <span class="trust-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>MNRE Approved</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>BIS Certified</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>ISO 9001:2015</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>25 Year Performance Warranty</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>5 Year Workmanship Warranty</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 07 — PROCESS ============ -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <h2 class="section-heading centered">Our Installation Process</h2>
+      <div class="process-timeline">
+        <div class="process-step" data-reveal>
+          <span class="process-index">01</span>
+          <h3>Assess</h3>
+          <p>We evaluate your roof, electricity usage and solar potential.</p>
+        </div>
+        <div class="process-line" aria-hidden="true"></div>
+        <div class="process-step" data-reveal>
+          <span class="process-index">02</span>
+          <h3>Design</h3>
+          <p>We create a system sized around your property's actual energy requirements.</p>
+        </div>
+        <div class="process-line" aria-hidden="true"></div>
+        <div class="process-step" data-reveal>
+          <span class="process-index">03</span>
+          <h3>Install</h3>
+          <p>Our team handles installation, electrical integration and commissioning.</p>
+        </div>
+      </div>
+      <div class="process-cta">
+        <a href="#process" class="btn btn-outline">See How It Works <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 08 — FINAL CTA ============ -->
+  <section class="final-cta" id="contact">
+    <div class="final-cta-media" aria-hidden="true">
+      <img src="assets/images/project-chennai.svg" alt="" loading="lazy">
+    </div>
+    <div class="container final-cta-content">
+      <p class="eyebrow eyebrow-light">Start Your Solar Journey</p>
+      <h2 class="section-heading light">Ready to Make<br>Your Roof Work?</h2>
+      <p class="final-cta-desc">Get a free site assessment and discover what solar could do for your home.</p>
+
+      <ul class="trust-points">
+        <li>100% Free Assessment</li>
+        <li>Customised System Design</li>
+        <li>Quality Components</li>
+        <li>Professional Installation</li>
+      </ul>
+
+      <div class="final-cta-actions">
+        <a href="#contact" class="btn btn-primary">Book Free Assessment <span class="arrow">→</span></a>
+        <span class="final-cta-phone">or Call Us: <a href="tel:18001234567">1800 123 4567</a></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="about">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="brand">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+          <circle cx="17" cy="17" r="8" fill="#F2C644"/>
+          <g stroke="#69C34B" stroke-width="2.4" stroke-linecap="round">
+            <line x1="17" y1="1" x2="17" y2="6"/><line x1="17" y1="28" x2="17" y2="33"/>
+            <line x1="1" y1="17" x2="6" y2="17"/><line x1="28" y1="17" x2="33" y2="17"/>
+          </g>
+        </svg>
+        <span class="brand-name">Solar<strong>Bright</strong></span>
+      </div>
+      <p class="footer-desc">Rooftop solar installation for homes, shops and small offices — designed for real savings and long-term reliability.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <a href="#products">Residential Solar</a>
+      <a href="#products">Rooftop Systems</a>
+      <a href="#savings">Solar Calculator</a>
+      <a href="#subsidy">Subsidy Support</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#products">Services</a>
+      <a href="#process">How It Works</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#contact">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#trust">Warranty</a>
+      <a href="#contact">Maintenance</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> SolarBright. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-social" aria-label="Social links">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="#" aria-label="YouTube">YT</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
