@@ -162,10 +162,11 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .site-header:not(.scrolled) .brand-name{ color:#fff; }
 .site-header:not(.scrolled) .brand-tag{ color: rgba(255,255,255,0.78); }
 
-.main-nav{ display:flex; align-items:center; gap: 30px; }
+.main-nav{ display:flex; align-items:center; gap: 20px; flex-wrap: nowrap; }
 .nav-link{
-  font-size: 14.5px; font-weight: 600; color: rgba(255,255,255,0.92);
+  font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.92);
   position:relative; padding: 4px 0; transition: color var(--transition);
+  white-space: nowrap; flex-shrink: 0;
 }
 .site-header.scrolled .nav-link{ color: var(--text-secondary); }
 .nav-link:hover, .nav-link.active{ color: var(--green); }
@@ -175,7 +176,71 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background: var(--green);
 }
 
-.header-actions{ display:flex; align-items:center; gap: 16px; }
+.header-actions{ display:flex; align-items:center; gap: 14px; }
+
+/* RTL Toggle Button */
+.rtl-toggle {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: #ffffff;
+  font-family: monospace, var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.site-header.scrolled .rtl-toggle {
+  border-color: var(--border);
+  color: var(--text);
+}
+.rtl-toggle:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* ==========================================================================
+   RTL (RIGHT-TO-LEFT) INTERNATIONALIZATION RULES
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .main-nav {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .arrow {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .mobile-menu {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 10px 0 40px rgba(0,0,0,0.18);
+}
+
+[dir="rtl"] .mobile-menu.open {
+  transform: translateX(0);
+}
+
+@media (max-width: 1280px) {
+  .main-nav { gap: 14px; }
+  .nav-link { font-size: 13px; }
+}
+
+@media (max-width: 1024px) {
+  .main-nav { display: none !important; }
+}
 .theme-toggle{
   width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center;
   border: 1.5px solid rgba(255,255,255,0.35); color:#fff; transition: border-color var(--transition), color var(--transition), background var(--transition);

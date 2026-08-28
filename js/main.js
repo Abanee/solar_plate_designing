@@ -63,6 +63,37 @@
     try { localStorage.setItem(STORAGE_KEY, next); } catch (e) { /* storage unavailable */ }
   });
 
+  /* ---------- RTL / LTR Toggle (persisted) ---------- */
+  var rtlToggle = document.getElementById("rtlToggle");
+  var doc = document.documentElement;
+  var DIR_STORAGE_KEY = "solarbright-dir";
+
+  function applyDir(dir) {
+    doc.setAttribute("dir", dir);
+    if (rtlToggle) {
+      var label = rtlToggle.querySelector(".rtl-label");
+      if (label) label.textContent = dir === "rtl" ? "RTL" : "LTR";
+    }
+  }
+
+  var savedDir = null;
+  try { savedDir = localStorage.getItem(DIR_STORAGE_KEY); } catch (e) { /* storage unavailable */ }
+
+  if (savedDir) {
+    applyDir(savedDir);
+  } else {
+    applyDir("ltr");
+  }
+
+  if (rtlToggle) {
+    rtlToggle.addEventListener("click", function () {
+      var currentDir = doc.getAttribute("dir") || "ltr";
+      var nextDir = currentDir === "rtl" ? "ltr" : "rtl";
+      applyDir(nextDir);
+      try { localStorage.setItem(DIR_STORAGE_KEY, nextDir); } catch (e) { /* storage unavailable */ }
+    });
+  }
+
   /* ---------- Mobile menu ---------- */
   var hamburger = document.getElementById("hamburgerBtn");
   var mobileMenu = document.getElementById("mobileMenu");
