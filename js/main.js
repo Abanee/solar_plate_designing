@@ -22,6 +22,37 @@
   updateHeaderState();
   window.addEventListener("scroll", updateHeaderState, { passive: true });
 
+  /* ---------- Innovative Hero — Interactive Solar Slider Calculator ---------- */
+  var heroSlider = document.getElementById("heroBillSlider");
+  var heroBillDisplay = document.getElementById("heroBillDisplay");
+  var heroSysSize = document.getElementById("heroSysSize");
+  var heroMonthlySav = document.getElementById("heroMonthlySav");
+  var heroSubsidy = document.getElementById("heroSubsidy");
+  var hero25YrSav = document.getElementById("hero25YrSav");
+
+  if (heroSlider) {
+    function updateHeroEstimator() {
+      var bill = parseInt(heroSlider.value, 10);
+      if (heroBillDisplay) heroBillDisplay.textContent = "₹" + bill.toLocaleString("en-IN") + " / mo";
+
+      var kw = Math.round((bill / 1400) * 10) / 10;
+      if (kw < 2) kw = 2;
+      if (heroSysSize) heroSysSize.textContent = kw.toFixed(1) + " kW";
+
+      var monthlySav = Math.round(bill * 0.85);
+      if (heroMonthlySav) heroMonthlySav.textContent = "₹" + monthlySav.toLocaleString("en-IN");
+
+      var subsidy = kw <= 2 ? Math.round(kw * 30000) : 78000;
+      if (heroSubsidy) heroSubsidy.textContent = "₹" + subsidy.toLocaleString("en-IN");
+
+      var total25Yr = Math.round((monthlySav * 12 * 25) / 100000 * 10) / 10;
+      if (hero25YrSav) hero25YrSav.textContent = "₹" + total25Yr.toFixed(1) + " Lakhs";
+    }
+
+    heroSlider.addEventListener("input", updateHeroEstimator);
+    updateHeroEstimator();
+  }
+
   /* ---------- Active nav link on scroll ---------- */
   var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));

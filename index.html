@@ -75,36 +75,117 @@
 
 <main id="home">
 
-  <!-- ============ SECTION 01 — HERO ============ -->
-  <section class="hero">
+  <!-- ============ SECTION 01 — INNOVATIVE HERO ============ -->
+  <section class="hero hero-innovative">
     <div class="hero-media" data-parallax>
-      <img src="assets/images/hero-house.svg" alt="Modern residential home with rooftop solar panels at sunrise" loading="eager">
+      <img src="assets/images/home2-hero-roof.jpg" alt="Luxury residential villa with premium rooftop solar system at golden hour" loading="eager">
       <div class="hero-scrim"></div>
     </div>
 
-    <div class="hero-content">
-      <p class="eyebrow">Smart Rooftop Solar</p>
-      <h1 class="hero-heading">
-        Power Your Home.<br>
-        Save Every Month.<br>
-        Live Better.
-      </h1>
-      <p class="hero-sub">High-performance rooftop solar solutions designed to reduce electricity costs and give your home cleaner, smarter energy.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Get Free Site Assessment <span class="arrow">→</span></a>
-        <a href="#savings" class="btn btn-secondary">Calculate My Savings</a>
-      </div>
-    </div>
+    <div class="container hero-container">
+      <div class="hero-grid-2col">
+        
+        <!-- LEFT COLUMN: COPY & VALUE PROPOSITION -->
+        <div class="hero-content" data-reveal>
+          <div class="hero-live-badge">
+            <span class="live-pulse"></span>
+            <span>NEXT-GEN ROOFTOP ENERGY</span>
+            <span class="badge-dot">•</span>
+            <span>22.8% TOPCon Efficiency</span>
+          </div>
 
-    <div class="savings-float" data-reveal>
-      <div class="savings-float-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="6"/><circle cx="15" cy="9" r="6" opacity=".55"/></svg>
-      </div>
-      <div class="savings-float-text">
-        <span class="savings-float-label">Up to</span>
-        <span class="savings-float-number" data-count-to="70">0</span><span class="savings-float-percent">%</span>
-        <p class="savings-float-desc">potential reduction in electricity bills*</p>
-        <p class="savings-float-note">*Savings vary based on system size and energy usage.</p>
+          <h1 class="hero-heading">
+            Intelligent Solar.<br>
+            <span class="text-gradient">Zero Grid Waste.</span><br>
+            Lifetime Savings.
+          </h1>
+
+          <p class="hero-sub">
+            Precision-engineered rooftop solar systems for modern residences and villas. Seamlessly integrated with smart micro-inverters and government subsidy fast-tracking.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="contact.html#contact-form" class="btn btn-primary btn-hero-main">
+              Get Free Site Assessment <span class="arrow">→</span>
+            </a>
+            <a href="plans.html" class="btn btn-secondary btn-hero-sec">
+              Explore Plans &amp; Pricing
+            </a>
+          </div>
+
+          <!-- TRUST HIGHLIGHTS ROW -->
+          <div class="hero-trust-row">
+            <div class="trust-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>MNRE &amp; DISCOM Approved</span>
+            </div>
+            <div class="trust-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>25-Year Linear Power Warranty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: INTERACTIVE LIVE ROOFTOP ESTIMATOR COCKPIT -->
+        <div class="hero-widget-col" data-reveal>
+          <div class="hero-estimator-card">
+            <div class="estimator-header">
+              <div class="estimator-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>QUICK SOLAR CALCULATOR</span>
+              </div>
+              <span class="estimator-live-tag">Instant Quote</span>
+            </div>
+
+            <h3>Estimate Your Roof Potential</h3>
+            <p class="estimator-sub">Drag to match your average monthly power bill:</p>
+
+            <div class="bill-slider-box">
+              <div class="slider-val-row">
+                <span class="slider-lbl">Monthly Electricity Bill:</span>
+                <span class="slider-val-display" id="heroBillDisplay">₹5,000 / mo</span>
+              </div>
+              <input type="range" id="heroBillSlider" min="2000" max="25000" step="500" value="5000" class="hero-slider">
+              <div class="slider-limits">
+                <span>₹2,000</span>
+                <span>₹12,000</span>
+                <span>₹25,000+</span>
+              </div>
+            </div>
+
+            <!-- DYNAMIC CALCULATIONS GRID -->
+            <div class="estimator-results-grid">
+              <div class="res-card">
+                <span class="res-lbl">Recommended System</span>
+                <strong class="res-val" id="heroSysSize">3.5 kW</strong>
+                <span class="res-sub">7–8 TOPCon Panels</span>
+              </div>
+
+              <div class="res-card highlight">
+                <span class="res-lbl">Est. Monthly Savings</span>
+                <strong class="res-val text-green" id="heroMonthlySav">₹4,200</strong>
+                <span class="res-sub">Up to 85% Bill Cut</span>
+              </div>
+
+              <div class="res-card">
+                <span class="res-lbl">Gov't Subsidy</span>
+                <strong class="res-val text-yellow" id="heroSubsidy">₹78,000</strong>
+                <span class="res-sub">PM Surya Ghar Fast-Track</span>
+              </div>
+
+              <div class="res-card">
+                <span class="res-lbl">25-Yr Net Savings</span>
+                <strong class="res-val" id="hero25YrSav">₹12.6 Lakhs</strong>
+                <span class="res-sub">Lifetime ROI: 380%</span>
+              </div>
+            </div>
+
+            <a href="contact.html#contact-form" class="btn btn-primary btn-block estimator-cta">
+              Lock In Subsidy &amp; Design Roof →
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
