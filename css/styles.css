@@ -180,17 +180,22 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 
 /* RTL Toggle Button */
 .rtl-toggle {
-  padding: 6px 12px;
-  border-radius: 999px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   border: 1.5px solid rgba(255,255,255,0.35);
   background: transparent;
   color: #ffffff;
   font-family: monospace, var(--font-body);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
 .site-header.scrolled .rtl-toggle {
   border-color: var(--border);
@@ -825,25 +830,26 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 }
 .savings-flow {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
 }
 .savings-card {
   flex: 1;
   min-width: 0;
   background: #F7F7F1;
   color: var(--green-dark);
-  border-radius: var(--radius-md);
-  padding: 24px 14px;
+  border-radius: var(--radius-lg);
+  padding: 24px 18px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  min-height: 150px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  min-height: 170px;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 .savings-card.highlight {
   background: var(--green);
@@ -853,7 +859,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .savings-card-label {
   font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   opacity: 0.85;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -883,7 +889,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   width: 80%;
   height: 1px;
   background: rgba(255, 255, 255, 0.3);
-  margin: 12px 0;
+  margin: 8px 0;
 }
 .savings-card-sub-label {
   font-size: 11px;
@@ -1165,6 +1171,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   justify-content: center;
   margin-bottom: 18px;
 }
+
 .shield-spec-tag {
   font-family: monospace;
   font-size: 10px;
@@ -1530,9 +1537,109 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 }
 
 @media (max-width: 1024px) {
-  .ecosystem-grid { grid-template-columns: 1fr; }
-  .shield-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: 1fr; }
+  /* Layout Sizing & Centering Fixes for <=1024px */
+  .subsidy-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+  }
+  .subsidy-visual {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    aspect-ratio: 16 / 9;
+    min-height: unset;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .subsidy-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .subsidy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .check-list {
+    text-align: left;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+  }
+  .ecosystem-image-wrapper {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .ecosystem-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ecosystem-features {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .eco-feature-card {
+    text-align: left;
+  }
+
+  .savings-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+  }
+  .savings-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
+  .hero-trust-row {
+    justify-content: center;
+  }
+
+  .shield-grid { grid-template-columns: repeat(2, 1fr); max-width: 720px; margin: 0 auto; }
+  .projects-grid { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto; }
 }
 
 @media (max-width: 600px) {
