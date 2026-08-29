@@ -22,35 +22,66 @@
   updateHeaderState();
   window.addEventListener("scroll", updateHeaderState, { passive: true });
 
-  /* ---------- Innovative Hero — Interactive Solar Slider Calculator ---------- */
-  var heroSlider = document.getElementById("heroBillSlider");
-  var heroBillDisplay = document.getElementById("heroBillDisplay");
-  var heroSysSize = document.getElementById("heroSysSize");
-  var heroMonthlySav = document.getElementById("heroMonthlySav");
-  var heroSubsidy = document.getElementById("heroSubsidy");
-  var hero25YrSav = document.getElementById("hero25YrSav");
+  /* ---------- Hero Image Carousel ---------- */
+  var heroCarousel = document.getElementById("heroCarousel");
+  if (heroCarousel) {
+    var slides = Array.prototype.slice.call(heroCarousel.querySelectorAll(".hero-carousel-slide"));
+    var dots = Array.prototype.slice.call(heroCarousel.querySelectorAll(".dot"));
+    var prevBtn = document.getElementById("heroPrevBtn");
+    var nextBtn = document.getElementById("heroNextBtn");
+    var currentIndex = 0;
+    var timer = null;
 
-  if (heroSlider) {
-    function updateHeroEstimator() {
-      var bill = parseInt(heroSlider.value, 10);
-      if (heroBillDisplay) heroBillDisplay.textContent = "₹" + bill.toLocaleString("en-IN") + " / mo";
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentIndex = index;
 
-      var kw = Math.round((bill / 1400) * 10) / 10;
-      if (kw < 2) kw = 2;
-      if (heroSysSize) heroSysSize.textContent = kw.toFixed(1) + " kW";
-
-      var monthlySav = Math.round(bill * 0.85);
-      if (heroMonthlySav) heroMonthlySav.textContent = "₹" + monthlySav.toLocaleString("en-IN");
-
-      var subsidy = kw <= 2 ? Math.round(kw * 30000) : 78000;
-      if (heroSubsidy) heroSubsidy.textContent = "₹" + subsidy.toLocaleString("en-IN");
-
-      var total25Yr = Math.round((monthlySav * 12 * 25) / 100000 * 10) / 10;
-      if (hero25YrSav) hero25YrSav.textContent = "₹" + total25Yr.toFixed(1) + " Lakhs";
+      slides.forEach(function (slide, idx) {
+        slide.classList.toggle("active", idx === currentIndex);
+      });
+      dots.forEach(function (dot, idx) {
+        dot.classList.toggle("active", idx === currentIndex);
+      });
     }
 
-    heroSlider.addEventListener("input", updateHeroEstimator);
-    updateHeroEstimator();
+    function startAutoPlay() {
+      stopAutoPlay();
+      if (!reducedMotion) {
+        timer = setInterval(function () {
+          goToSlide(currentIndex + 1);
+        }, 4500);
+      }
+    }
+
+    function stopAutoPlay() {
+      if (timer) clearInterval(timer);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        goToSlide(currentIndex - 1);
+        startAutoPlay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        goToSlide(currentIndex + 1);
+        startAutoPlay();
+      });
+    }
+
+    dots.forEach(function (dot, idx) {
+      dot.addEventListener("click", function () {
+        goToSlide(idx);
+        startAutoPlay();
+      });
+    });
+
+    heroCarousel.addEventListener("mouseenter", stopAutoPlay);
+    heroCarousel.addEventListener("mouseleave", startAutoPlay);
+
+    startAutoPlay();
   }
 
   /* ---------- Active nav link on scroll ---------- */
@@ -235,19 +266,62 @@
     );
   }
 
-  /* ---------- Home 2 Interactive Day Cycle Timeline ---------- */
-  var timeSlots = Array.prototype.slice.call(document.querySelectorAll(".h2-time-slot"));
-  var chartNodes = Array.prototype.slice.call(document.querySelectorAll(".chart-node"));
-  var graphBadge = document.getElementById("graphTimeBadge");
+  /* ---------- Home 2 Architectural Roof Aesthetic Studio ---------- */
+  var matButtons = Array.prototype.slice.call(document.querySelectorAll(".h2-mat-btn"));
+  var matImage = document.getElementById("matImage");
+  var matTitle = document.getElementById("matTitle");
+  var matDesc = document.getElementById("matDesc");
+  var matTag = document.getElementById("matTag");
 
-  var timeInfoMap = {
-    "6 AM": "6:00 AM (Sunrise — Generation Begins)",
-    "9 AM": "9:00 AM (Morning — Production Building)",
-    "12 PM": "12:00 PM (Midday — Peak Solar Output)",
-    "3 PM": "3:00 PM (Afternoon — Direct Appliance Power)",
-    "6 PM": "6:00 PM (Sunset — Transitioning to Grid/Saved)",
-    "9 PM": "9:00 PM (Night — Battery / Grid Power)"
+  var matDataMap = {
+    slate: {
+      title: "Dark Slate Tile Flush Mount",
+      desc: "Custom low-profile black anodized clamps align parallel to slate roof lines, maintaining original home curb appeal while maximizing solar yield.",
+      tag: "Flush Monocrystalline Integration",
+      img: "assets/images/home2-roof-plan.jpg"
+    },
+    concrete: {
+      title: "Flat Concrete Roof Elevated Array",
+      desc: "Ballasted non-penetrating elevated mounts with 15-degree optimized solar tilt angles designed for flat concrete villa terraced roofs.",
+      tag: "15° Ballasted Tilt Geometry",
+      img: "assets/images/products-hero-cutaway.jpg"
+    },
+    terracotta: {
+      title: "Terracotta Clay Tile Weather-Seal",
+      desc: "Custom stainless steel tile replacement hooks with EPDM rubber flashing ensure 100% zero water leakage on traditional terracotta clay tile roofs.",
+      tag: "Zero-Leak Flashing Guarantee",
+      img: "assets/images/about-engineering-detail.jpg"
+    },
+    metal: {
+      title: "Standing Seam Metal Clamp System",
+      desc: "Direct non-invasive seam clamps lock onto standing seam metal roofs without drilling holes, preserving factory roof warranties completely.",
+      tag: "Zero-Drill Non-Invasive Clamping",
+      img: "assets/images/products-panel-closeup.jpg"
+    }
   };
+
+  if (matButtons.length && matImage) {
+    matButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var mat = btn.getAttribute("data-mat");
+        var data = matDataMap[mat];
+        if (!data) return;
+
+        matButtons.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+
+        matImage.style.opacity = "0.3";
+        setTimeout(function () {
+          matImage.src = data.img;
+          matImage.style.opacity = "1";
+        }, 200);
+
+        if (matTitle) matTitle.textContent = data.title;
+        if (matDesc) matDesc.textContent = data.desc;
+        if (matTag) matTag.textContent = data.tag;
+      });
+    });
+  }
 
   function selectTimeSlot(timeStr) {
     timeSlots.forEach(function (slot) {

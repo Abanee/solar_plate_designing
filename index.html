@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SolarBright — Rooftop Solar for Homes, Villas &amp; Small Businesses</title>
-<meta name="description" content="High-performance rooftop solar panel installations for homes, villas, shops, and small offices. Get clean energy, government subsidies, and lower electricity bills.">
+<title>SolarBright — Premium Residential Rooftop Solar Solutions</title>
+<meta name="description" content="Turn key residential rooftop solar installation. Tier-1 hardware, CAD roof design, full DISCOM net-metering & PM Surya Ghar subsidy processing.">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
@@ -15,18 +16,10 @@
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-        <circle cx="17" cy="17" r="8" fill="#EBC247"/>
-        <g stroke="#4B9847" stroke-width="2.4" stroke-linecap="round">
-          <line x1="17" y1="1" x2="17" y2="6"/>
-          <line x1="17" y1="28" x2="17" y2="33"/>
-          <line x1="1" y1="17" x2="6" y2="17"/>
-          <line x1="28" y1="17" x2="33" y2="17"/>
-        </g>
-      </svg>
+      <img src="./logo.png" alt="SolarBright Logo" class="brand-logo-img">
       <span class="brand-text">
         <span class="brand-name">Solar<strong>Bright</strong></span>
-        <span class="brand-tag">Powering a Greener Tomorrow</span>
+        <span class="brand-tag">Architectural Energy</span>
       </span>
     </a>
 
@@ -106,7 +99,7 @@
 
           <div class="hero-ctas">
             <a href="contact.html#contact-form" class="btn btn-primary btn-hero-main">
-              Get Free Site Assessment <span class="arrow">→</span>
+              Book Solar Audit <span class="arrow">→</span>
             </a>
             <a href="plans.html" class="btn btn-secondary btn-hero-sec">
               Explore Plans &amp; Pricing
@@ -126,63 +119,62 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: INTERACTIVE LIVE ROOFTOP ESTIMATOR COCKPIT -->
+        <!-- RIGHT COLUMN: HERO FEATURED INSTALLATIONS CAROUSEL -->
         <div class="hero-widget-col" data-reveal>
-          <div class="hero-estimator-card">
-            <div class="estimator-header">
-              <div class="estimator-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                <span>QUICK SOLAR CALCULATOR</span>
-              </div>
-              <span class="estimator-live-tag">Instant Quote</span>
-            </div>
-
-            <h3>Estimate Your Roof Potential</h3>
-            <p class="estimator-sub">Drag to match your average monthly power bill:</p>
-
-            <div class="bill-slider-box">
-              <div class="slider-val-row">
-                <span class="slider-lbl">Monthly Electricity Bill:</span>
-                <span class="slider-val-display" id="heroBillDisplay">₹5,000 / mo</span>
-              </div>
-              <input type="range" id="heroBillSlider" min="2000" max="25000" step="500" value="5000" class="hero-slider">
-              <div class="slider-limits">
-                <span>₹2,000</span>
-                <span>₹12,000</span>
-                <span>₹25,000+</span>
-              </div>
-            </div>
-
-            <!-- DYNAMIC CALCULATIONS GRID -->
-            <div class="estimator-results-grid">
-              <div class="res-card">
-                <span class="res-lbl">Recommended System</span>
-                <strong class="res-val" id="heroSysSize">3.5 kW</strong>
-                <span class="res-sub">7–8 TOPCon Panels</span>
+          <div class="hero-carousel-card" id="heroCarousel">
+            <div class="hero-carousel-track">
+              <div class="hero-carousel-slide active">
+                <img src="assets/images/home2-hero-roof.jpg" alt="5.5 kW Villa Solar System in Bangalore">
+                <div class="hero-carousel-caption">
+                  <span class="carousel-tag">FEATURED INSTALLATION</span>
+                  <h3>5.5 kW Residential Villa System</h3>
+                  <p>Bangalore, Karnataka • 85% Bill Reduction</p>
+                </div>
               </div>
 
-              <div class="res-card highlight">
-                <span class="res-lbl">Est. Monthly Savings</span>
-                <strong class="res-val text-green" id="heroMonthlySav">₹4,200</strong>
-                <span class="res-sub">Up to 85% Bill Cut</span>
+              <div class="hero-carousel-slide">
+                <img src="assets/images/about-engineering-detail.jpg" alt="8.0 kW Commercial Rooftop Solar in Hyderabad">
+                <div class="hero-carousel-caption">
+                  <span class="carousel-tag">FEATURED INSTALLATION</span>
+                  <h3>8.0 kW Bifacial TOPCon Array</h3>
+                  <p>Hyderabad, Telangana • Tier-1 N-Type Cells</p>
+                </div>
               </div>
 
-              <div class="res-card">
-                <span class="res-lbl">Gov't Subsidy</span>
-                <strong class="res-val text-yellow" id="heroSubsidy">₹78,000</strong>
-                <span class="res-sub">PM Surya Ghar Fast-Track</span>
+              <div class="hero-carousel-slide">
+                <img src="assets/images/home2-project-story.jpg" alt="10 kW Solar & Battery Setup in Pune">
+                <div class="hero-carousel-caption">
+                  <span class="carousel-tag">FEATURED INSTALLATION</span>
+                  <h3>10 kW Hybrid Storage Rooftop</h3>
+                  <p>Pune, Maharashtra • Zero Outage Backup</p>
+                </div>
               </div>
 
-              <div class="res-card">
-                <span class="res-lbl">25-Yr Net Savings</span>
-                <strong class="res-val" id="hero25YrSav">₹12.6 Lakhs</strong>
-                <span class="res-sub">Lifetime ROI: 380%</span>
+              <div class="hero-carousel-slide">
+                <img src="assets/images/products-hero-cutaway.jpg" alt="3.5 kW Premium Home Solar in Chennai">
+                <div class="hero-carousel-caption">
+                  <span class="carousel-tag">FEATURED INSTALLATION</span>
+                  <h3>3.5 kW Premium Home Solar</h3>
+                  <p>Chennai, Tamil Nadu • DISCOM Subsidy Approved</p>
+                </div>
               </div>
             </div>
 
-            <a href="contact.html#contact-form" class="btn btn-primary btn-block estimator-cta">
-              Lock In Subsidy &amp; Design Roof →
-            </a>
+            <!-- Carousel Navigation Controls -->
+            <button class="carousel-btn prev-btn" id="heroPrevBtn" aria-label="Previous Slide">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="carousel-btn next-btn" id="heroNextBtn" aria-label="Next Slide">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <!-- Indicators -->
+            <div class="carousel-dots" id="heroCarouselDots">
+              <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+              <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+              <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+              <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
           </div>
         </div>
 
@@ -242,27 +234,33 @@
         <div class="savings-flow">
           <div class="savings-card">
             <span class="savings-card-label">Current Electricity Bill</span>
-            <span class="savings-card-value">₹<span data-count-to="6500">0</span></span>
-            <span class="savings-card-unit">/ month</span>
+            <div class="savings-val-wrapper">
+              <span class="savings-card-value">₹<span data-count-to="6500">0</span></span>
+              <span class="savings-card-unit">/ month</span>
+            </div>
           </div>
           <div class="flow-arrow" aria-hidden="true">
-            <svg width="34" height="16" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 8h30M24 2l8 6-8 6"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </div>
           <div class="savings-card highlight">
             <span class="savings-card-label">With Solar</span>
-            <span class="savings-card-value">₹<span data-count-to="2100">0</span></span>
-            <span class="savings-card-unit">/ month</span>
+            <div class="savings-val-wrapper">
+              <span class="savings-card-value">₹<span data-count-to="2100">0</span></span>
+              <span class="savings-card-unit">/ month</span>
+            </div>
             <div class="savings-card-divider"></div>
             <span class="savings-card-sub-label">You Save</span>
             <span class="savings-card-sub-value">₹<span data-count-to="4400">0</span> <small>/ month</small></span>
           </div>
           <div class="flow-arrow" aria-hidden="true">
-            <svg width="34" height="16" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 8h30M24 2l8 6-8 6"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </div>
           <div class="savings-card">
             <span class="savings-card-label">Annual Savings</span>
-            <span class="savings-card-value">₹<span data-count-to="52800">0</span></span>
-            <span class="savings-card-unit">/ year</span>
+            <div class="savings-val-wrapper">
+              <span class="savings-card-value">₹<span data-count-to="52800">0</span></span>
+              <span class="savings-card-unit">/ year</span>
+            </div>
           </div>
         </div>
         <p class="savings-disclaimer">Illustrative example — actual savings depend on usage, DISCOM tariff, roof orientation and system size.</p>
@@ -272,27 +270,33 @@
 
   <!-- ============ SECTION 04 — GOVERNMENT SUBSIDY FAST-TRACK ============ -->
   <section class="subsidy-section" id="subsidy">
-    <div class="subsidy-visual" data-reveal>
-      <img src="assets/images/about-quality-inspection.jpg" alt="Certified solar engineer verifying rooftop installation for government subsidy inspection" loading="lazy">
-    </div>
-    <div class="subsidy-content" data-reveal>
-      <p class="eyebrow">Government Subsidy Fast-Track</p>
-      <h2 class="section-heading">Claim Up to ₹78,000<br>Central Subsidy</h2>
-      <p>Under the national PM Surya Ghar Muft Bijli Yojana, residential rooftop solar qualifies for direct financial incentives. SolarBright handles 100% of the portal documentation, DISCOM net-metering liaison, and technical inspection.</p>
-
-      <div class="subsidy-highlight">
-        <span class="subsidy-amount">Up to ₹<span data-count-to="78000">0</span>*</span>
-        <span class="subsidy-note">*Direct Benefit Transfer (DBT) credited straight to your bank account post DISCOM synchronization.</span>
+    <div class="container subsidy-container">
+      <div class="subsidy-visual" data-reveal>
+        <img src="assets/images/about-quality-inspection.jpg" alt="Certified solar engineer verifying rooftop installation for government subsidy inspection" loading="lazy">
+        <div class="subsidy-badge-floating">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>PM Surya Ghar Verified</span>
+        </div>
       </div>
+      <div class="subsidy-content" data-reveal>
+        <p class="eyebrow">Government Subsidy Fast-Track</p>
+        <h2 class="section-heading">Claim Up to ₹78,000<br>Central Subsidy</h2>
+        <p>Under the national PM Surya Ghar Muft Bijli Yojana, residential rooftop solar qualifies for direct financial incentives. SolarBright handles 100% of the portal documentation, DISCOM net-metering liaison, and technical inspection.</p>
 
-      <ul class="check-list">
-        <li>National Portal Registration &amp; Feasibility Approval</li>
-        <li>Bi-Directional Net-Meter DISCOM Coordination</li>
-        <li>Electrical Safety Certification &amp; Commissioning Report</li>
-        <li>Guaranteed Subsidy DBT Disbursement Assistance</li>
-      </ul>
+        <div class="subsidy-highlight">
+          <span class="subsidy-amount">Up to ₹<span data-count-to="78000">0</span>*</span>
+          <span class="subsidy-note">*Direct Benefit Transfer (DBT) credited straight to your bank account post DISCOM synchronization.</span>
+        </div>
 
-      <a href="contact.html#contact-form" class="btn btn-yellow">Check Subsidy Eligibility <span class="arrow">→</span></a>
+        <ul class="check-list">
+          <li>National Portal Registration &amp; Feasibility Approval</li>
+          <li>Bi-Directional Net-Meter DISCOM Coordination</li>
+          <li>Electrical Safety Certification &amp; Commissioning Report</li>
+          <li>Guaranteed Subsidy DBT Disbursement Assistance</li>
+        </ul>
+
+        <a href="contact.html#contact-form" class="btn btn-yellow">Check Subsidy Eligibility <span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
@@ -306,48 +310,12 @@
       </div>
 
       <div class="ecosystem-grid" data-reveal>
-        <!-- LEFT: APP TELEMETRY COCKPIT -->
-        <div class="ecosystem-telemetry-card">
-          <div class="telemetry-top">
-            <div class="telemetry-device-title">
-              <span class="live-dot-green"></span>
-              <strong>SolarBright OS • Live Hub</strong>
-            </div>
-            <span class="telemetry-time">Synchronized 1m ago</span>
-          </div>
-
-          <div class="telemetry-stats-row">
-            <div class="tel-stat-box">
-              <span class="tel-lbl">Current Generation</span>
-              <strong class="tel-val text-green">4.82 kW</strong>
-              <span class="tel-trend">↑ Peak Midday Curve</span>
-            </div>
-            <div class="tel-stat-box">
-              <span class="tel-lbl">Export to Grid</span>
-              <strong class="tel-val text-yellow">2.95 kW</strong>
-              <span class="tel-trend">Net Meter Credited</span>
-            </div>
-            <div class="tel-stat-box">
-              <span class="tel-lbl">Today's Total</span>
-              <strong class="tel-val">28.4 kWh</strong>
-              <span class="tel-trend">₹227 Saved Today</span>
-            </div>
-          </div>
-
-          <div class="telemetry-chart-wrapper">
-            <div class="chart-header">
-              <span>Hourly Solar Yield Curve (kW)</span>
-              <span class="chart-badge">Active TOPCon Bifacial</span>
-            </div>
-            <div class="chart-bars">
-              <div class="c-bar" style="--h: 18%;" data-time="7 AM"><span class="c-val">0.9</span></div>
-              <div class="c-bar" style="--h: 38%;" data-time="9 AM"><span class="c-val">2.1</span></div>
-              <div class="c-bar" style="--h: 68%;" data-time="11 AM"><span class="c-val">3.9</span></div>
-              <div class="c-bar peak" style="--h: 96%;" data-time="1 PM"><span class="c-val">5.2</span></div>
-              <div class="c-bar" style="--h: 84%;" data-time="3 PM"><span class="c-val">4.5</span></div>
-              <div class="c-bar" style="--h: 44%;" data-time="5 PM"><span class="c-val">2.3</span></div>
-              <div class="c-bar" style="--h: 12%;" data-time="6 PM"><span class="c-val">0.6</span></div>
-            </div>
+        <!-- LEFT: APP TELEMETRY COCKPIT IMAGE -->
+        <div class="ecosystem-image-wrapper">
+          <img src="assets/images/smart-iot-monitoring.jpg" alt="SolarBright Smart Energy IoT Monitoring App Interface on Tablet" loading="lazy">
+          <div class="ecosystem-live-badge">
+            <span class="live-dot-green"></span>
+            <strong>SolarBright OS • Real-Time Telemetry</strong>
           </div>
         </div>
 
@@ -407,55 +375,65 @@
       </div>
 
       <div class="projects-grid">
-        <article class="project featured" data-reveal>
+        <article class="project" data-reveal>
           <div class="project-media">
             <img src="assets/images/about-engineering-detail.jpg" alt="5 kW residential rooftop solar installation in Bangalore" loading="lazy">
             <span class="project-badge">5 kW SYSTEM</span>
           </div>
           <div class="project-meta">
             <h3>Residential Villa Rooftop</h3>
-            <p class="project-location">Indiranagar, Bangalore, Karnataka</p>
+            <p class="project-location">Bangalore, Karnataka</p>
             <div class="project-stats">
               <span>⚡ 7,200 kWh annual generation</span>
-              <span>💰 ₹67,000 estimated annual savings</span>
+              <span>💰 ₹67,000 annual savings</span>
             </div>
           </div>
         </article>
 
-        <div class="project-supporting">
-          <article class="project" data-reveal>
-            <div class="project-media">
-              <img src="assets/images/products-hero-cutaway.jpg" alt="3 kW rooftop solar installation in Pune" loading="lazy">
-              <span class="project-badge">3 kW SYSTEM</span>
+        <article class="project" data-reveal>
+          <div class="project-media">
+            <img src="assets/images/products-hero-cutaway.jpg" alt="3 kW rooftop solar installation in Pune" loading="lazy">
+            <span class="project-badge">3 kW SYSTEM</span>
+          </div>
+          <div class="project-meta">
+            <h3>Urban Rooftop Solar</h3>
+            <p class="project-location">Pune, Maharashtra</p>
+            <div class="project-stats">
+              <span>⚡ 4,200 kWh annual generation</span>
+              <span>💰 ₹38,000 annual savings</span>
             </div>
-            <div class="project-meta">
-              <h3>Pune, Maharashtra</h3>
-              <span class="project-stat-inline">4,200 kWh / year</span>
-            </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project" data-reveal>
-            <div class="project-media">
-              <img src="assets/images/about-quality-inspection.jpg" alt="8 kW rooftop solar installation in Hyderabad" loading="lazy">
-              <span class="project-badge">8 kW SYSTEM</span>
+        <article class="project" data-reveal>
+          <div class="project-media">
+            <img src="assets/images/about-quality-inspection.jpg" alt="8 kW rooftop solar installation in Hyderabad" loading="lazy">
+            <span class="project-badge">8 kW SYSTEM</span>
+          </div>
+          <div class="project-meta">
+            <h3>Luxury Villa Solar Array</h3>
+            <p class="project-location">Hyderabad, Telangana</p>
+            <div class="project-stats">
+              <span>⚡ 11,500 kWh annual generation</span>
+              <span>💰 ₹98,000 annual savings</span>
             </div>
-            <div class="project-meta">
-              <h3>Hyderabad, Telangana</h3>
-              <span class="project-stat-inline">11,500 kWh / year</span>
-            </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project" data-reveal>
-            <div class="project-media">
-              <img src="assets/images/home2-closing-sunset.jpg" alt="10 kW rooftop solar installation in Chennai" loading="lazy">
-              <span class="project-badge">10 kW SYSTEM</span>
+        <article class="project" data-reveal>
+          <div class="project-media">
+            <img src="assets/images/home2-closing-sunset.jpg" alt="10 kW rooftop solar installation in Chennai" loading="lazy">
+            <span class="project-badge">10 kW SYSTEM</span>
+          </div>
+          <div class="project-meta">
+            <h3>Bifacial TOPCon Array</h3>
+            <p class="project-location">Chennai, Tamil Nadu</p>
+            <div class="project-stats">
+              <span>⚡ 14,400 kWh annual generation</span>
+              <span>💰 ₹1,25,000 annual savings</span>
             </div>
-            <div class="project-meta">
-              <h3>Chennai, Tamil Nadu</h3>
-              <span class="project-stat-inline">14,400 kWh / year</span>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
 
       <div class="projects-cta">
@@ -632,10 +610,10 @@
       <p class="final-cta-desc">Get a 100% free rooftop assessment and discover your monthly savings, system capacity, and eligible government subsidy.</p>
 
       <ul class="trust-points">
-        <li>100% Free Site Assessment</li>
+        <li>100% DISCOM Net Metering Paperwork</li>
         <li>Custom 3D CAD Rooftop Design</li>
         <li>Tier-1 N-Type TOPCon Components</li>
-        <li>Full DISCOM Net Metering Paperwork</li>
+        <li>25-Year Performance Guarantee</li>
       </ul>
 
       <div class="final-cta-actions">
@@ -652,13 +630,7 @@
   <div class="container footer-grid">
     <div class="footer-col footer-brand">
       <div class="brand">
-        <svg class="brand-mark" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
-          <circle cx="17" cy="17" r="8" fill="#F2C644"/>
-          <g stroke="#69C34B" stroke-width="2.4" stroke-linecap="round">
-            <line x1="17" y1="1" x2="17" y2="6"/><line x1="17" y1="28" x2="17" y2="33"/>
-            <line x1="1" y1="17" x2="6" y2="17"/><line x1="28" y1="17" x2="33" y2="17"/>
-          </g>
-        </svg>
+        <img src="assets/images/logo.png" alt="SolarBright Logo" class="brand-logo-img">
         <span class="brand-name">Solar<strong>Bright</strong></span>
       </div>
       <p class="footer-desc">Professional rooftop solar installations for residential villas, homes, and commercial properties — built for lifetime savings and extreme weather resilience.</p>
@@ -680,12 +652,24 @@
       <a href="index.html#process">Installation Process</a>
     </div>
 
-    <div class="footer-col">
+    <div class="footer-col footer-contact-col">
       <h4>Support &amp; Contact</h4>
-      <a href="contact.html">Contact Us</a>
-      <a href="contact.html">Book Free Audit</a>
-      <a href="login.html">Client Portal Login</a>
-      <a href="tel:+918005550199">+91 800 555 0199</a>
+      <a href="contact.html" class="footer-contact-link">
+        <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Contact Us</span>
+      </a>
+      <a href="contact.html" class="footer-contact-link">
+        <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg>
+        <span>Book Free Audit</span>
+      </a>
+      <a href="login.html" class="footer-contact-link">
+        <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Client Portal Login</span>
+      </a>
+      <a href="tel:+918005550199" class="footer-contact-link">
+        <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+91 800 555 0199</span>
+      </a>
     </div>
   </div>
 
