@@ -1,4 +1,94 @@
 /* ==========================================================================
+   SOLARBRIGHT — GLOBAL THEME & RTL CONTROLLER (RUNS FIRST ON EVERY PAGE)
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  function getSavedTheme() {
+    try {
+      return localStorage.getItem("solarbright-theme") || localStorage.getItem("theme") || "light";
+    } catch (e) {
+      return "light";
+    }
+  }
+
+  function getSavedDir() {
+    try {
+      return localStorage.getItem("solarbright-dir") || localStorage.getItem("dir") || "ltr";
+    } catch (e) {
+      return "ltr";
+    }
+  }
+
+  function applyTheme(theme) {
+    if (theme !== "dark" && theme !== "light") theme = "light";
+    document.documentElement.setAttribute("data-theme", theme);
+    if (document.body) document.body.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem("solarbright-theme", theme);
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+
+    var themeButtons = document.querySelectorAll(".theme-toggle, #themeToggle, #mobileThemeToggle");
+    themeButtons.forEach(function (btn) {
+      btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+    });
+  }
+
+  function applyDir(dir) {
+    if (dir !== "rtl" && dir !== "ltr") dir = "ltr";
+    document.documentElement.dir = dir;
+    document.documentElement.setAttribute("dir", dir);
+    if (document.body) {
+      document.body.dir = dir;
+      document.body.setAttribute("dir", dir);
+    }
+    try {
+      localStorage.setItem("solarbright-dir", dir);
+      localStorage.setItem("dir", dir);
+    } catch (e) {}
+
+    var rtlLabels = document.querySelectorAll(".rtl-label");
+    rtlLabels.forEach(function (lbl) {
+      lbl.textContent = dir === "rtl" ? "RTL" : "LTR";
+    });
+  }
+
+  // Apply immediately on script load
+  applyTheme(getSavedTheme());
+  applyDir(getSavedDir());
+
+  // Re-apply when DOM is ready to catch document.body and dynamic elements
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      applyTheme(getSavedTheme());
+      applyDir(getSavedDir());
+    });
+  }
+
+  // Global click event delegation - catches clicks anywhere on button, text, or icon
+  window.addEventListener("click", function (e) {
+    var themeBtn = e.target.closest(".theme-toggle, #themeToggle, #mobileThemeToggle");
+    if (themeBtn) {
+      e.preventDefault();
+      var currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+      var newTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(newTheme);
+      return;
+    }
+
+    var rtlBtn = e.target.closest(".rtl-toggle, #rtlToggle, #mobileRtlToggle");
+    if (rtlBtn) {
+      e.preventDefault();
+      var currentDir = document.documentElement.getAttribute("dir") || "ltr";
+      var newDir = currentDir === "rtl" ? "ltr" : "rtl";
+      applyDir(newDir);
+      return;
+    }
+  }, true);
+})();
+
+/* ==========================================================================
    SolarBright — Home Page Interactions
    ========================================================================== */
 (function () {
@@ -13,14 +103,17 @@
   /* ---------- Sticky header state ---------- */
   var header = document.getElementById("siteHeader");
   function updateHeaderState() {
+    if (!header) return;
     if (window.scrollY > 24) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
     }
   }
-  updateHeaderState();
-  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  if (header) {
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  }
 
   /* ---------- Hero Image Carousel ---------- */
   var heroCarousel = document.getElementById("heroCarousel");
@@ -130,66 +223,6 @@
   if (sections.length > 0) {
     window.addEventListener("scroll", updateActiveNav, { passive: true });
   }
-
-  /* ---------- Theme toggle (persisted) ---------- */
-  var themeToggles = Array.prototype.slice.call(document.querySelectorAll("#themeToggle, #mobileThemeToggle"));
-  var root = document.body;
-  var STORAGE_KEY = "solarbright-theme";
-
-  function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-    themeToggles.forEach(function (btn) {
-      btn.setAttribute("aria-pressed", theme === "dark");
-    });
-  }
-
-  var savedTheme = null;
-  try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) { /* storage unavailable */ }
-
-  if (savedTheme) {
-    applyTheme(savedTheme);
-  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    applyTheme("dark");
-  }
-
-  themeToggles.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      applyTheme(next);
-      try { localStorage.setItem(STORAGE_KEY, next); } catch (e) { /* storage unavailable */ }
-    });
-  });
-
-  /* ---------- RTL / LTR Toggle (persisted) ---------- */
-  var rtlToggles = Array.prototype.slice.call(document.querySelectorAll("#rtlToggle, #mobileRtlToggle"));
-  var doc = document.documentElement;
-  var DIR_STORAGE_KEY = "solarbright-dir";
-
-  function applyDir(dir) {
-    doc.setAttribute("dir", dir);
-    rtlToggles.forEach(function (btn) {
-      var label = btn.querySelector(".rtl-label");
-      if (label) label.textContent = dir === "rtl" ? "RTL" : "LTR";
-    });
-  }
-
-  var savedDir = null;
-  try { savedDir = localStorage.getItem(DIR_STORAGE_KEY); } catch (e) { /* storage unavailable */ }
-
-  if (savedDir) {
-    applyDir(savedDir);
-  } else {
-    applyDir("ltr");
-  }
-
-  rtlToggles.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var currentDir = doc.getAttribute("dir") || "ltr";
-      var nextDir = currentDir === "rtl" ? "ltr" : "rtl";
-      applyDir(nextDir);
-      try { localStorage.setItem(DIR_STORAGE_KEY, nextDir); } catch (e) { /* storage unavailable */ }
-    });
-  });
 
   /* ---------- Mobile menu ---------- */
   var hamburger = document.getElementById("hamburgerBtn");

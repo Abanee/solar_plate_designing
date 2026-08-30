@@ -8,6 +8,14 @@
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+  (function(){
+    var t = localStorage.getItem("solarbright-theme") || localStorage.getItem("theme") || "light";
+    var d = localStorage.getItem("solarbright-dir") || localStorage.getItem("dir") || "ltr";
+    document.documentElement.setAttribute("data-theme", t);
+    document.documentElement.setAttribute("dir", d);
+  })();
+</script>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-theme="light" class="page-gallery">
