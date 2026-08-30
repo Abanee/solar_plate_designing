@@ -9043,6 +9043,123 @@ body.page-home2,
   justify-content: center;
 }
 
+/* ==========================================================================
+   SERVICES PAGE (services.html) SECTION 01 EQUAL-HEIGHT CARD GRID
+   ========================================================================== */
+.sv-catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .sv-catalogue-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sv-catalogue-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.sv-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.sv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border-color: var(--green);
+}
+
+.sv-card-media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #111;
+}
+
+.sv-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.sv-card:hover .sv-card-media img {
+  transform: scale(1.08);
+}
+
+.sv-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(11, 20, 16, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sv-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.sv-card-body h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+  font-family: var(--font-display);
+}
+
+.sv-card-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.sv-card-body .sv-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 6px 0 14px;
+}
+
+.sv-card-footer {
+  margin-top: auto;
+}
+
+.sv-card-btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+
 
 
 
