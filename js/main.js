@@ -84,21 +84,52 @@
     startAutoPlay();
   }
 
-  /* ---------- Active nav link on scroll ---------- */
+  /* ---------- Active nav link handling ---------- */
+  var currentPath = window.location.pathname.split("/").pop() || "index.html";
+  if (currentPath === "") currentPath = "index.html";
+
+  var desktopNavLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
+  var mobileNavLinks = Array.prototype.slice.call(document.querySelectorAll(".mobile-link"));
+
+  function highlightPageLinks() {
+    desktopNavLinks.forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (href === currentPath || (currentPath === "index.html" && (href === "index.html" || href === "./"))) {
+        link.classList.add("active");
+      } else if (href && !href.startsWith("#")) {
+        link.classList.remove("active");
+      }
+    });
+    mobileNavLinks.forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (href === currentPath || (currentPath === "index.html" && (href === "index.html" || href === "./"))) {
+        link.classList.add("active");
+      } else if (href && !href.startsWith("#")) {
+        link.classList.remove("active");
+      }
+    });
+  }
+  highlightPageLinks();
+
   var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
   function updateActiveNav() {
+    if (!sections.length) return;
     var scrollPos = window.scrollY + 140;
-    var current = sections[0] ? sections[0].id : null;
+    var current = null;
     sections.forEach(function (section) {
       if (section.offsetTop <= scrollPos) current = section.id;
     });
-    navLinks.forEach(function (link) {
-      var match = link.getAttribute("href") === "#" + current;
-      link.classList.toggle("active", match);
+    if (!current) return;
+    desktopNavLinks.forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        link.classList.toggle("active", href === "#" + current);
+      }
     });
   }
-  window.addEventListener("scroll", updateActiveNav, { passive: true });
+  if (sections.length > 0) {
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+  }
 
   /* ---------- Theme toggle (persisted) ---------- */
   var themeToggle = document.getElementById("themeToggle");

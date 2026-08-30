@@ -82,68 +82,7 @@
     <div class="container">
       <div class="ct-grid-container">
         
-        <!-- LEFT COLUMN: PROFESSIONAL CONTACT FORM -->
-        <div class="ct-form-wrapper" id="contact-form">
-          <div class="ct-card-header">
-            <h2>Send Us A Message</h2>
-            <p>Fill out the form below and our solar team will respond within 24 hours.</p>
-          </div>
-
-          <form id="solarContactForm" class="ct-clean-form" onsubmit="event.preventDefault();">
-            <div class="form-row">
-              <div class="form-field">
-                <label for="fullName">Full Name <span>*</span></label>
-                <input type="text" id="fullName" placeholder="e.g. Rahul Sharma" required>
-              </div>
-
-              <div class="form-field">
-                <label for="emailAddress">Email Address <span>*</span></label>
-                <input type="email" id="emailAddress" placeholder="e.g. rahul@example.com" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label for="phoneNumber">Phone Number <span>*</span></label>
-                <input type="tel" id="phoneNumber" placeholder="e.g. +91 98765 43210" required>
-              </div>
-
-              <div class="form-field">
-                <label for="subjectSelect">Subject / Inquiry Type <span>*</span></label>
-                <select id="subjectSelect" required>
-                  <option value="">Select a Topic</option>
-                  <option value="audit">Solar Audit Request</option>
-                  <option value="pricing">Pricing &amp; Quotation Request</option>
-                  <option value="subsidy">Government Subsidy Consultation</option>
-                  <option value="service">Existing Solar Maintenance / Repair</option>
-                  <option value="other">General Question</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-field full-width">
-              <label for="messageText">Your Message <span>*</span></label>
-              <textarea id="messageText" rows="5" placeholder="Write your message or rooftop requirements here..." required></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary ct-btn-send" id="submitFormBtn">
-                Send Message →
-              </button>
-              <span class="privacy-note">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                We respect your privacy. No spam guaranteed.
-              </span>
-            </div>
-
-            <div class="form-success-alert" id="formSuccessMessage" style="display:none;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><polyline points="20 6 9 17 4 12"/></svg>
-              Thank you! Your message has been sent successfully. An engineer will contact you shortly.
-            </div>
-          </form>
-        </div>
-
-        <!-- RIGHT COLUMN: CONTACT INFORMATION CARD -->
+        <!-- LEFT COLUMN: CONTACT INFORMATION CARD -->
         <div class="ct-info-sidebar">
           <div class="ct-info-box">
             <h3>Contact Information</h3>
@@ -218,6 +157,67 @@
             </div>
 
           </div>
+        </div>
+
+        <!-- RIGHT COLUMN: PROFESSIONAL CONTACT FORM -->
+        <div class="ct-form-wrapper" id="contact-form">
+          <div class="ct-card-header">
+            <h2>Send Us A Message</h2>
+            <p>Fill out the form below and our solar team will respond within 24 hours.</p>
+          </div>
+
+          <form id="solarContactForm" class="ct-clean-form" onsubmit="event.preventDefault();">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fullName">Full Name <span>*</span></label>
+                <input type="text" id="fullName" placeholder="e.g. Rahul Sharma" required>
+              </div>
+
+              <div class="form-field">
+                <label for="emailAddress">Email Address <span>*</span></label>
+                <input type="email" id="emailAddress" placeholder="e.g. rahul@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phoneNumber">Phone Number <span>*</span></label>
+                <input type="tel" id="phoneNumber" placeholder="e.g. +91 98765 43210" required>
+              </div>
+
+              <div class="form-field">
+                <label for="subjectSelect">Subject / Inquiry Type <span>*</span></label>
+                <select id="subjectSelect" required>
+                  <option value="">Select a Topic</option>
+                  <option value="audit">Solar Audit Request</option>
+                  <option value="pricing">Pricing &amp; Quotation Request</option>
+                  <option value="subsidy">Government Subsidy Consultation</option>
+                  <option value="service">Existing Solar Maintenance / Repair</option>
+                  <option value="other">General Question</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="messageText">Your Message <span>*</span></label>
+              <textarea id="messageText" rows="5" placeholder="Write your message or rooftop requirements here..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary ct-btn-send" id="submitFormBtn">
+                Send Message →
+              </button>
+              <span class="privacy-note">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                We respect your privacy. No spam guaranteed.
+              </span>
+            </div>
+
+            <div class="form-success-alert" id="formSuccessMessage" style="display:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><polyline points="20 6 9 17 4 12"/></svg>
+              Thank you! Your message has been sent successfully. An engineer will contact you shortly.
+            </div>
+          </form>
         </div>
 
       </div>
