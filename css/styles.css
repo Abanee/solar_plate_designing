@@ -8055,6 +8055,629 @@ a.h2-hero-secondary-link {
   margin-bottom: 40px !important;
 }
 
+/* ==========================================================================
+   HOME 2 VIDEO HERO STYLING
+   ========================================================================== */
+.h2-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.h2-hero-media img,
+.h2-hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.h2-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 18, 16, 0.65) 0%, rgba(11, 18, 16, 0.82) 100%);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   HOME 2 (home2.html) 360px MOBILE RESPONSIVE FIXES & STYLING
+   ========================================================================== */
+
+/* Prevent page-wide horizontal scroll & overflow */
+body.page-home2,
+.page-home2 main {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+.h2-hero {
+  position: relative;
+  min-height: 75vh;
+  padding: 90px 0 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.h2-hero-heading {
+  font-size: clamp(28px, 7vw, 54px);
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin: 16px 0;
+}
+
+.h2-hero-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 24px;
+}
+
+.h2-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .h2-hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.h2-hero-actions .btn,
+.h2-hero-actions .h2-hero-secondary-link {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .h2-hero-actions .btn,
+  .h2-hero-actions .h2-hero-secondary-link {
+    width: auto;
+  }
+}
+
+/* Section Spacing & Containers */
+.h2-section {
+  padding: 48px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.h2-section-header {
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
+.h2-section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--green);
+  background: rgba(62, 150, 63, 0.12);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.h2-editorial-heading {
+  font-size: clamp(24px, 5.5vw, 42px);
+  font-weight: 800;
+  font-family: var(--font-display);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.h2-section-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Section 02: Pipeline Track Mobile Stacking */
+.h2-energy-pipeline {
+  width: 100%;
+  overflow: hidden;
+}
+
+.h2-pipeline-track {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .h2-pipeline-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+}
+
+.h2-pipeline-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .h2-pipeline-step {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.h2-pipeline-connector {
+  display: none;
+}
+
+.h2-step-node {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.h2-step-num {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: var(--green);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.h2-step-media {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border);
+}
+
+.h2-step-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h2-step-info h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.h2-step-info p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Section 03: Day Cards Grid */
+.h2-day-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .h2-day-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.h2-day-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.h2-day-card-media {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.h2-day-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h2-time-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(11, 20, 16, 0.85);
+  backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.h2-power-pill {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--green);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.h2-day-card-body {
+  padding: 20px;
+}
+
+.h2-day-card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.h2-day-card-body p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Section 04: Portrait / Lifestyle Split */
+.h2-portrait-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .h2-portrait-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.h2-portrait-media img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.h2-scenarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.h2-scenario-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.h2-scenario-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--green);
+  background: rgba(62, 150, 63, 0.12);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.h2-scenario-body {
+  flex: 1 1 160px;
+}
+
+.h2-scenario-body h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.h2-scenario-body p {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.h2-scenario-stat {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--text);
+  margin-left: auto;
+}
+
+/* Section 05: Roof Canvas & Metrics */
+.h2-roof-analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .h2-roof-analysis-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.h2-roof-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+}
+
+.h2-roof-canvas-wrapper img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.h2-roof-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.h2-metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+
+.h2-metric-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.h2-metric-icon {
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.h2-metric-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.metric-value {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Section 06 & 07: Milestones & Aesthetics */
+.h2-milestones-track {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .h2-milestones-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .h2-milestones-track {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.h2-milestone-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  width: 100%;
+}
+
+.h2-m-step {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.h2-milestone-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0 6px;
+}
+
+.h2-milestone-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.h2-single-story-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .h2-single-story-card {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.h2-story-media img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.h2-material-selector {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.h2-mat-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.h2-mat-btn.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.h2-aesthetics-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .h2-aesthetics-showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.h2-aesthetics-media img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.h2-closing-section {
+  position: relative;
+  padding: 80px 0;
+  text-align: center;
+  background: #060D0A;
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.h2-closing-media {
+  position: absolute;
+  inset: 0;
+}
+
+.h2-closing-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.h2-closing-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,13,10,0.7) 0%, rgba(6,13,10,0.9) 100%);
+}
+
+.h2-closing-container {
+  position: relative;
+  z-index: 2;
+}
+
+.h2-closing-title {
+  font-size: clamp(28px, 6vw, 48px);
+  font-family: var(--font-display);
+  font-weight: 800;
+  margin: 16px 0;
+  color: #fff;
+}
+
+.h2-closing-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  max-width: 580px;
+  margin: 0 auto 28px;
+}
+
+.h2-closing-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .h2-closing-actions {
+    flex-direction: row;
+  }
+}
+
+
+
 
 
 
