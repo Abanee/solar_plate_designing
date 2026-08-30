@@ -370,20 +370,141 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   border-color: #26362D !important;
 }
 
-/* Mobile menu */
-.mobile-menu{
-  position: fixed; top:0; right:0; height:100vh; width: min(360px, 86vw); z-index: 200;
-  background: var(--bg); box-shadow: -10px 0 40px rgba(0,0,0,0.18);
-  padding: 100px 32px 40px; display:flex; flex-direction:column; gap: 32px;
-  transform: translateX(100%); transition: transform 340ms cubic-bezier(.4,0,.2,1);
+/* Mobile menu drawer styling */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(380px, 88vw);
+  z-index: 200;
+  background: var(--bg);
+  backdrop-filter: blur(24px);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.22);
+  padding: 24px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  transform: translateX(100%);
+  transition: transform 340ms cubic-bezier(.4, 0, .2, 1);
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
 }
-.mobile-menu.open{ transform: translateX(0); }
-.mobile-menu nav{ display:flex; flex-direction:column; gap:22px; }
-.mobile-link{ font-size:20px; font-weight:700; font-family: var(--font-display); }
-.mobile-menu-backdrop{
-  position:fixed; inset:0; background: rgba(0,0,0,0.4); z-index:150; opacity:0; pointer-events:none; transition: opacity var(--transition);
+
+.mobile-menu.open {
+  transform: translateX(0);
 }
-.mobile-menu-backdrop.open{ opacity:1; pointer-events:auto; }
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+[data-theme="dark"] .mobile-menu-close {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mobile-menu-close:hover {
+  transform: rotate(90deg);
+  background: var(--green);
+  color: #fff;
+}
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 0;
+}
+
+.mobile-link {
+  font-size: 15.5px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.mobile-link:hover,
+.mobile-link.active,
+.mobile-link.text-accent {
+  background: rgba(62, 150, 63, 0.12);
+  color: var(--green) !important;
+  transform: translateX(4px);
+}
+
+.mobile-menu-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.mobile-toggles-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.mobile-toggles-row .rtl-toggle,
+.mobile-toggles-row .theme-toggle {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 150;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.mobile-menu-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  .site-header .btn-header,
+  .site-header .rtl-toggle,
+  .site-header .theme-toggle {
+    display: none !important;
+  }
+}
 
 /* ---------- 4. INNOVATIVE HERO ---------- */
 .hero-innovative {
@@ -7662,5 +7783,278 @@ a.btn.btn-secondary.sv-btn-light:hover {
   .ab-evolution-grid { grid-template-columns: 1fr; }
   .ab-principle-item { flex-direction: column; gap: 14px; }
 }
+
+/* ==========================================================================
+   WHY SOLAR SECTION — IMAGE CARDS & ACCENT STYLES
+   ========================================================================== */
+.text-gradient {
+  color: var(--green) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: var(--green) !important;
+}
+
+.why-solar .benefit-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.why-solar .benefit {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.why-solar .benefit:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: var(--shadow-lift);
+}
+
+.why-solar .benefit-media {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.why-solar .benefit-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(.4,0,.2,1);
+}
+
+.why-solar .benefit:hover .benefit-media img {
+  transform: scale(1.08);
+}
+
+.why-solar .benefit-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.why-solar .benefit-body h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.why-solar .benefit-body p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .why-solar .benefit-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-solar .benefit-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   PROJECTS SECTION <= 1024px CENTERING & SPACING
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .projects-section .section-intro {
+    text-align: center;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+  }
+  .projects-section .section-intro .ct-badge-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects-section .projects-grid {
+    margin-top: 24px;
+    gap: 32px;
+    justify-content: center;
+  }
+  .projects-section .projects-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+  }
+}
+
+/* ==========================================================================
+   HOME 2 HERO TOP SPACE REDUCTION & BUTTON BORDER
+   ========================================================================== */
+.h2-hero {
+  min-height: 80vh;
+  padding: 100px 0 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.h2-hero-container {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.h2-hero-secondary-link,
+a.h2-hero-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.h2-hero-secondary-link:hover {
+  background: #FFFFFF !important;
+  color: var(--green-dark) !important;
+  border-color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   ABOUT & SERVICES IMAGE HEIGHT CONSTRAINTS <= 1024px
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .ab-diagram-media img,
+  .ab-wall-media img,
+  .ab-hero-media img,
+  .ab-team-media-equal img,
+  .story-media img,
+  .sv-deliverables-wall img {
+    max-height: 420px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: var(--radius-md);
+  }
+  .ab-diagram-media {
+    max-height: 440px;
+    overflow: hidden;
+  }
+}
+
+/* ==========================================================================
+   CONTACT PAGE HERO INNOVATIVE SECTION
+   ========================================================================== */
+.ct-hero-innovative {
+  position: relative;
+  padding: 140px 0 80px;
+  background: linear-gradient(180deg, rgba(11,20,16,0.85) 0%, rgba(11,20,16,0.75) 100%), url('../assets/images/about-hero-portrait.jpg') center/cover no-repeat;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.ct-hero-innovative .ct-page-title {
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 16px 0;
+  font-family: var(--font-display);
+}
+
+.ct-hero-innovative .ct-page-lead {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 720px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.ct-hero-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ct-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   AUTH PAGES (LOGIN & SIGNUP) CENTERING & TOP-LEFT ACTIONS
+   ========================================================================== */
+.auth-top-actions {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.auth-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.auth-title {
+  text-align: center;
+}
+
+.auth-subtitle {
+  text-align: center;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   PRODUCT PAGE EMPTY GAP FIX
+   ========================================================================== */
+.pr-project-section {
+  padding-bottom: 20px !important;
+}
+
+.pr-final-cta {
+  margin-top: 20px !important;
+  margin-bottom: 40px !important;
+}
+
+
 
 

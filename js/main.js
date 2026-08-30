@@ -132,13 +132,15 @@
   }
 
   /* ---------- Theme toggle (persisted) ---------- */
-  var themeToggle = document.getElementById("themeToggle");
+  var themeToggles = Array.prototype.slice.call(document.querySelectorAll("#themeToggle, #mobileThemeToggle"));
   var root = document.body;
   var STORAGE_KEY = "solarbright-theme";
 
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
-    themeToggle.setAttribute("aria-pressed", theme === "dark");
+    themeToggles.forEach(function (btn) {
+      btn.setAttribute("aria-pressed", theme === "dark");
+    });
   }
 
   var savedTheme = null;
@@ -150,23 +152,25 @@
     applyTheme("dark");
   }
 
-  themeToggle.addEventListener("click", function () {
-    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    applyTheme(next);
-    try { localStorage.setItem(STORAGE_KEY, next); } catch (e) { /* storage unavailable */ }
+  themeToggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      applyTheme(next);
+      try { localStorage.setItem(STORAGE_KEY, next); } catch (e) { /* storage unavailable */ }
+    });
   });
 
   /* ---------- RTL / LTR Toggle (persisted) ---------- */
-  var rtlToggle = document.getElementById("rtlToggle");
+  var rtlToggles = Array.prototype.slice.call(document.querySelectorAll("#rtlToggle, #mobileRtlToggle"));
   var doc = document.documentElement;
   var DIR_STORAGE_KEY = "solarbright-dir";
 
   function applyDir(dir) {
     doc.setAttribute("dir", dir);
-    if (rtlToggle) {
-      var label = rtlToggle.querySelector(".rtl-label");
+    rtlToggles.forEach(function (btn) {
+      var label = btn.querySelector(".rtl-label");
       if (label) label.textContent = dir === "rtl" ? "RTL" : "LTR";
-    }
+    });
   }
 
   var savedDir = null;
@@ -178,43 +182,53 @@
     applyDir("ltr");
   }
 
-  if (rtlToggle) {
-    rtlToggle.addEventListener("click", function () {
+  rtlToggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
       var currentDir = doc.getAttribute("dir") || "ltr";
       var nextDir = currentDir === "rtl" ? "ltr" : "rtl";
       applyDir(nextDir);
       try { localStorage.setItem(DIR_STORAGE_KEY, nextDir); } catch (e) { /* storage unavailable */ }
     });
-  }
+  });
 
   /* ---------- Mobile menu ---------- */
   var hamburger = document.getElementById("hamburgerBtn");
   var mobileMenu = document.getElementById("mobileMenu");
   var backdrop = document.getElementById("mobileMenuBackdrop");
+  var mobileCloseBtn = document.getElementById("mobileMenuCloseBtn");
 
   function openMenu() {
+    if (!hamburger || !mobileMenu) return;
     hamburger.classList.add("open");
     hamburger.setAttribute("aria-expanded", "true");
     mobileMenu.classList.add("open");
     mobileMenu.setAttribute("aria-hidden", "false");
-    backdrop.classList.add("open");
+    if (backdrop) backdrop.classList.add("open");
     document.documentElement.style.overflow = "hidden";
   }
   function closeMenu() {
+    if (!hamburger || !mobileMenu) return;
     hamburger.classList.remove("open");
     hamburger.setAttribute("aria-expanded", "false");
     mobileMenu.classList.remove("open");
     mobileMenu.setAttribute("aria-hidden", "true");
-    backdrop.classList.remove("open");
+    if (backdrop) backdrop.classList.remove("open");
     document.documentElement.style.overflow = "";
   }
-  hamburger.addEventListener("click", function () {
-    mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
-  });
-  backdrop.addEventListener("click", closeMenu);
-  Array.prototype.slice.call(mobileMenu.querySelectorAll("a")).forEach(function (link) {
-    link.addEventListener("click", closeMenu);
-  });
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
+    });
+  }
+  if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener("click", closeMenu);
+  }
+  if (backdrop) backdrop.addEventListener("click", closeMenu);
+  if (mobileMenu) {
+    Array.prototype.slice.call(mobileMenu.querySelectorAll("nav a")).forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+  }
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeMenu();
   });
