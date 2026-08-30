@@ -1375,15 +1375,24 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 
 /* ---------- 8. PROJECTS OVERHAUL ---------- */
 .projects-section {
-  padding: 110px 0;
+  padding: 100px 0;
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
+}
+.projects-section .section-intro {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 44px;
+}
+.projects-section .section-intro .ct-badge-pill {
+  margin-left: auto;
+  margin-right: auto;
 }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 .projects-grid .project {
   background: var(--card-bg);
@@ -1450,11 +1459,42 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .project-stats {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  font-size: 12px;
+  gap: 6px;
+  font-size: 12.5px;
   font-weight: 600;
-  color: var(--green);
   margin-top: auto;
+}
+.project-stats .stat-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+.project-stats .stat-icon {
+  flex-shrink: 0;
+}
+.project-stats .stat-icon.icon-energy {
+  color: #d97706;
+}
+.project-stats .stat-icon.icon-savings {
+  color: var(--green);
+}
+[data-theme="dark"] .project-stats .stat-icon.icon-energy {
+  color: #facc15;
+}
+[data-theme="dark"] .project-stats .stat-icon.icon-savings {
+  color: #69C34B;
+}
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  width: 100%;
+}
+.projects-cta .btn {
+  align-self: center !important;
 }
 .project-supporting {
   display: flex;
