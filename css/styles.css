@@ -131,22 +131,24 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .btn-block{ width:100%; justify-content:center; }
 .btn-header{ padding: 11px 22px; font-size: 14px; }
 
-/* ---------- 3. HEADER ---------- */
-.site-header{
-  position: fixed; top:0; left:0; right:0; z-index: 100;
-  padding: 20px 0;
-  background: transparent;
-  transition: background var(--transition), box-shadow var(--transition), padding var(--transition), border-color var(--transition);
-  border-bottom: 1px solid transparent;
+/* ---------- 3. HEADER (DYNAMIC THEME BACKGROUND) ---------- */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 14px 0;
+  background: rgba(247, 247, 241, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(11, 20, 16, 0.08);
+  border-bottom: 1px solid var(--border);
+  transition: padding var(--transition), background var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
-.site-header.scrolled{
-  background: rgba(247,247,241,0.86);
-  backdrop-filter: blur(14px);
-  padding: 12px 0;
-  box-shadow: 0 4px 24px rgba(11,20,16,0.06);
+
+.site-header.scrolled {
+  padding: 10px 0;
+  background: rgba(247, 247, 241, 0.98);
+  box-shadow: 0 6px 28px rgba(11, 20, 16, 0.12);
   border-bottom: 1px solid var(--border);
 }
-[data-theme="dark"] .site-header.scrolled{ background: rgba(11,18,16,0.82); }
 
 .header-inner{
   max-width: var(--container); margin: 0 auto; padding: 0 32px;
@@ -155,26 +157,42 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .brand{ display:flex; align-items:center; gap:10px; }
 .brand-mark{ flex-shrink:0; }
 .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
-.brand-name{ font-family: var(--font-display); font-weight:600; font-size:19px; color: var(--text); }
+.brand-name{ font-family: var(--font-display); font-weight:700; font-size:19px; color: var(--text); }
 .brand-name strong{ color: var(--green); font-weight:800; }
 .brand-tag{ font-size:10.5px; color: var(--text-secondary); letter-spacing:0.02em; }
-.hero .brand-name, .hero .brand-tag{ color: #fff; }
-.site-header:not(.scrolled) .brand-name{ color:#fff; }
-.site-header:not(.scrolled) .brand-tag{ color: rgba(255,255,255,0.78); }
 
 .main-nav{ display:flex; align-items:center; gap: 20px; flex-wrap: nowrap; }
 .nav-link{
-  font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.92);
+  font-size: 14px; font-weight: 600; color: var(--text-secondary);
   position:relative; padding: 4px 0; transition: color var(--transition);
   white-space: nowrap; flex-shrink: 0;
 }
-.site-header.scrolled .nav-link{ color: var(--text-secondary); }
 .nav-link:hover, .nav-link.active{ color: var(--green); }
-.site-header:not(.scrolled) .nav-link:hover,
-.site-header:not(.scrolled) .nav-link.active{ color: var(--yellow); }
 .nav-link.active::after{
-  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background: var(--green);
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2.5px; background: var(--green); border-radius: 999px;
 }
+
+/* Dark Mode Header Overrides */
+[data-theme="dark"] .site-header {
+  background: rgba(11, 18, 16, 0.92);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .site-header.scrolled {
+  background: rgba(6, 12, 10, 0.96);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(62, 150, 63, 0.3);
+}
+
+[data-theme="dark"] .site-header .brand-name { color: #FFFFFF; }
+[data-theme="dark"] .site-header .brand-name strong { color: var(--green); }
+[data-theme="dark"] .site-header .brand-tag { color: rgba(255, 255, 255, 0.7); }
+
+[data-theme="dark"] .site-header .nav-link { color: rgba(255, 255, 255, 0.85); }
+[data-theme="dark"] .site-header .nav-link:hover,
+[data-theme="dark"] .site-header .nav-link.active { color: var(--yellow); }
+[data-theme="dark"] .site-header .nav-link.active::after { background: var(--yellow); }
 
 .header-actions{ display:flex; align-items:center; gap: 14px; }
 
@@ -8095,11 +8113,33 @@ body.page-home2,
 .h2-hero {
   position: relative;
   min-height: 75vh;
-  padding: 90px 0 50px;
+  padding: 95px 0 55px;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   width: 100%;
+  text-align: center;
+}
+
+.h2-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.h2-hero-content {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .h2-hero-heading {
@@ -8109,25 +8149,30 @@ body.page-home2,
   color: #FFFFFF;
   line-height: 1.15;
   margin: 16px 0;
+  text-align: center;
 }
 
 .h2-hero-sub {
-  font-size: 15px;
+  font-size: 15.5px;
   color: rgba(255, 255, 255, 0.88);
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .h2-hero-actions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 640px) {
   .h2-hero-actions {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -8361,7 +8406,21 @@ body.page-home2,
 @media (min-width: 1025px) {
   .h2-portrait-grid {
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .h2-portrait-media,
+  .h2-image-frame {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .h2-portrait-media img,
+  .h2-image-frame img {
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    flex: 1;
   }
 }
 
@@ -8436,6 +8495,17 @@ body.page-home2,
 @media (min-width: 1025px) {
   .h2-roof-analysis-grid {
     grid-template-columns: 1.2fr 1fr;
+    align-items: stretch;
+    gap: 32px;
+  }
+  .h2-roof-canvas-wrapper {
+    height: 100%;
+    min-height: 480px;
+  }
+  .h2-roof-canvas-wrapper img {
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
   }
 }
 
@@ -8557,6 +8627,17 @@ body.page-home2,
 @media (min-width: 1025px) {
   .h2-single-story-card {
     grid-template-columns: 1.2fr 1fr;
+    align-items: stretch;
+    gap: 36px;
+  }
+  .h2-story-media {
+    height: 100%;
+    min-height: 420px;
+  }
+  .h2-story-media img {
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
   }
 }
 
