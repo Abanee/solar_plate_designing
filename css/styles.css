@@ -7673,11 +7673,18 @@ a.btn.btn-secondary.sv-btn-light:hover {
 }
 
 .ab-section-label {
-  display: block;
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;
   color: var(--green);
+  background: rgba(62, 150, 63, 0.12);
+  border: 1px solid rgba(62, 150, 63, 0.3);
+  padding: 5px 14px;
+  border-radius: 999px;
   margin-bottom: 16px;
   text-transform: uppercase;
 }
@@ -8535,7 +8542,8 @@ body.page-home2,
 @media (min-width: 768px) {
   .h2-portrait-grid,
   .h2-roof-analysis-grid,
-  .h2-single-story-card {
+  .h2-single-story-card,
+  .ab-engineering-layout {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     align-items: stretch !important;
@@ -8547,9 +8555,11 @@ body.page-home2,
   .h2-portrait-media[data-reveal],
   .h2-image-frame,
   .h2-roof-canvas-wrapper,
-  .h2-story-media {
+  .h2-story-media,
+  .ab-diagram-media {
     height: 100% !important;
     min-height: 100% !important;
+    aspect-ratio: auto !important;
     display: flex !important;
     flex-direction: column !important;
     flex: 1 1 auto !important;
@@ -8561,7 +8571,8 @@ body.page-home2,
   .h2-portrait-media img,
   .h2-image-frame img,
   .h2-roof-canvas-wrapper img,
-  .h2-story-media img {
+  .h2-story-media img,
+  .ab-diagram-media img {
     width: 100% !important;
     height: 100% !important;
     min-height: 100% !important;
@@ -8571,6 +8582,84 @@ body.page-home2,
     flex: 1 1 auto !important;
     border-radius: var(--radius-md) !important;
   }
+}
+
+/* Universal Section Badge Pills & Labels (Text-Fitted Fit-Content Background) */
+.ab-section-label,
+.h2-section-label,
+.ct-badge-pill,
+.sv-section-label,
+.pr-section-label,
+.pl-section-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(62, 150, 63, 0.12) !important;
+  border: 1px solid rgba(62, 150, 63, 0.3) !important;
+  color: var(--green) !important;
+  font-family: monospace, var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 16px !important;
+}
+
+[data-theme="dark"] .ab-section-label,
+[data-theme="dark"] .h2-section-label,
+[data-theme="dark"] .ct-badge-pill,
+[data-theme="dark"] .sv-section-label,
+[data-theme="dark"] .pr-section-label,
+[data-theme="dark"] .pl-section-label {
+  background: rgba(105, 195, 75, 0.15) !important;
+  border: 1px solid rgba(105, 195, 75, 0.3) !important;
+  color: #69C34B !important;
+}
+
+/* Dark Mode High-Contrast Overrides for Milestone Cards (#financial-chronology) */
+[data-theme="dark"] .h2-m-badge {
+  color: #69C34B !important;
+  background: rgba(105, 195, 75, 0.18) !important;
+  border: 1px solid rgba(105, 195, 75, 0.35) !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="dark"] .h2-m-badge.highlight {
+  color: #0B1210 !important;
+  background: var(--green) !important;
+}
+
+/* Dark Mode High-Contrast Overrides for Products Page (.pr-panel-best) */
+[data-theme="dark"] .pr-panel-best {
+  color: #69C34B !important;
+  background: rgba(105, 195, 75, 0.18) !important;
+  border: 1px solid rgba(105, 195, 75, 0.35) !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .pr-panel-best strong {
+  color: #69C34B !important;
+  opacity: 0.95 !important;
+}
+
+/* Dark Mode High-Contrast Overrides for Plans Page (.price-net-hero & .pl-m-tag) */
+[data-theme="dark"] .price-net-hero .currency,
+[data-theme="dark"] .price-net-hero .val {
+  color: #69C34B !important;
+}
+
+[data-theme="dark"] .pl-m-tag {
+  color: #69C34B !important;
+  background: rgba(105, 195, 75, 0.18) !important;
+  border: 1px solid rgba(105, 195, 75, 0.35) !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="dark"] .ab-t-year {
+  color: #69C34B !important;
 }
 
 .h2-scenarios-list {
