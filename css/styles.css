@@ -8676,6 +8676,198 @@ body.page-home2,
   }
 }
 
+/* ==========================================================================
+   FOOTER REAL SVG SOCIAL ICONS STYLING
+   ========================================================================== */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social a,
+.footer-social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.site-footer .footer-social a,
+.site-footer .footer-social-icon {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-social a:hover,
+.footer-social-icon:hover {
+  background: var(--green) !important;
+  color: #FFFFFF !important;
+  border-color: var(--green) !important;
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   GALLERY PAGE (gallery.html) STYLING & GRID
+   ========================================================================== */
+.gl-hero {
+  position: relative;
+  padding: 140px 0 60px;
+  background: linear-gradient(180deg, var(--green-dark) 0%, rgba(11,20,16,0.92) 100%);
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.gl-hero-heading {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: #FFFFFF;
+  margin: 16px 0;
+}
+
+.gl-hero-sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 680px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.gl-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gl-filter-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.gl-filter-btn:hover,
+.gl-filter-btn.active {
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #FFFFFF !important;
+}
+
+.gl-section {
+  padding: 60px 0 80px;
+}
+
+.gl-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .gl-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gl-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.gl-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.gl-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border-color: var(--green);
+}
+
+.gl-card-media {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #111;
+}
+
+.gl-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.gl-card:hover .gl-card-media img {
+  transform: scale(1.08);
+}
+
+.gl-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(11, 20, 16, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gl-card-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.gl-card-info h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.gl-card-info p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.gl-view-more-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
 
 
 
