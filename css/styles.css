@@ -993,8 +993,8 @@ body[data-theme="dark"] .hamburger span,
 .benefit-strip{
   margin-top: 56px; display:grid; grid-template-columns: repeat(4,1fr);
 }
-.benefit{ padding: 8px 32px; border-left: 1px solid var(--border); }
-.benefit:first-child{ border-left:none; padding-left:0; }
+.why-solar-icon-card{ padding: 8px 32px; border-left: 1px solid var(--border); }
+.why-solar-icon-card:first-child{ border-left:none; padding-left:0; }
 .benefit-icon{
   width:48px; height:48px; border-radius:50%; border:1.5px solid var(--border);
   display:flex; align-items:center; justify-content:center; color: var(--green); margin-bottom:20px;
@@ -2373,7 +2373,7 @@ footer p {
 .h2-pipeline-track {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 12px;
 }
 
@@ -2381,8 +2381,13 @@ footer p {
   background: var(--h2-bg);
   border: 1px solid var(--h2-border-color);
   border-radius: var(--radius-md);
-  padding: 28px 20px;
+  padding: 24px 16px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 .h2-pipeline-step:hover {
@@ -2408,16 +2413,24 @@ footer p {
 .h2-step-media {
   width: 64px;
   height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  max-width: 64px;
+  max-height: 64px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--h2-green);
   box-shadow: 0 4px 14px rgba(77, 153, 72, 0.2);
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 .h2-step-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 400ms ease;
 }
 .h2-pipeline-step:hover .h2-step-media {
@@ -2429,6 +2442,12 @@ footer p {
   transform: scale(1.15);
 }
 
+.h2-step-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .h2-step-info h4 {
   font-size: 15px;
   font-weight: 800;
@@ -2448,6 +2467,7 @@ footer p {
   height: 2px;
   background: var(--h2-border-color);
   margin-top: 56px;
+  align-self: flex-start;
 }
 .h2-pulse-dot {
   position: absolute;
@@ -2464,6 +2484,32 @@ footer p {
   0% { left: 0%; opacity: 0.2; }
   50% { opacity: 1; }
   100% { left: 100%; opacity: 0.2; }
+}
+
+/* Responsive pipeline breakpoints for Tablets & Mobile (1024px, 820px, 768px, 360px) */
+@media (max-width: 1024px) {
+  .h2-pipeline-track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .h2-pipeline-connector {
+    display: none !important;
+  }
+}
+@media (max-width: 820px) {
+  .h2-pipeline-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 640px), (max-width: 360px) {
+  .h2-pipeline-track {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .h2-pipeline-step {
+    padding: 20px 16px;
+  }
 }
 
 /* ---------- SECTION 03 — A DAY POWERED BY THE SUN ---------- */
@@ -8053,10 +8099,11 @@ a.btn.btn-secondary.sv-btn-light:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-top: 48px;
+  align-items: stretch;
 }
 
 .why-solar .benefit {
-  background: var(--card-bg);
+  background: var(--card-bg, #ffffff);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -8064,6 +8111,9 @@ a.btn.btn-secondary.sv-btn-light:hover {
   flex-direction: column;
   box-shadow: var(--shadow-card);
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  padding: 0 !important;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .why-solar .benefit:hover {
@@ -8074,15 +8124,19 @@ a.btn.btn-secondary.sv-btn-light:hover {
 
 .why-solar .benefit-media {
   width: 100%;
-  height: 180px;
+  height: 200px;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
+  background: #f0f4f1;
 }
 
 .why-solar .benefit-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 0;
   transition: transform 500ms cubic-bezier(.4,0,.2,1);
 }
 
@@ -8110,6 +8164,7 @@ a.btn.btn-secondary.sv-btn-light:hover {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.55;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -8876,53 +8931,96 @@ body.page-home2,
 .h2-scenarios-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 16px;
+  margin-top: 24px;
   width: 100%;
 }
 
 .h2-scenario-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
   align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  gap: 20px;
+  padding: 18px 22px;
+  background: var(--h2-bg, var(--card-bg, #ffffff));
+  border: 1px solid var(--h2-border-color, var(--border));
+  border-radius: var(--radius-md);
   width: 100%;
-  flex-wrap: wrap;
+  box-sizing: border-box;
+  transition: border-color 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+}
+
+.h2-scenario-row:hover {
+  border-color: var(--h2-green, var(--green));
+  transform: translateX(4px);
 }
 
 .h2-scenario-tag {
-  font-size: 10.5px;
+  font-family: monospace;
+  font-size: 11px;
   font-weight: 800;
-  color: var(--green);
-  background: rgba(62, 150, 63, 0.12);
-  padding: 4px 8px;
-  border-radius: 4px;
+  color: var(--h2-green, var(--green));
+  letter-spacing: 0.08em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(77, 153, 72, 0.12);
+  text-align: center;
+  width: 100px;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .h2-scenario-body {
-  flex: 1 1 160px;
+  width: 100%;
 }
 
 .h2-scenario-body h4 {
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 700;
-  margin-bottom: 2px;
+  color: var(--h2-text-main, var(--text));
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
 .h2-scenario-body p {
-  font-size: 12.5px;
-  color: var(--text-secondary);
-  line-height: 1.4;
+  font-size: 13px;
+  color: var(--h2-text-sub, var(--text-secondary));
+  line-height: 1.5;
+  margin: 0;
 }
 
 .h2-scenario-stat {
-  font-size: 12.5px;
+  font-family: var(--font-display);
+  font-size: 15px;
   font-weight: 800;
-  color: var(--text);
-  margin-left: auto;
+  color: var(--h2-green, var(--green));
+  text-align: right;
+  min-width: 65px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .h2-scenario-row {
+    grid-template-columns: 85px 1fr auto;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  .h2-scenario-tag {
+    width: 85px;
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+  .h2-scenario-body h4 {
+    font-size: 14px;
+  }
+  .h2-scenario-body p {
+    font-size: 12px;
+  }
+  .h2-scenario-stat {
+    font-size: 13.5px;
+    min-width: 55px;
+  }
+}
 }
 
 /* Section 05: Roof Canvas & Metrics */
