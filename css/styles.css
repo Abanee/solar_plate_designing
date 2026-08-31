@@ -352,19 +352,17 @@ p, .section-desc, .h2-section-desc, .pr-section-desc, .sv-section-desc,
 
 [dir="rtl"] {
   text-align: right;
-}
-
-[dir="rtl"] .main-nav {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .header-actions {
-  flex-direction: row-reverse;
+  direction: rtl;
 }
 
 [dir="rtl"] .arrow {
   display: inline-block;
   transform: scaleX(-1);
+}
+
+[dir="rtl"] .process-num-badge {
+  right: auto !important;
+  left: 24px !important;
 }
 
 [dir="rtl"] .mobile-menu {
@@ -7153,6 +7151,11 @@ footer p {
   z-index: 9999 !important;
 }
 
+[dir="rtl"] .auth-floating-actions {
+  right: auto !important;
+  left: 32px !important;
+}
+
 .auth-floating-actions .rtl-toggle,
 .auth-floating-actions .theme-toggle {
   width: 42px !important;
@@ -7195,10 +7198,14 @@ footer p {
     top: 16px !important;
     right: 16px !important;
   }
+  [dir="rtl"] .auth-floating-actions {
+    right: auto !important;
+    left: 16px !important;
+  }
 }
 
 .auth-section {
-  padding: 60px 0;
+  padding: 100px 0 80px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -7226,7 +7233,7 @@ footer p {
   background: var(--card-bg);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 44px 40px;
+  padding: 46px 42px;
   box-shadow: var(--shadow-card);
   opacity: 1 !important;
   transform: none !important;
@@ -7358,7 +7365,7 @@ footer p {
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 .field-header-row {
@@ -7409,7 +7416,7 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 4px;
+  margin: 12px 0 16px;
 }
 
 .custom-checkbox {
@@ -7436,10 +7443,39 @@ footer p {
 
 .auth-submit-btn {
   padding: 14px 28px;
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 800;
   border-radius: 999px;
   margin-top: 6px;
+  height: 52px;
+}
+
+/* RTL AUTH & FORM RULES */
+[dir="rtl"] .form-field input,
+[dir="rtl"] .form-field select,
+[dir="rtl"] .form-field textarea {
+  text-align: right !important;
+  direction: rtl !important;
+  padding: 14px 16px !important;
+}
+
+[dir="rtl"] .password-input-wrapper input {
+  padding-right: 16px !important;
+  padding-left: 48px !important;
+}
+
+[dir="rtl"] .btn-toggle-password {
+  right: auto !important;
+  left: 12px !important;
+}
+
+[dir="rtl"] .custom-checkbox {
+  flex-direction: row !important;
+  gap: 10px !important;
+}
+
+[dir="rtl"] .form-row-2 {
+  direction: rtl !important;
 }
 
 .auth-alert {
