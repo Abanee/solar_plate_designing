@@ -7403,15 +7403,15 @@ footer p {
   font-family: var(--font-body);
 }
 
-/* FLOATING TOP-RIGHT THEME & RTL CONTROLS (AUTH PAGES) */
+/* TOP-RIGHT THEME & RTL CONTROLS (AUTH PAGES) - NON-STICKY */
 .auth-floating-actions {
-  position: fixed !important;
+  position: absolute !important;
   top: 24px !important;
   right: 32px !important;
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
-  z-index: 9999 !important;
+  z-index: 100 !important;
 }
 
 [dir="rtl"] .auth-floating-actions {
@@ -7458,6 +7458,7 @@ footer p {
 
 @media (max-width: 600px) {
   .auth-floating-actions {
+    position: absolute !important;
     top: 16px !important;
     right: 16px !important;
   }
@@ -10311,13 +10312,18 @@ body.page-home2,
   font-weight: 800;
   color: var(--text) !important;
   font-family: var(--font-display);
-  margin: 12px 0 6px;
+  margin: 12px auto 6px !important;
+  text-align: center !important;
+  width: 100%;
 }
 
 .auth-subtitle {
   font-size: 14px;
   color: var(--text-secondary) !important;
-  margin-bottom: 24px;
+  margin: 0 auto 24px !important;
+  text-align: center !important;
+  max-width: 380px;
+  width: 100%;
 }
 
 .form-field {
@@ -10480,16 +10486,30 @@ body[dir="ltr"] {
   direction: ltr !important;
 }
 
-[dir="ltr"] .auth-header,
-[dir="ltr"] .auth-title,
-[dir="ltr"] .auth-subtitle,
 [dir="ltr"] .form-field,
 [dir="ltr"] .form-field label,
 [dir="ltr"] .form-field input,
-[dir="ltr"] .custom-checkbox,
-[dir="ltr"] .auth-footer {
+[dir="ltr"] .custom-checkbox {
   text-align: left !important;
   direction: ltr !important;
+}
+
+.auth-header,
+.auth-title,
+.auth-subtitle,
+.auth-footer,
+.auth-footer p,
+[dir="ltr"] .auth-header,
+[dir="ltr"] .auth-title,
+[dir="ltr"] .auth-subtitle,
+[dir="ltr"] .auth-footer,
+[dir="ltr"] .auth-footer p,
+[dir="rtl"] .auth-header,
+[dir="rtl"] .auth-title,
+[dir="rtl"] .auth-subtitle,
+[dir="rtl"] .auth-footer,
+[dir="rtl"] .auth-footer p {
+  text-align: center !important;
 }
 
 [dir="ltr"] .password-input-wrapper input {
@@ -10524,14 +10544,10 @@ body[dir="rtl"] {
   direction: rtl !important;
 }
 
-[dir="rtl"] .auth-header,
-[dir="rtl"] .auth-title,
-[dir="rtl"] .auth-subtitle,
 [dir="rtl"] .form-field,
 [dir="rtl"] .form-field label,
 [dir="rtl"] .form-field input,
-[dir="rtl"] .custom-checkbox,
-[dir="rtl"] .auth-footer {
+[dir="rtl"] .custom-checkbox {
   text-align: right !important;
   direction: rtl !important;
 }
