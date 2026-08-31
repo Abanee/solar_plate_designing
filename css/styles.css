@@ -17,6 +17,17 @@
   --card-bg:       #FFFFFF;
   --overlay-scrim: rgba(11,20,16,0.45);
 
+  --h2-bg:          #F7F7F1;
+  --h2-bg-alt:      #EFF1E6;
+  --h2-text-main:   #111714;
+  --h2-text-sub:    #59615B;
+  --h2-green:       #3E963F;
+  --h2-dark-green:  #0B3A27;
+  --h2-yellow:      #F2C644;
+  --h2-border-color:#DDE2D9;
+  --h2-panel-bg:    #FFFFFF;
+  --h2-card-shadow: 0 12px 34px rgba(11,20,16,0.08);
+
   --font-display: 'Plus Jakarta Sans', 'Manrope', system-ui, sans-serif;
   --font-body:    'Manrope', system-ui, sans-serif;
 
@@ -41,6 +52,18 @@
   --border:         #26362D;
   --card-bg:        #15231C;
   --overlay-scrim:  rgba(6,12,9,0.62);
+
+  --h2-bg:          #0B1210;
+  --h2-bg-alt:      #101B16;
+  --h2-text-main:   #F4F5EF;
+  --h2-text-sub:    #AAB6AC;
+  --h2-green:       #69C34B;
+  --h2-dark-green:  #153D2A;
+  --h2-yellow:      #F3C94B;
+  --h2-border-color:#26362D;
+  --h2-panel-bg:    #15231C;
+  --h2-card-shadow: 0 12px 34px rgba(0,0,0,0.35);
+
   --shadow-card: 0 12px 34px rgba(0,0,0,0.35);
   --shadow-lift: 0 18px 44px rgba(0,0,0,0.45);
 }
@@ -1844,6 +1867,14 @@ body[data-theme="dark"] .hamburger span,
   justify-content: center;
 }
 
+@media (max-width: 1200px) {
+  .trust-header-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 36px !important;
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1200px) {
   .trust-grid-cards {
     display: flex !important;
@@ -1855,10 +1886,15 @@ body[data-theme="dark"] .hamburger span,
     width: calc(33.333% - 14px) !important;
     box-sizing: border-box !important;
   }
-  .trust-header-row { grid-template-columns: 1fr; gap: 20px; }
 }
+
 @media (max-width: 900px) {
   .process-cards-grid { grid-template-columns: 1fr; }
+  .trust-header-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 32px !important;
+  }
   .trust-grid-cards {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -1870,7 +1906,13 @@ body[data-theme="dark"] .hamburger span,
     box-sizing: border-box !important;
   }
 }
+
 @media (max-width: 600px) {
+  .trust-header-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
   .trust-grid-cards .trust-card {
     width: 100% !important;
   }
@@ -2609,15 +2651,16 @@ footer p {
 }
 
 .h2-pipeline-step {
-  background: var(--h2-bg);
-  border: 1px solid var(--h2-border-color);
+  background: var(--h2-panel-bg, var(--card-bg, #ffffff));
+  border: 1px solid var(--h2-border-color, var(--border));
   border-radius: var(--radius-md);
   padding: 0 !important;
   overflow: hidden;
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto !important;
+  min-height: auto !important;
   box-sizing: border-box;
   box-shadow: var(--shadow-card);
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
@@ -2633,6 +2676,7 @@ footer p {
   width: 100%;
   margin-bottom: 0;
   display: block;
+  flex-shrink: 0;
 }
 .h2-step-num {
   position: absolute;
@@ -2650,10 +2694,10 @@ footer p {
 }
 .h2-step-media {
   width: 100% !important;
-  height: 130px !important;
+  height: 140px !important;
   min-width: 100% !important;
   max-width: 100% !important;
-  max-height: 130px !important;
+  max-height: 140px !important;
   border-radius: 0 !important;
   overflow: hidden !important;
   border: none !important;
@@ -2674,24 +2718,27 @@ footer p {
 }
 
 .h2-step-info {
-  padding: 16px 14px 18px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  padding: 16px 14px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 .h2-step-info h4 {
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: var(--h2-text-main);
-  margin-bottom: 6px;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--h2-text-main, var(--text, #111714)) !important;
+  margin: 0 0 6px 0 !important;
+  display: block !important;
 }
 .h2-step-info p {
-  font-size: 12.5px;
-  color: var(--h2-text-sub);
-  line-height: 1.5;
-  margin: 0;
+  font-size: 13px !important;
+  color: var(--h2-text-sub, var(--text-secondary, #59615B)) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  display: block !important;
 }
 
 .h2-pipeline-connector {
@@ -2737,11 +2784,14 @@ footer p {
 }
 @media (max-width: 640px), (max-width: 360px) {
   .h2-pipeline-track {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
   }
   .h2-pipeline-step {
-    padding: 20px 16px;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
@@ -9116,110 +9166,147 @@ body.page-home2,
   line-height: 1.6;
 }
 
-/* Section 02: Pipeline Track Mobile Stacking */
+/* Section 02: Pipeline Track Responsive System */
 .h2-energy-pipeline {
   width: 100%;
-  overflow: hidden;
 }
 
 .h2-pipeline-track {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+  align-items: stretch;
   width: 100%;
-}
-
-@media (min-width: 1025px) {
-  .h2-pipeline-track {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-    align-items: stretch;
-  }
 }
 
 .h2-pipeline-step {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 20px 24px;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+  border-radius: var(--radius-md, 12px);
+  padding: 0 !important;
+  overflow: hidden !important;
   display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 20px !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
   width: 100% !important;
+  box-sizing: border-box !important;
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.04));
+  transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
 }
 
-.h2-step-info {
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-  text-align: left !important;
-}
-
-.h2-step-info h4,
-.h2-step-info p {
-  text-align: left !important;
-}
-
-@media (min-width: 1025px) {
-  .h2-pipeline-step {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-  .h2-step-info,
-  .h2-step-info h4,
-  .h2-step-info p {
-    text-align: center !important;
-  }
-}
-
-.h2-pipeline-connector {
-  display: none;
+.h2-pipeline-step:hover {
+  transform: translateY(-4px);
+  border-color: var(--green, #3e963f);
+  box-shadow: var(--shadow-md, 0 8px 24px rgba(0, 0, 0, 0.08));
 }
 
 .h2-step-node {
-  flex-shrink: 0;
-  position: relative;
+  position: relative !important;
+  width: 100% !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
 }
 
 .h2-step-num {
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  background: var(--green);
-  color: #fff;
-  font-size: 10px;
-  font-weight: 800;
-  padding: 2px 6px;
-  border-radius: 999px;
-  z-index: 2;
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  background: var(--green, #3e963f) !important;
+  color: #ffffff !important;
+  font-family: monospace, var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  padding: 3px 8px !important;
+  border-radius: 4px !important;
+  z-index: 2 !important;
 }
 
 .h2-step-media {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid var(--border);
+  width: 100% !important;
+  height: 140px !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0 !important;
+  display: block !important;
 }
 
 .h2-step-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 0 !important;
+}
+
+.h2-step-info {
+  padding: 16px 16px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+  flex: 1 1 auto !important;
 }
 
 .h2-step-info h4 {
-  font-size: 14.5px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 4px;
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--text, #111714) !important;
+  margin: 0 0 6px 0 !important;
+  text-align: left !important;
+  display: block !important;
 }
 
 .h2-step-info p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.45;
+  font-size: 12.5px !important;
+  color: var(--text-secondary, #59615b) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.h2-pipeline-connector {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .h2-pipeline-track {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 640px), (max-width: 360px) {
+  .h2-pipeline-track {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+  .h2-pipeline-step {
+    width: 100% !important;
+  }
+  .h2-step-media {
+    height: 150px !important;
+  }
+  .h2-step-info {
+    padding: 16px 18px 20px !important;
+  }
+  .h2-step-info h4 {
+    font-size: 15px !important;
+  }
+  .h2-step-info p {
+    font-size: 13px !important;
+  }
 }
 
 /* Section 03: Day Cards Grid */
@@ -9359,14 +9446,17 @@ body.page-home2,
   .h2-roof-canvas-wrapper,
   .h2-story-media {
     width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
+    height: 240px !important;
+    min-height: auto !important;
+    max-height: 240px !important;
+    aspect-ratio: 16 / 10 !important;
     flex: 0 0 auto !important;
     align-self: flex-start !important;
     display: block !important;
     position: relative !important;
     margin-bottom: 0 !important;
+    border-radius: var(--radius-md) !important;
+    overflow: hidden !important;
   }
 
   .h2-portrait-media img,
@@ -9374,8 +9464,9 @@ body.page-home2,
   .h2-roof-canvas-wrapper img,
   .h2-story-media img {
     width: 100% !important;
-    height: 260px !important;
-    max-height: 260px !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 240px !important;
     object-fit: cover !important;
     display: block !important;
     border-radius: var(--radius-md) !important;
