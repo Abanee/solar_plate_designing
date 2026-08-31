@@ -401,7 +401,18 @@
     });
   }
 
+  var timeSlots = Array.prototype.slice.call(document.querySelectorAll(".h2-time-btn, .time-slot-btn"));
+  var chartNodes = Array.prototype.slice.call(document.querySelectorAll(".h2-chart-node"));
+  var graphBadge = document.querySelector(".h2-graph-badge");
+  var timeInfoMap = {
+    morning: "Morning Solar Generation Peak",
+    midday: "Midday Optimal Direct Sunlight",
+    afternoon: "Afternoon High Thermal Conversion",
+    evening: "Evening Battery Storage Transition"
+  };
+
   function selectTimeSlot(timeStr) {
+    if (!timeSlots.length) return;
     timeSlots.forEach(function (slot) {
       slot.classList.toggle("active", slot.getAttribute("data-time") === timeStr);
     });
@@ -421,16 +432,18 @@
     }
   }
 
-  timeSlots.forEach(function (slot) {
-    slot.addEventListener("click", function () {
-      selectTimeSlot(slot.getAttribute("data-time"));
+  if (timeSlots.length) {
+    timeSlots.forEach(function (slot) {
+      slot.addEventListener("click", function () {
+        selectTimeSlot(slot.getAttribute("data-time"));
+      });
     });
-  });
-  chartNodes.forEach(function (node) {
-    node.addEventListener("click", function () {
-      selectTimeSlot(node.getAttribute("data-time"));
+    chartNodes.forEach(function (node) {
+      node.addEventListener("click", function () {
+        selectTimeSlot(node.getAttribute("data-time"));
+      });
     });
-  });
+  }
 
   /* ---------- Home 2 25-Year Asset Timeline Interaction ---------- */
   var assetCards = Array.prototype.slice.call(document.querySelectorAll(".h2-horizon-card"));

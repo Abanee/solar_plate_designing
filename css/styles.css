@@ -2555,9 +2555,9 @@ footer p {
   color: #ffffff;
   font-weight: 700;
   font-size: 15px;
-  text-decoration: underline;
+  
   text-underline-offset: 6px;
-  text-decoration-color: var(--h2-yellow);
+  
   transition: color var(--transition);
 }
 .h2-hero-secondary-link:hover {
@@ -9669,7 +9669,7 @@ body.page-home2,
     min-width: 55px;
   }
 }
-}
+
 
 /* Section 05: Roof Canvas & Metrics */
 .h2-roof-analysis-grid {
@@ -10856,6 +10856,62 @@ body[dir="rtl"] {
   .forgot-link {
     white-space: nowrap !important;
     font-size: 12.5px !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE HERO (index.html 360px) CTA CENTERING
+   ========================================================================== */
+@media (max-width: 600px) {
+  .hero-innovative .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero-innovative .hero-heading {
+    text-align: center !important;
+  }
+
+  .hero-innovative .hero-sub {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-innovative .hero-ctas {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 24px !important;
+    gap: 12px !important;
+  }
+
+  .hero-innovative .hero-ctas .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    padding: 14px 20px !important;
+    font-size: 14.5px !important;
+  }
+
+  .hero-innovative .hero-trust-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 }
 
