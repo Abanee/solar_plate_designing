@@ -539,25 +539,53 @@
   var capSuitability = document.getElementById("capSuitability");
 
   function updateCapacityDisplay(key) {
-    var data = capacityData[key];
+    if (!key) return;
+    var normKey = String(key).trim();
+    var data = capacityData[normKey];
     if (!data) return;
-    capPills.forEach(function (pill) {
-      pill.classList.toggle("active", pill.getAttribute("data-cap") === key);
+
+    var allPills = document.querySelectorAll(".pr-cap-pill");
+    Array.prototype.slice.call(allPills).forEach(function (pill) {
+      var pillCap = String(pill.getAttribute("data-cap")).trim();
+      pill.classList.toggle("active", pillCap === normKey);
     });
-    if (capVal) capVal.textContent = key;
-    if (capTitle) capTitle.textContent = data.title;
-    if (capDesc) capDesc.textContent = data.desc;
-    if (capGen) capGen.textContent = data.gen;
-    if (capArea) capArea.textContent = data.area;
-    if (capPanels) capPanels.textContent = data.panels;
-    if (capInverter) capInverter.textContent = data.inverter;
-    if (capSuitability) capSuitability.textContent = data.suitability;
+
+    var curCapVal = document.getElementById("capVal");
+    var curCapTitle = document.getElementById("capTitle");
+    var curCapDesc = document.getElementById("capDesc");
+    var curCapGen = document.getElementById("capGen");
+    var curCapArea = document.getElementById("capArea");
+    var curCapPanels = document.getElementById("capPanels");
+    var curCapInverter = document.getElementById("capInverter");
+    var curCapSuitability = document.getElementById("capSuitability");
+
+    if (curCapVal) curCapVal.textContent = normKey;
+    if (curCapTitle) curCapTitle.textContent = data.title;
+    if (curCapDesc) curCapDesc.textContent = data.desc;
+    if (curCapGen) curCapGen.textContent = data.gen;
+    if (curCapArea) curCapArea.textContent = data.area;
+    if (curCapPanels) curCapPanels.textContent = data.panels;
+    if (curCapInverter) curCapInverter.textContent = data.inverter;
+    if (curCapSuitability) curCapSuitability.textContent = data.suitability;
   }
 
   capPills.forEach(function (pill) {
-    pill.addEventListener("click", function () {
-      updateCapacityDisplay(pill.getAttribute("data-cap"));
+    pill.addEventListener("click", function (e) {
+      e.preventDefault();
+      var cap = pill.getAttribute("data-cap");
+      updateCapacityDisplay(cap);
     });
+  });
+
+  // Global delegation safeguard for mobile touch/click events
+  document.addEventListener("click", function (e) {
+    var pill = e.target.closest(".pr-cap-pill");
+    if (pill) {
+      var cap = pill.getAttribute("data-cap");
+      if (cap) {
+        updateCapacityDisplay(cap);
+      }
+    }
   });
 
   /* ---------- Property Selection Interaction ---------- */
