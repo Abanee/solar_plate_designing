@@ -9425,6 +9425,13 @@ body.page-home2,
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 16px !important;
   }
+  .h2-pipeline-step:last-child {
+    grid-column: span 2 !important;
+    max-width: calc(50% - 8px) !important;
+    justify-self: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
 }
 
 @media (max-width: 640px), (max-width: 360px) {
