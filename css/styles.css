@@ -1848,20 +1848,80 @@ body[data-theme="dark"] .hamburger span,
   border-top: 1px solid var(--border);
 }
 .trust-header-row {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: flex-end;
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto 40px;
+  max-width: 800px;
 }
 .trust-heading {
   margin-top: 10px;
+  text-align: center !important;
 }
 .trust-lead-text {
   font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.6;
+  text-align: center !important;
+  max-width: 680px;
+  margin: 12px auto 0;
 }
+
+/* Accreditation Visual Showcase */
+.trust-showcase-wrapper {
+  margin: 0 auto 36px;
+  max-width: 980px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  background: #040A07;
+}
+.trust-showcase-media {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+}
+.trust-showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.trust-showcase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(5, 15, 10, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 22px 26px;
+}
+.trust-showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 18px;
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-size: 13px;
+}
+.trust-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 10px #10B981;
+}
+
 .trust-grid-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1924,7 +1984,8 @@ body[data-theme="dark"] .hamburger span,
   background: var(--card-bg);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 40px 30px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
@@ -1933,11 +1994,48 @@ body[data-theme="dark"] .hamburger span,
 .process-card:hover {
   border-color: var(--green);
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lift);
+}
+.process-card-media {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background: #060D0A;
+}
+.process-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+  display: block;
+}
+.process-card:hover .process-card-media img {
+  transform: scale(1.06);
+}
+.process-card-media .process-num-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(4, 10, 7, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+.process-card-body {
+  padding: 26px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .process-num-badge {
-  position: absolute;
-  top: 24px;
-  right: 24px;
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 800;
@@ -2728,8 +2826,6 @@ footer p {
 .pl-section-header.centered .pl-section-desc,
 .gl-section-header.centered .gl-section-desc {
   margin: 0 auto;
-}
-  position: relative;
 }
 
 /* ---------- SECTION 01 — THE ROOF (Hero) ---------- */
@@ -10732,18 +10828,19 @@ body[dir="rtl"] {
 .pr-hero,
 .sv-hero,
 .pl-hero,
-.gl-hero {
+.gl-hero,
+.ct-hero-innovative {
   position: relative;
-  min-height: 0 !important;
-  height: auto !important;
-  padding: 110px 20px 48px !important;
+  min-height: 480px !important;
+  box-sizing: border-box !important;
+  padding: 130px 24px 60px !important;
   background: #09100D;
   color: #FFFFFF;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
 
 .ab-hero-media,
@@ -11235,3 +11332,127 @@ body[dir="rtl"] {
     min-width: 48px !important;
   }
 }
+
+/* ==========================================================================
+   GLOBAL HERO HEIGHT UNIFORMITY ACROSS ALL PAGES
+   ========================================================================== */
+.hero-innovative,
+.h2-hero {
+  min-height: 85vh !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .ab-hero,
+  .pr-hero,
+  .sv-hero,
+  .pl-hero,
+  .gl-hero,
+  .ct-hero-innovative {
+    min-height: 400px !important;
+    padding: 115px 20px 50px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ab-hero,
+  .pr-hero,
+  .sv-hero,
+  .pl-hero,
+  .gl-hero,
+  .ct-hero-innovative {
+    min-height: 360px !important;
+    padding: 100px 16px 40px !important;
+  }
+}
+
+/* ==========================================================================
+   ALL PAGES — ALL SECTIONS CENTER-ALIGNED HEADINGS & STRAIGHT-LINE ALIGNMENT
+   ========================================================================== */
+
+/* Universal Heading Centering Across All Pages */
+.section-heading,
+.h2-editorial-heading,
+.ab-editorial-heading,
+.pr-editorial-heading,
+.sv-editorial-heading,
+.pl-editorial-heading,
+.gl-editorial-heading,
+.gl-section-heading,
+.ab-section-title,
+.trust-heading,
+.gov-heading,
+.ab-quote-heading,
+.sv-req-heading,
+.h2-closing-title,
+.pr-cta-heading,
+.pl-cta-heading,
+.sv-cta-heading,
+.ct-main-section h2,
+.ct-faq-section h2,
+.ct-map-full-section h2 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Universal Section Header Containers Centering & Straight-Line Alignment */
+.section-header-center,
+.section-intro,
+.section-title-wrapper,
+.trust-header-row,
+.h2-section-header,
+.ab-section-header,
+.pr-section-header,
+.sv-section-header,
+.pl-section-header,
+.gl-section-header,
+.ct-faq-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  max-width: 860px !important;
+}
+
+/* Sub-Headings (Badges, Pills, Eyebrows, Labels) Straight-Line Centering */
+.ct-badge-pill,
+.ab-section-label,
+.pr-section-label,
+.sv-section-label,
+.pl-section-label,
+.h2-section-label,
+.gl-section-label,
+.eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto 14px !important;
+  align-self: center !important;
+}
+
+/* Sub-Texts (Descriptions, Leads, Intro Paragraphs) Straight-Line Centering */
+.section-desc-centered,
+.trust-lead-text,
+.ab-section-desc,
+.pr-section-desc,
+.sv-section-desc,
+.pl-section-desc,
+.h2-section-desc,
+.section-intro p,
+.ct-faq-lead {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 680px !important;
+  line-height: 1.65 !important;
+  font-size: clamp(15px, 1.25vw, 17px) !important;
+}
+
