@@ -1279,24 +1279,43 @@ body[data-theme="dark"] .hamburger span,
   gap: 50px;
   align-items: center;
 }
+.savings-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .savings-desc {
   color: rgba(244,245,239,0.78);
   font-size: 16.5px;
-  max-width: 420px;
-  margin: 22px 0 34px;
+  max-width: 440px;
+  margin: 20px auto 32px !important;
+  text-align: center !important;
+}
+.savings-copy .btn {
+  align-self: center !important;
+  margin: 0 auto !important;
 }
 .savings-panel {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
-  padding: 36px 30px;
+  padding: 36px 28px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 680px;
 }
 .savings-flow {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
 }
 .savings-card {
   flex: 1;
@@ -1304,7 +1323,7 @@ body[data-theme="dark"] .hamburger span,
   background: #F7F7F1;
   color: var(--green-dark);
   border-radius: var(--radius-lg);
-  padding: 24px 18px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1312,7 +1331,6 @@ body[data-theme="dark"] .hamburger span,
   align-items: center;
   box-sizing: border-box;
   min-height: 170px;
-  height: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 .savings-card.highlight {
@@ -1384,6 +1402,8 @@ body[data-theme="dark"] .hamburger span,
   height: 32px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
+  align-self: center !important;
+  margin: auto 0 !important;
 }
 .savings-disclaimer {
   font-size: 12.5px;
@@ -1402,7 +1422,7 @@ body[data-theme="dark"] .hamburger span,
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: stretch;
+  align-items: center;
 }
 .subsidy-visual {
   position: relative;
@@ -1444,12 +1464,17 @@ body[data-theme="dark"] .hamburger span,
   line-height: 1.2;
   color: var(--text);
   margin-bottom: 16px;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .gov-lead-desc {
   font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin: 0 auto 24px !important;
+  text-align: center !important;
+  max-width: 480px;
 }
 .text-green-highlight {
   color: var(--green) !important;
@@ -1477,22 +1502,50 @@ body[data-theme="dark"] .hamburger span,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 540px;
 }
-.subsidy-content p{ margin: 20px 0 0; max-width: 480px; font-size:16px; }
+.subsidy-content p{ margin: 0 auto 20px; max-width: 480px; font-size:16px; text-align: center; }
 .subsidy-highlight{
-  margin: 30px 0; padding: 22px 26px; border-radius: var(--radius-md);
-  background: rgba(242,198,68,0.14); border:1px solid rgba(242,198,68,0.4);
-  display:flex; flex-direction:column; gap:8px; max-width:480px;
+  margin: 20px auto 28px !important;
+  padding: 22px 26px;
+  border-radius: var(--radius-md);
+  background: rgba(242,198,68,0.14);
+  border: 1px solid rgba(242,198,68,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  max-width: 480px;
+  width: 100%;
+  box-sizing: border-box;
 }
-.subsidy-amount{ font-family: var(--font-display); font-size:30px; font-weight:800; color: var(--green-dark); }
+.subsidy-amount{ font-family: var(--font-display); font-size:30px; font-weight:800; color: var(--green-dark); text-align: center; }
 [data-theme="dark"] .subsidy-amount{ color: var(--yellow); }
-.subsidy-note{ font-size:12.5px; color: var(--text-secondary); }
-.check-list{ display:flex; flex-direction:column; gap:12px; margin: 8px 0 34px; }
+.subsidy-note{ font-size:12.5px; color: var(--text-secondary); text-align: center; }
+.check-list{
+  display: inline-flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 12px;
+  margin: 8px auto 34px !important;
+  text-align: left;
+  max-width: 460px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .check-list li{ position:relative; padding-left:28px; font-size:15px; color: var(--text); font-weight:600; }
 .check-list li::before{
   content:""; position:absolute; left:0; top:4px; width:6px; height:11px;
   border: solid var(--green); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+}
+.subsidy-content .btn {
+  align-self: center !important;
+  margin: 0 auto !important;
 }
 
 /* ---------- 7.5 SMART IOT MONITORING ECOSYSTEM ---------- */
@@ -2443,11 +2496,11 @@ footer p {
   .benefit-strip{ grid-template-columns: 1fr 1fr; row-gap: 40px; }
   .benefit{ border-left:none; padding-left:0; border-top:1px solid var(--border); padding-top:28px; }
   .benefit:nth-child(1), .benefit:nth-child(2){ border-top:none; padding-top:8px; }
-  .savings-grid{ grid-template-columns: 1fr; }
-  .savings-flow{ flex-wrap:wrap; }
-  .subsidy-container{ grid-template-columns: 1fr; gap: 32px; }
-  .subsidy-visual{ min-height: 320px; }
-  .subsidy-content{ padding: 20px 0; }
+  .savings-grid{ grid-template-columns: 1fr; gap: 40px; justify-items: center; text-align: center; }
+  .savings-flow{ display: flex; align-items: center; justify-content: center; flex-wrap: nowrap; gap: 10px; width: 100%; }
+  .subsidy-container{ grid-template-columns: 1fr; gap: 36px; justify-items: center; text-align: center; }
+  .subsidy-visual{ min-height: 320px; width: 100%; max-width: 680px; margin: 0 auto; }
+  .subsidy-content{ padding: 20px 0; margin: 0 auto; width: 100%; max-width: 540px; display: flex; flex-direction: column; align-items: center; text-align: center; }
   .h2-day-cards-grid{ grid-template-columns: repeat(2, 1fr); }
   .h2-aesthetics-showcase{ grid-template-columns: 1fr; }
   .h2-milestones-track{ grid-template-columns: repeat(2, 1fr); }
@@ -2458,13 +2511,15 @@ footer p {
   .trust-band{ overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:8px; }
 }
 
-/* Tablet 1024px: Remove duplicate login CTA in hamburger menu list since it is already visible in the navbar */
-@media (min-width: 601px) and (max-width: 1080px) {
-  .mobile-menu .btn-block,
-  .mobile-menu .mobile-menu-footer .btn-block,
-  .mobile-menu a[href*="login.html"] {
-    display: none !important;
-  }
+/* Tablet & Mobile: Ensure Login CTA button is always visible and functional in the dropdown drawer */
+.mobile-menu a[href*="login.html"],
+.mobile-menu .mobile-menu-footer .btn-block {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Tablet 768 */
@@ -2647,11 +2702,11 @@ footer p {
   .benefit-strip{ grid-template-columns: 1fr 1fr; row-gap: 40px; }
   .benefit{ border-left:none; padding-left:0; border-top:1px solid var(--border); padding-top:28px; }
   .benefit:nth-child(1), .benefit:nth-child(2){ border-top:none; padding-top:8px; }
-  .savings-grid{ grid-template-columns: 1fr; }
-  .savings-flow{ flex-wrap:wrap; }
-  .subsidy-container{ grid-template-columns: 1fr; gap: 32px; }
-  .subsidy-visual{ min-height: 320px; }
-  .subsidy-content{ padding: 20px 0; }
+  .savings-grid{ grid-template-columns: 1fr; gap: 40px; justify-items: center; text-align: center; }
+  .savings-flow{ display: flex; align-items: center; justify-content: center; flex-wrap: nowrap; gap: 10px; width: 100%; }
+  .subsidy-container{ grid-template-columns: 1fr; gap: 36px; justify-items: center; text-align: center; }
+  .subsidy-visual{ min-height: 320px; width: 100%; max-width: 680px; margin: 0 auto; }
+  .subsidy-content{ padding: 20px 0; margin: 0 auto; width: 100%; max-width: 540px; display: flex; flex-direction: column; align-items: center; text-align: center; }
   .h2-day-cards-grid{ grid-template-columns: repeat(2, 1fr); }
   .h2-aesthetics-showcase{ grid-template-columns: 1fr; }
   .h2-milestones-track{ grid-template-columns: repeat(2, 1fr); }
@@ -11521,7 +11576,9 @@ body[dir="rtl"] {
 .sv-existing-header,
 .ab-quality-content,
 .sv-consulting-content,
-.ab-manifesto-left {
+.ab-manifesto-left,
+.savings-copy,
+.subsidy-content {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -11536,7 +11593,8 @@ body[dir="rtl"] {
 /* Keep card checklists and pillar lists readable with left-aligned interior text */
 .ab-checklist,
 .sv-audit-pillars,
-.sv-existing-grid {
+.sv-existing-grid,
+.check-list {
   text-align: left !important;
   width: 100% !important;
 }
@@ -11570,7 +11628,9 @@ body[dir="rtl"] {
 .h2-section-desc,
 .section-intro p,
 .ct-faq-lead,
-.ab-quality-lead {
+.ab-quality-lead,
+.savings-desc,
+.gov-lead-desc {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
