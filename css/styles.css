@@ -3552,8 +3552,10 @@ footer p {
 .h2-portrait-sub {
   font-size: 17px;
   color: var(--h2-text-sub);
-  margin: 16px 0 28px;
+  margin: 16px auto 28px !important;
   line-height: 1.6;
+  text-align: center !important;
+  max-width: 580px;
 }
 
 .h2-scenarios-list {
@@ -11630,7 +11632,8 @@ body[dir="rtl"] {
 .ct-faq-lead,
 .ab-quality-lead,
 .savings-desc,
-.gov-lead-desc {
+.gov-lead-desc,
+.h2-portrait-sub {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
