@@ -2333,6 +2333,7 @@ body[data-theme="dark"] .hamburger span,
   background: var(--green-dark);
   color: rgba(244, 245, 239, 0.9);
   padding: 76px 0 32px;
+  margin-top: 0 !important;
 }
 [data-theme="dark"] .site-footer {
   background: #081310;
@@ -2341,8 +2342,8 @@ body[data-theme="dark"] .hamburger span,
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 40px;
-  padding-bottom: 48px;
-  margin-bottom: 32px;
+  padding-bottom: 30px;
+  margin-bottom: 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 .footer-brand .brand-name { color: #fff; }
@@ -2353,18 +2354,17 @@ body[data-theme="dark"] .hamburger span,
 .footer-col a:hover { color: var(--yellow); }
 
 .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 18px;
-    padding: 28px 0 60px !important;
-  }
-  .footer-legal {
-    justify-content: center;
-  }
-  .footer-social {
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 24px 0 12px !important;
+}
+.footer-legal {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
@@ -2456,6 +2456,15 @@ footer p {
   .project-supporting .project{ flex: 1 1 260px; }
   .trust-inner{ flex-direction:column; align-items:flex-start; gap:28px; }
   .trust-band{ overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:8px; }
+}
+
+/* Tablet 1024px: Remove duplicate login CTA in hamburger menu list since it is already visible in the navbar */
+@media (min-width: 601px) and (max-width: 1080px) {
+  .mobile-menu .btn-block,
+  .mobile-menu .mobile-menu-footer .btn-block,
+  .mobile-menu a[href*="login.html"] {
+    display: none !important;
+  }
 }
 
 /* Tablet 768 */
@@ -3434,20 +3443,31 @@ footer p {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 64px;
-  align-items: center;
+  align-items: stretch;
+}
+.h2-portrait-media {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .h2-image-frame {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--h2-card-shadow);
-  aspect-ratio: 3/4;
+  height: 100%;
+  flex: 1 1 auto;
+  aspect-ratio: unset;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
 }
 .h2-image-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 600ms ease;
+  display: block;
 }
 .h2-image-frame:hover img {
   transform: scale(1.03);
@@ -3467,17 +3487,26 @@ footer p {
   backdrop-filter: blur(6px);
 }
 
+.h2-portrait-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .h2-portrait-sub {
   font-size: 17px;
   color: var(--h2-text-sub);
-  margin: 16px 0 36px;
+  margin: 16px 0 28px;
   line-height: 1.6;
 }
 
 .h2-scenarios-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  gap: 16px;
 }
 .h2-scenario-row {
   display: grid;
@@ -4280,16 +4309,19 @@ footer p {
   bottom: 14px;
   right: 16px;
   font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
   color: #ffffff;
-  background: rgba(18, 24, 20, 0.8);
+  background: rgba(18, 24, 20, 0.82);
   backdrop-filter: blur(8px);
-  padding: 4px 14px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 .ab-wall-copy {
   padding: 32px 28px;
@@ -4923,6 +4955,12 @@ footer p {
   transition: all var(--transition);
   display: flex;
   flex-direction: column;
+  padding: 0 !important;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  color: inherit;
 }
 .pr-prop-card:hover, .pr-prop-card.active {
   border-color: var(--h2-green);
@@ -4951,17 +4989,32 @@ footer p {
   opacity: 1;
 }
 .prop-media {
-  aspect-ratio: 4/3;
+  width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
   overflow: hidden;
+  position: relative;
+  background: #040A07;
+  border-top-left-radius: calc(var(--radius-lg) - 2px);
+  border-top-right-radius: calc(var(--radius-lg) - 2px);
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .prop-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
   transition: transform 500ms ease;
+  display: block !important;
+}
+.pr-prop-card[data-property="shop"] .prop-media img {
+  object-position: center 8% !important;
+}
+.pr-prop-card[data-property="office"] .prop-media img {
+  object-position: center 18% !important;
 }
 .pr-prop-card:hover .prop-media img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 .prop-info {
   padding: 22px;
@@ -8694,10 +8747,10 @@ a.btn.btn-secondary.sv-btn-light:hover {
   background: var(--green-dark);
   color: #FFFFFF;
   padding: 80px 32px;
-  border-radius: var(--radius-lg);
+  border-radius: 0 !important;
   margin-top: 40px;
-  margin-bottom: 60px;
-  box-shadow: var(--shadow-card);
+  margin-bottom: 0 !important;
+  box-shadow: none;
   position: relative;
   overflow: hidden;
 }
@@ -9140,7 +9193,6 @@ a.h2-hero-secondary-link {
     display: block !important;
   }
   .ab-diagram-media img,
-  .ab-wall-media img,
   .ab-hero-media img,
   .ab-team-media-equal img,
   .sv-deliverables-wall img {
@@ -9152,6 +9204,23 @@ a.h2-hero-secondary-link {
   .ab-diagram-media {
     max-height: 440px;
     overflow: hidden;
+  }
+
+  /* Philosophy Section Image & Container Equalized Height (Eliminates dead space) */
+  .ab-wall-media {
+    width: 100% !important;
+    height: 380px !important;
+    max-height: 400px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  .ab-wall-media img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 }
 
@@ -9252,7 +9321,7 @@ a.h2-hero-secondary-link {
 
 .pr-final-cta {
   margin-top: 20px !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 0 !important;
 }
 
 /* ==========================================================================
@@ -10113,7 +10182,9 @@ body.page-home2,
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
 }
 
 .footer-social a,
@@ -11455,4 +11526,64 @@ body[dir="rtl"] {
   line-height: 1.65 !important;
   font-size: clamp(15px, 1.25vw, 17px) !important;
 }
+
+/* ==========================================================================
+   ALL PAGES FINAL CTA SECTIONS — UNIFIED BUTTON HOVER IN DARK MODE
+   ========================================================================== */
+
+/* Primary CTA Button Hover in Dark Mode across all pages */
+[data-theme="dark"] .final-cta .btn-primary:hover,
+[data-theme="dark"] .final-cta .btn-yellow:hover,
+[data-theme="dark"] .final-cta .btn:not(.btn-secondary):not(.btn-outline):not(.btn-outline-light):hover,
+[data-theme="dark"] .h2-closing-section .btn-primary:hover,
+[data-theme="dark"] .h2-closing-section .h2-btn-green:hover,
+[data-theme="dark"] .h2-closing-section .btn-yellow:hover,
+[data-theme="dark"] .ab-commitment-section .btn-primary:hover,
+[data-theme="dark"] .ab-commitment-section .ab-btn-green:hover,
+[data-theme="dark"] .ab-commitment-section .btn-yellow:hover,
+[data-theme="dark"] .pr-final-cta .btn-primary:hover,
+[data-theme="dark"] .pr-final-cta .pr-btn-green:hover,
+[data-theme="dark"] .pr-final-cta .btn-yellow:hover,
+[data-theme="dark"] .sv-final-cta .btn-primary:hover,
+[data-theme="dark"] .sv-final-cta .sv-btn-green:hover,
+[data-theme="dark"] .sv-final-cta .btn-yellow:hover,
+[data-theme="dark"] .pl-final-cta .btn-primary:hover,
+[data-theme="dark"] .pl-final-cta .pl-btn-green:hover,
+[data-theme="dark"] .pl-final-cta .btn-yellow:hover {
+  background: #E5B22D !important;
+  color: #0B1210 !important;
+  border-color: #E5B22D !important;
+  box-shadow: 0 8px 24px rgba(229, 178, 45, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* Secondary CTA Button Hover in Dark Mode across all pages */
+[data-theme="dark"] .final-cta .btn-secondary:hover,
+[data-theme="dark"] .final-cta .btn-outline:hover,
+[data-theme="dark"] .final-cta .btn-outline-light:hover,
+[data-theme="dark"] .final-cta .btn-outline-white:hover,
+[data-theme="dark"] .h2-closing-section .h2-btn-light:hover,
+[data-theme="dark"] .h2-closing-section .btn-secondary:hover,
+[data-theme="dark"] .h2-closing-section .btn-outline-light:hover,
+[data-theme="dark"] .h2-closing-section .btn-outline:hover,
+[data-theme="dark"] .ab-commitment-section .ab-btn-light:hover,
+[data-theme="dark"] .ab-commitment-section .btn-outline-light:hover,
+[data-theme="dark"] .ab-commitment-section .btn-outline-white:hover,
+[data-theme="dark"] .ab-commitment-section .btn-secondary:hover,
+[data-theme="dark"] .pr-final-cta .pr-btn-light:hover,
+[data-theme="dark"] .pr-final-cta .btn-secondary:hover,
+[data-theme="dark"] .pr-final-cta .btn-outline-white:hover,
+[data-theme="dark"] .sv-final-cta .sv-btn-light:hover,
+[data-theme="dark"] .sv-final-cta .btn-secondary:hover,
+[data-theme="dark"] .sv-final-cta .btn-outline-white:hover,
+[data-theme="dark"] .pl-final-cta .pl-btn-light:hover,
+[data-theme="dark"] .pl-final-cta .btn-secondary:hover,
+[data-theme="dark"] .pl-final-cta .btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-2px);
+}
+
 
